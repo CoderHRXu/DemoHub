@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (4.6.0)
+  - Evil (0.9.2)
+  - HandyJSON (1.8.0)
+  - Moya (11.0.0):
+    - Moya/Core (= 11.0.0)
+  - Moya/Core (11.0.0):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (11.0.0):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - PromiseKit (4.5.2):
+    - PromiseKit/Foundation (= 4.5.2)
+    - PromiseKit/QuartzCore (= 4.5.2)
+    - PromiseKit/UIKit (= 4.5.2)
+  - PromiseKit/Alamofire (4.5.2):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (4.5.2)
+  - PromiseKit/Foundation (4.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.5.2):
+    - PromiseKit/CorePromise
+  - Result (3.2.4)
+  - RxSwift (4.1.2)
+
+DEPENDENCIES:
+  - Evil
+  - HandyJSON
+  - Moya
+  - Moya/RxSwift
+  - PromiseKit
+  - PromiseKit/Alamofire
+  - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Evil: 67b381b8e8649993b03fcbbde4b9025707f122c5
+  HandyJSON: edaaa3278bf4c4c96d6f7382b80d6b91c88d3bf5
+  Moya: be29766339783963a70d1279d69c891ab3a1393c
+  PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+
+PODFILE CHECKSUM: 116e2c0977ed2df78d89d553755c7df2cefb1ad5
+
+COCOAPODS: 1.4.0
