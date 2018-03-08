@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD1873822050D2AC00495539 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1873812050D2AC00495539 /* AppDelegate.m */; };
+		AD1873852050D2AC00495539 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1873842050D2AC00495539 /* ViewController.m */; };
+		AD1873882050D2AC00495539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1873862050D2AC00495539 /* Main.storyboard */; };
+		AD18738A2050D2AC00495539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1873892050D2AC00495539 /* Assets.xcassets */; };
+		AD18738D2050D2AC00495539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD18738B2050D2AC00495539 /* LaunchScreen.storyboard */; };
+		AD1873902050D2AC00495539 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD18738F2050D2AC00495539 /* main.m */; };
+		AD1873992050D6FB00495539 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1873972050D6FB00495539 /* ChatViewController.m */; };
+		AD18739A2050D6FB00495539 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1873982050D6FB00495539 /* ChatViewController.xib */; };
+		C9FF1093F6327981A8FEF930 /* Pods_QIYUDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D645602D36F275625DD6DA13 /* Pods_QIYUDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17E813C69E7FD242BB75DDCF /* Pods-QIYUDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QIYUDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QIYUDemo/Pods-QIYUDemo.release.xcconfig"; sourceTree = "<group>"; };
+		731819FFCFDF6338F82CAABB /* Pods-QIYUDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QIYUDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QIYUDemo/Pods-QIYUDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AD18737D2050D2AC00495539 /* QIYUDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QIYUDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1873802050D2AC00495539 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD1873812050D2AC00495539 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD1873832050D2AC00495539 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AD1873842050D2AC00495539 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AD1873872050D2AC00495539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD1873892050D2AC00495539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD18738C2050D2AC00495539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD18738E2050D2AC00495539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD18738F2050D2AC00495539 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD1873962050D6FB00495539 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		AD1873972050D6FB00495539 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		AD1873982050D6FB00495539 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		D645602D36F275625DD6DA13 /* Pods_QIYUDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QIYUDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD18737A2050D2AC00495539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FF1093F6327981A8FEF930 /* Pods_QIYUDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EBBFCFE92D7624AF4252BD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				731819FFCFDF6338F82CAABB /* Pods-QIYUDemo.debug.xcconfig */,
+				17E813C69E7FD242BB75DDCF /* Pods-QIYUDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD1873742050D2AC00495539 = {
+			isa = PBXGroup;
+			children = (
+				AD18737F2050D2AC00495539 /* QIYUDemo */,
+				AD18737E2050D2AC00495539 /* Products */,
+				2EBBFCFE92D7624AF4252BD1 /* Pods */,
+				FDDDCB9933DEF798AD3F3079 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AD18737E2050D2AC00495539 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD18737D2050D2AC00495539 /* QIYUDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD18737F2050D2AC00495539 /* QIYUDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AD1873802050D2AC00495539 /* AppDelegate.h */,
+				AD1873812050D2AC00495539 /* AppDelegate.m */,
+				AD1873832050D2AC00495539 /* ViewController.h */,
+				AD1873842050D2AC00495539 /* ViewController.m */,
+				AD1873862050D2AC00495539 /* Main.storyboard */,
+				AD1873962050D6FB00495539 /* ChatViewController.h */,
+				AD1873972050D6FB00495539 /* ChatViewController.m */,
+				AD1873982050D6FB00495539 /* ChatViewController.xib */,
+				AD1873892050D2AC00495539 /* Assets.xcassets */,
+				AD18738B2050D2AC00495539 /* LaunchScreen.storyboard */,
+				AD18738E2050D2AC00495539 /* Info.plist */,
+				AD18738F2050D2AC00495539 /* main.m */,
+			);
+			path = QIYUDemo;
+			sourceTree = "<group>";
+		};
+		FDDDCB9933DEF798AD3F3079 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D645602D36F275625DD6DA13 /* Pods_QIYUDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD18737C2050D2AC00495539 /* QIYUDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD1873932050D2AC00495539 /* Build configuration list for PBXNativeTarget "QIYUDemo" */;
+			buildPhases = (
+				3383B946BD3E616D76CC3F42 /* [CP] Check Pods Manifest.lock */,
+				AD1873792050D2AC00495539 /* Sources */,
+				AD18737A2050D2AC00495539 /* Frameworks */,
+				AD18737B2050D2AC00495539 /* Resources */,
+				DB15649E829956CD1D307A54 /* [CP] Embed Pods Frameworks */,
+				2AD1C4CB99B87DDE60BE7829 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QIYUDemo;
+			productName = QIYUDemo;
+			productReference = AD18737D2050D2AC00495539 /* QIYUDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD1873752050D2AC00495539 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Fclassroom;
+				TargetAttributes = {
+					AD18737C2050D2AC00495539 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AD1873782050D2AC00495539 /* Build configuration list for PBXProject "QIYUDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD1873742050D2AC00495539;
+			productRefGroup = AD18737E2050D2AC00495539 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD18737C2050D2AC00495539 /* QIYUDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD18737B2050D2AC00495539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD18738D2050D2AC00495539 /* LaunchScreen.storyboard in Resources */,
+				AD18738A2050D2AC00495539 /* Assets.xcassets in Resources */,
+				AD18739A2050D6FB00495539 /* ChatViewController.xib in Resources */,
+				AD1873882050D2AC00495539 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AD1C4CB99B87DDE60BE7829 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QIYUDemo/Pods-QIYUDemo-resources.sh",
+				"${PODS_ROOT}/QIYU_iOS_SDK/SDK/QYResource.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QYResource.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QIYUDemo/Pods-QIYUDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3383B946BD3E616D76CC3F42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QIYUDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB15649E829956CD1D307A54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QIYUDemo/Pods-QIYUDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD1873792050D2AC00495539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD1873852050D2AC00495539 /* ViewController.m in Sources */,
+				AD1873902050D2AC00495539 /* main.m in Sources */,
+				AD1873992050D6FB00495539 /* ChatViewController.m in Sources */,
+				AD1873822050D2AC00495539 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AD1873862050D2AC00495539 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD1873872050D2AC00495539 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD18738B2050D2AC00495539 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD18738C2050D2AC00495539 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD1873912050D2AC00495539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AD1873922050D2AC00495539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD1873942050D2AC00495539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 731819FFCFDF6338F82CAABB /* Pods-QIYUDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QIYUDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fclassroom.QIYUDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD1873952050D2AC00495539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17E813C69E7FD242BB75DDCF /* Pods-QIYUDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QIYUDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fclassroom.QIYUDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD1873782050D2AC00495539 /* Build configuration list for PBXProject "QIYUDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD1873912050D2AC00495539 /* Debug */,
+				AD1873922050D2AC00495539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD1873932050D2AC00495539 /* Build configuration list for PBXNativeTarget "QIYUDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD1873942050D2AC00495539 /* Debug */,
+				AD1873952050D2AC00495539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD1873752050D2AC00495539 /* Project object */;
+}
