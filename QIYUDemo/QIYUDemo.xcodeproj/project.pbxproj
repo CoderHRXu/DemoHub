@@ -34,6 +34,7 @@
 		AD1873962050D6FB00495539 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		AD1873972050D6FB00495539 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		AD1873982050D6FB00495539 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		AD18739B205127FE00495539 /* QIYUDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QIYUDemo.entitlements; sourceTree = "<group>"; };
 		D645602D36F275625DD6DA13 /* Pods_QIYUDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QIYUDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,6 +80,7 @@
 		AD18737F2050D2AC00495539 /* QIYUDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AD18739B205127FE00495539 /* QIYUDemo.entitlements */,
 				AD1873802050D2AC00495539 /* AppDelegate.h */,
 				AD1873812050D2AC00495539 /* AppDelegate.m */,
 				AD1873832050D2AC00495539 /* ViewController.h */,
@@ -137,7 +139,12 @@
 				TargetAttributes = {
 					AD18737C2050D2AC00495539 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -370,11 +377,16 @@
 			baseConfigurationReference = 731819FFCFDF6338F82CAABB /* Pods-QIYUDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = QIYUDemo/QIYUDemo.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = JX333254R3;
 				INFOPLIST_FILE = QIYUDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fclassroom.QIYUDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fclassroom.ttel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9d8ce7c6-9552-4271-92c6-3b80c7a58b28";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fclassroom.ttel";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -384,11 +396,17 @@
 			baseConfigurationReference = 17E813C69E7FD242BB75DDCF /* Pods-QIYUDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = QIYUDemo/QIYUDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = JX333254R3;
 				INFOPLIST_FILE = QIYUDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fclassroom.QIYUDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fclassroom.ttel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2daaed65-5d4b-4c0b-81e3-495fadf04af7";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.fclassroom.ttel";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
