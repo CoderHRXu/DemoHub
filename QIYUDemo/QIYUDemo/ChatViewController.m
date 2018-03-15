@@ -55,13 +55,13 @@
         NSMutableDictionary *dictEmail              = [NSMutableDictionary new];
         [dictEmail setObject:@"email" forKey:@"key"];
         [dictEmail setObject:@"bianchen@163.com" forKey:@"value"];
-        [array addObject:dictEmail];
+//        [array addObject:dictEmail];
         
         NSMutableDictionary *dictAuthentication     = [NSMutableDictionary new];
         [dictAuthentication setObject:@"0" forKey:@"index"];
-        [dictAuthentication setObject:@"authentication" forKey:@"key"];
-        [dictAuthentication setObject:@"实名认证" forKey:@"label"];
-        [dictAuthentication setObject:@"已认证" forKey:@"value"];
+        [dictAuthentication setObject:@"schoolName" forKey:@"key"];
+        [dictAuthentication setObject:@"学校名称" forKey:@"label"];
+        [dictAuthentication setObject:@"星海实验小学" forKey:@"value"];
         [array addObject:dictAuthentication];
         
         NSMutableDictionary *dictBankcard           = [NSMutableDictionary new];
@@ -69,7 +69,7 @@
         [dictBankcard setObject:@"bankcard" forKey:@"key"];
         [dictBankcard setObject:@"绑定银行卡" forKey:@"label"];
         [dictBankcard setObject:@"622202******01116068" forKey:@"value"];
-        [array addObject:dictBankcard];
+//        [array addObject:dictBankcard];
         
         NSData *data                                = [NSJSONSerialization dataWithJSONObject:array options:0 error:nil];
         if (data){
