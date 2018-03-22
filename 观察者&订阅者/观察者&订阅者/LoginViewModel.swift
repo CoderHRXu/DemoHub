@@ -114,7 +114,7 @@ extension Reactive where Base: UILabel {
     }
     */
     
-    var result: Binder<ValidationResult>{
+    var validationResult: Binder<ValidationResult>{
         return Binder(base, binding: { (label, result) in
             label.text = result.description
             label.textColor = result.textColor

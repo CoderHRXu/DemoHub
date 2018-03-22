@@ -21,8 +21,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var tf3: UITextField!
     
     @IBOutlet weak var loginBtn: UIButton!
-    
-    @IBOutlet weak var label: UILabel!
+
+    @IBOutlet weak var label1: UILabel!
+
+    @IBOutlet weak var label2: UILabel!
+
+    @IBOutlet weak var label3: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,22 +34,27 @@ class ViewController: UIViewController {
         let viewModel = LoginViewModel(input: ( username: tf1.rx.text.orEmpty.asObservable(), password: tf2.rx.text.orEmpty.asObservable(), repeatedPassword: tf3.rx.text.orEmpty.asObservable(), regidterTap: loginBtn.rx.tap.asObservable())
         )
         
-        viewModel.validateUserName.subscribe(onNext: { valid in
-            print("username is \(valid)")
-        }).disposed(by: disposeBag)
+//        viewModel.validateUserName.subscribe(onNext: { valid in
+//            print("username is \(valid)")
+//        }).disposed(by: disposeBag)
+//
+//        viewModel.validateUserName.subscribe(onNext: { valid in
+//            print("username 2 is \(valid)")
+//        }).disposed(by: disposeBag)
+//
+//
+//        viewModel.validatePassword.subscribe(onNext: { (valid) in
+//            print("password is \(valid)")
+//        }).disposed(by: disposeBag)
+//
+//        viewModel.validatedPasswordRepeated.subscribe(onNext:{ valid in
+//            print("repoatedPassword is \(valid)")
+//        }).disposed(by: disposeBag)
         
-        viewModel.validateUserName.subscribe(onNext: { valid in
-            print("username 2 is \(valid)")
-        }).disposed(by: disposeBag)
-
-        
-        viewModel.validatePassword.subscribe(onNext: { (valid) in
-            print("password is \(valid)")
-        }).disposed(by: disposeBag)
-        
-        viewModel.validatedPasswordRepeated.subscribe(onNext:{ valid in
-            print("repoatedPassword is \(valid)")
-        }).disposed(by: disposeBag)
+//        然后绑定:
+        viewModel.validateUserName.bind(to: label1.rx.validationResult).disposed(by: disposeBag)
+        viewModel.validatePassword.bind(to: label2.rx.validationResult).disposed(by: disposeBag)
+        viewModel.validatedPasswordRepeated.bind(to: label3.rx.validationResult).disposed(by: disposeBag)
 
         
     }
