@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         
         let targetShip = Ship(position: Position(x: 16, y: 20), fireRange: 20, unsafeRange: 5)
         
-        
         let canAttack = myShip.canSafelyAttackShip(target: targetShip , friendlyShip: friendShip)
         print(canAttack)
         // 传一个区域和移动的偏移来生成一个新的圆。代码可以从:
