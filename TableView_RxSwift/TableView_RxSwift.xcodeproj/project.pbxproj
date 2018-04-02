@@ -15,6 +15,8 @@
 		AD7A7C2E206D0C00004DC8CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7A7C2C206D0C00004DC8CC /* LaunchScreen.storyboard */; };
 		AD7A7C36206D0F27004DC8CC /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A7C35206D0F27004DC8CC /* SimpleViewController.swift */; };
 		AD7A7C38206D1AC5004DC8CC /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A7C37206D1AC5004DC8CC /* SectionViewController.swift */; };
+		AD7A7C3A206DE77B004DC8CC /* BindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A7C39206DE77B004DC8CC /* BindViewController.swift */; };
+		AD7A7C3F206E6B11004DC8CC /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A7C3E206E6B11004DC8CC /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		AD7A7C2F206D0C00004DC8CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7A7C35206D0F27004DC8CC /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
 		AD7A7C37206D1AC5004DC8CC /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
+		AD7A7C39206DE77B004DC8CC /* BindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindViewController.swift; sourceTree = "<group>"; };
+		AD7A7C3E206E6B11004DC8CC /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				AD7A7C27206D0C00004DC8CC /* Main.storyboard */,
 				AD7A7C35206D0F27004DC8CC /* SimpleViewController.swift */,
 				AD7A7C37206D1AC5004DC8CC /* SectionViewController.swift */,
+				AD7A7C39206DE77B004DC8CC /* BindViewController.swift */,
+				AD7A7C3E206E6B11004DC8CC /* Operators.swift */,
 				AD7A7C2A206D0C00004DC8CC /* Assets.xcassets */,
 				AD7A7C2C206D0C00004DC8CC /* LaunchScreen.storyboard */,
 				AD7A7C2F206D0C00004DC8CC /* Info.plist */,
@@ -232,7 +238,9 @@
 				AD7A7C26206D0C00004DC8CC /* ViewController.swift in Sources */,
 				AD7A7C24206D0C00004DC8CC /* AppDelegate.swift in Sources */,
 				AD7A7C38206D1AC5004DC8CC /* SectionViewController.swift in Sources */,
+				AD7A7C3A206DE77B004DC8CC /* BindViewController.swift in Sources */,
 				AD7A7C36206D0F27004DC8CC /* SimpleViewController.swift in Sources */,
+				AD7A7C3F206E6B11004DC8CC /* Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

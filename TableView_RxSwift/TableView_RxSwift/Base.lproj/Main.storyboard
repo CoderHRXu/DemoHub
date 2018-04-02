@@ -32,9 +32,18 @@
                                     <segue destination="025-wI-dRX" kind="show" id="1me-MN-qXn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thj-Ub-5bx">
+                                <rect key="frame" x="156" y="264" width="62" height="30"/>
+                                <state key="normal" title="双向绑定"/>
+                                <connections>
+                                    <segue destination="LIn-mF-W2W" kind="show" id="ymO-oa-MVt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="thj-Ub-5bx" firstAttribute="top" secondItem="7w0-l7-emm" secondAttribute="bottom" constant="30" id="5ba-8v-uWl"/>
+                            <constraint firstItem="thj-Ub-5bx" firstAttribute="centerX" secondItem="7w0-l7-emm" secondAttribute="centerX" id="FWr-88-36Y"/>
                             <constraint firstItem="7w0-l7-emm" firstAttribute="top" secondItem="8Ui-uI-bjn" secondAttribute="bottom" constant="30" id="Lay-bC-5M9"/>
                             <constraint firstItem="8Ui-uI-bjn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M5v-SZ-DRr"/>
                             <constraint firstItem="8Ui-uI-bjn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="YjG-KV-9Az"/>
@@ -76,7 +85,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3YX-yI-dHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2118" y="-116"/>
+            <point key="canvasLocation" x="2182" y="-530"/>
+        </scene>
+        <!--双向绑定-->
+        <scene sceneID="eCN-xr-cUi">
+            <objects>
+                <viewController title="双向绑定" id="LIn-mF-W2W" customClass="BindViewController" customModule="TableView_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IJu-Bm-t5T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ted-rG-auH">
+                                <rect key="frame" x="20" y="94" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XsF-A3-3v2"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GQZ-tU-uTl">
+                                <rect key="frame" x="20" y="174" width="335" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="vUo-br-gP2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cal-1v-wKM">
+                                <rect key="frame" x="166" y="374" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.84301440057140309" blue="0.85549937879619264" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GQZ-tU-uTl" firstAttribute="top" secondItem="Ted-rG-auH" secondAttribute="bottom" constant="30" id="Gy3-Qb-x99"/>
+                            <constraint firstItem="GQZ-tU-uTl" firstAttribute="trailing" secondItem="Ted-rG-auH" secondAttribute="trailing" id="cZl-TF-ixM"/>
+                            <constraint firstItem="Ted-rG-auH" firstAttribute="top" secondItem="FXk-aO-CQU" secondAttribute="top" constant="30" id="d5y-q3-Alf"/>
+                            <constraint firstItem="cal-1v-wKM" firstAttribute="centerX" secondItem="GQZ-tU-uTl" secondAttribute="centerX" id="g5P-xm-1gE"/>
+                            <constraint firstItem="FXk-aO-CQU" firstAttribute="trailing" secondItem="Ted-rG-auH" secondAttribute="trailing" constant="20" id="gBg-vz-rg9"/>
+                            <constraint firstItem="GQZ-tU-uTl" firstAttribute="leading" secondItem="Ted-rG-auH" secondAttribute="leading" id="uYb-zS-gph"/>
+                            <constraint firstItem="cal-1v-wKM" firstAttribute="top" secondItem="GQZ-tU-uTl" secondAttribute="bottom" constant="50" id="z7E-oU-Agc"/>
+                            <constraint firstItem="Ted-rG-auH" firstAttribute="leading" secondItem="FXk-aO-CQU" secondAttribute="leading" constant="20" id="zLb-5r-9Y2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FXk-aO-CQU"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="cal-1v-wKM" id="GM2-zi-E8S"/>
+                        <outlet property="tf" destination="Ted-rG-auH" id="iux-Z9-L8T"/>
+                        <outlet property="tv" destination="GQZ-tU-uTl" id="2V8-g7-HeB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRQ-8t-LLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156" y="909"/>
         </scene>
         <!--带section-->
         <scene sceneID="coE-Tn-NDW">
@@ -106,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlN-UZ-x5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2118" y="565"/>
+            <point key="canvasLocation" x="2182" y="161"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lXR-Yo-5e7">
