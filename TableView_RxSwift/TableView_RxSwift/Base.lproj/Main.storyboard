@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WvW-k5-TV8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WvW-k5-TV8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,15 +39,24 @@
                                     <segue destination="LIn-mF-W2W" kind="show" id="ymO-oa-MVt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLB-Rt-dj7">
+                                <rect key="frame" x="156" y="324" width="62" height="30"/>
+                                <state key="normal" title="城市搜索"/>
+                                <connections>
+                                    <segue destination="UDp-Df-5sf" kind="show" id="oL0-jI-RCn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="thj-Ub-5bx" firstAttribute="top" secondItem="7w0-l7-emm" secondAttribute="bottom" constant="30" id="5ba-8v-uWl"/>
+                            <constraint firstItem="OLB-Rt-dj7" firstAttribute="centerX" secondItem="thj-Ub-5bx" secondAttribute="centerX" id="BFh-33-b7a"/>
                             <constraint firstItem="thj-Ub-5bx" firstAttribute="centerX" secondItem="7w0-l7-emm" secondAttribute="centerX" id="FWr-88-36Y"/>
                             <constraint firstItem="7w0-l7-emm" firstAttribute="top" secondItem="8Ui-uI-bjn" secondAttribute="bottom" constant="30" id="Lay-bC-5M9"/>
                             <constraint firstItem="8Ui-uI-bjn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M5v-SZ-DRr"/>
                             <constraint firstItem="8Ui-uI-bjn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="YjG-KV-9Az"/>
                             <constraint firstItem="7w0-l7-emm" firstAttribute="centerX" secondItem="8Ui-uI-bjn" secondAttribute="centerX" id="jql-99-d0b"/>
+                            <constraint firstItem="OLB-Rt-dj7" firstAttribute="top" secondItem="thj-Ub-5bx" secondAttribute="bottom" constant="30" id="yYS-LE-jvz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -86,6 +95,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3YX-yI-dHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2182" y="-530"/>
+        </scene>
+        <!--City Search View Controller-->
+        <scene sceneID="759-lN-ywW">
+            <objects>
+                <viewController id="UDp-Df-5sf" customClass="CitySearchViewController" customModule="TableView_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="urz-QB-aCH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lFA-8U-D1o">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableFooterView" contentMode="redraw" id="uFe-0Z-gmf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lFA-8U-D1o" firstAttribute="leading" secondItem="AlZ-2z-f7K" secondAttribute="leading" id="Thb-kT-R8j"/>
+                            <constraint firstItem="AlZ-2z-f7K" firstAttribute="trailing" secondItem="lFA-8U-D1o" secondAttribute="trailing" id="ZaP-zd-RNg"/>
+                            <constraint firstItem="lFA-8U-D1o" firstAttribute="top" secondItem="urz-QB-aCH" secondAttribute="top" constant="20" id="gYj-yY-7ae"/>
+                            <constraint firstItem="AlZ-2z-f7K" firstAttribute="bottom" secondItem="lFA-8U-D1o" secondAttribute="bottom" id="tMw-wE-pIE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AlZ-2z-f7K"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="uFe-0Z-gmf" id="r0u-fp-3pl"/>
+                        <outlet property="tableView" destination="lFA-8U-D1o" id="8ky-GY-OBP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbM-9d-RTa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231.2" y="904.49775112443785"/>
         </scene>
         <!--双向绑定-->
         <scene sceneID="eCN-xr-cUi">

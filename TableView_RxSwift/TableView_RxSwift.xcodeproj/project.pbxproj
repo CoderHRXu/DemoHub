@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		951C1B660ADE859CCC029120 /* Pods_TableView_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9611AC7941634E34F8EBA3C5 /* Pods_TableView_RxSwift.framework */; };
+		AD70950B207CB385001C60AF /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70950A207CB385001C60AF /* CitySearchViewController.swift */; };
 		AD7A7C24206D0C00004DC8CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A7C23206D0C00004DC8CC /* AppDelegate.swift */; };
 		AD7A7C26206D0C00004DC8CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A7C25206D0C00004DC8CC /* ViewController.swift */; };
 		AD7A7C29206D0C00004DC8CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7A7C27206D0C00004DC8CC /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		2F5B2932C61E01040D274E14 /* Pods-TableView_RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView_RxSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableView_RxSwift/Pods-TableView_RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		89B50161A90A6732E3AA3A40 /* Pods-TableView_RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView_RxSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TableView_RxSwift/Pods-TableView_RxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		9611AC7941634E34F8EBA3C5 /* Pods_TableView_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableView_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD70950A207CB385001C60AF /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
 		AD7A7C20206D0C00004DC8CC /* TableView_RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView_RxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7A7C23206D0C00004DC8CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD7A7C25206D0C00004DC8CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				AD7A7C35206D0F27004DC8CC /* SimpleViewController.swift */,
 				AD7A7C37206D1AC5004DC8CC /* SectionViewController.swift */,
 				AD7A7C39206DE77B004DC8CC /* BindViewController.swift */,
+				AD70950A207CB385001C60AF /* CitySearchViewController.swift */,
 				AD7A7C3E206E6B11004DC8CC /* Operators.swift */,
 				AD7A7C2A206D0C00004DC8CC /* Assets.xcassets */,
 				AD7A7C2C206D0C00004DC8CC /* LaunchScreen.storyboard */,
@@ -240,6 +243,7 @@
 				AD7A7C38206D1AC5004DC8CC /* SectionViewController.swift in Sources */,
 				AD7A7C3A206DE77B004DC8CC /* BindViewController.swift in Sources */,
 				AD7A7C36206D0F27004DC8CC /* SimpleViewController.swift in Sources */,
+				AD70950B207CB385001C60AF /* CitySearchViewController.swift in Sources */,
 				AD7A7C3F206E6B11004DC8CC /* Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

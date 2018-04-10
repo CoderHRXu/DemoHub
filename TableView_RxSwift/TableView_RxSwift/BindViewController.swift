@@ -44,8 +44,8 @@ class BindViewController: UIViewController {
         tf.text = "这是我修改的值"
         
         // UILabel 双向绑定
-        label.rx_text.asObservable().subscribe {
-            print("label: \($0)")
+        label.rx_text.asObservable().subscribe { text in
+            print("xxxxx"+text.element! )
         }.disposed(by: disposeBag)
         
         label.text = "修改label"
