@@ -49,12 +49,12 @@ use_frameworks!
         pod 'RxCocoa'
     	pod 'RxSwift'
         pod 'RxDataSources'
-#        pod 'RxAlamofire/RxCocoa'
-#        pod 'ObjectMapper'
+       	pod 'RxAlamofire/RxCocoa'
+       	pod 'ObjectMapper'
     end
     
      #A lightweight, pure-Swift library for downloading and caching images from the web.
-    target 'TableView_RxSwift' do  
+    target 'Rx多线程' do  
         # ui_pods
         # common_pod
         # net_pod
