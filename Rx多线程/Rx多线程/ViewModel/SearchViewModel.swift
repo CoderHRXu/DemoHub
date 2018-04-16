@@ -42,14 +42,21 @@ class SearchViewModel {
                         return Observable.never()
                 }
             })
+            // 我们要确保网络请求和json解析在后台线程运行，所以使用observeOn主动切换线程
+            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .map({ (response, json) -> [Repository] in
-                
+                // json解析放到后台线程中执行
                 if let repos = Mapper<Repository>().mapArray(JSONObject: json){
                     return repos
                 }else{
                     return []
                 }
-            }).asDriver(onErrorJustReturn: [])
+            })
+            .observeOn(MainScheduler.instance) // 切换回主线程 刷新UI switch to MainScheduler , updates UI
+            .do(onNext: { response in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            })
+            .asDriver(onErrorJustReturn: [])
         // 把输入的文字转成网络请求序列，然后对请求的结果进行map转成Repository数组，最后返回。这里使用了Driver保证回到主线程，并不抛出错误。
     }
     

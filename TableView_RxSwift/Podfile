@@ -49,6 +49,7 @@ use_frameworks!
         pod 'RxCocoa'
     	pod 'RxSwift'
         pod 'RxDataSources'
+        pod 'Action'
 #        pod 'RxAlamofire/RxCocoa'
 #        pod 'ObjectMapper'
     end

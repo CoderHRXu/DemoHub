@@ -18,6 +18,9 @@
 		AD7A7C38206D1AC5004DC8CC /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A7C37206D1AC5004DC8CC /* SectionViewController.swift */; };
 		AD7A7C3A206DE77B004DC8CC /* BindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A7C39206DE77B004DC8CC /* BindViewController.swift */; };
 		AD7A7C3F206E6B11004DC8CC /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A7C3E206E6B11004DC8CC /* Operators.swift */; };
+		ADEAD759207F2E8E00BF66E0 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAD758207F2E8E00BF66E0 /* ActionViewController.swift */; };
+		ADEAD75E207F416D00BF66E0 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAD75C207F416D00BF66E0 /* DemoCell.swift */; };
+		ADEAD75F207F416D00BF66E0 /* DemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADEAD75D207F416D00BF66E0 /* DemoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		AD7A7C37206D1AC5004DC8CC /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 		AD7A7C39206DE77B004DC8CC /* BindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindViewController.swift; sourceTree = "<group>"; };
 		AD7A7C3E206E6B11004DC8CC /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		ADEAD758207F2E8E00BF66E0 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		ADEAD75C207F416D00BF66E0 /* DemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
+		ADEAD75D207F416D00BF66E0 /* DemoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 				AD7A7C37206D1AC5004DC8CC /* SectionViewController.swift */,
 				AD7A7C39206DE77B004DC8CC /* BindViewController.swift */,
 				AD70950A207CB385001C60AF /* CitySearchViewController.swift */,
+				ADEAD758207F2E8E00BF66E0 /* ActionViewController.swift */,
+				ADEAD75C207F416D00BF66E0 /* DemoCell.swift */,
+				ADEAD75D207F416D00BF66E0 /* DemoCell.xib */,
 				AD7A7C3E206E6B11004DC8CC /* Operators.swift */,
 				AD7A7C2A206D0C00004DC8CC /* Assets.xcassets */,
 				AD7A7C2C206D0C00004DC8CC /* LaunchScreen.storyboard */,
@@ -167,6 +176,7 @@
 			files = (
 				AD7A7C2E206D0C00004DC8CC /* LaunchScreen.storyboard in Resources */,
 				AD7A7C2B206D0C00004DC8CC /* Assets.xcassets in Resources */,
+				ADEAD75F207F416D00BF66E0 /* DemoCell.xib in Resources */,
 				AD7A7C29206D0C00004DC8CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +206,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TableView_RxSwift/Pods-TableView_RxSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -203,6 +214,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -240,6 +252,8 @@
 			files = (
 				AD7A7C26206D0C00004DC8CC /* ViewController.swift in Sources */,
 				AD7A7C24206D0C00004DC8CC /* AppDelegate.swift in Sources */,
+				ADEAD75E207F416D00BF66E0 /* DemoCell.swift in Sources */,
+				ADEAD759207F2E8E00BF66E0 /* ActionViewController.swift in Sources */,
 				AD7A7C38206D1AC5004DC8CC /* SectionViewController.swift in Sources */,
 				AD7A7C3A206DE77B004DC8CC /* BindViewController.swift in Sources */,
 				AD7A7C36206D0F27004DC8CC /* SimpleViewController.swift in Sources */,
