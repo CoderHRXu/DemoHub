@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D868D48670A7A19799B5348 /* Pods_ExcelDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20BA1294C2A85342138CFDE4 /* Pods_ExcelDemo.framework */; };
 		AD56119720CF67C700125704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD56119620CF67C700125704 /* AppDelegate.m */; };
 		AD56119A20CF67C700125704 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD56119920CF67C700125704 /* ViewController.m */; };
 		AD56119D20CF67C700125704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD56119B20CF67C700125704 /* Main.storyboard */; };
@@ -26,9 +27,12 @@
 		AD5611F020CF6E7800125704 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5611ED20CF6E7700125704 /* NSObject+YYModel.m */; };
 		AD5611F120CF6E7800125704 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5611EE20CF6E7700125704 /* YYClassInfo.m */; };
 		AD5611F420CF7AFA00125704 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5611F320CF7AFA00125704 /* FirstViewController.m */; };
+		AD5611FD20CFA5ED00125704 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5611FC20CFA5ED00125704 /* PieChartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20BA1294C2A85342138CFDE4 /* Pods_ExcelDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExcelDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59750299DCC5797763A58AFF /* Pods-ExcelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExcelDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExcelDemo/Pods-ExcelDemo.release.xcconfig"; sourceTree = "<group>"; };
 		AD56119220CF67C700125704 /* ExcelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExcelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD56119520CF67C700125704 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD56119620CF67C700125704 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +67,10 @@
 		AD5611EF20CF6E7700125704 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
 		AD5611F220CF7AFA00125704 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		AD5611F320CF7AFA00125704 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		AD5611F520CFA10000125704 /* ExcelDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExcelDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		AD5611FB20CFA5ED00125704 /* PieChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieChartViewController.h; sourceTree = "<group>"; };
+		AD5611FC20CFA5ED00125704 /* PieChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
+		E299BA17283A925F53FC255B /* Pods-ExcelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExcelDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExcelDemo/Pods-ExcelDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,17 +78,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D868D48670A7A19799B5348 /* Pods_ExcelDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45364D6D72E94FABAD054468 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20BA1294C2A85342138CFDE4 /* Pods_ExcelDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD56118920CF67C600125704 = {
 			isa = PBXGroup;
 			children = (
 				AD56119420CF67C700125704 /* ExcelDemo */,
 				AD56119320CF67C700125704 /* Products */,
+				CB0385481EFD67D45F433A8F /* Pods */,
+				45364D6D72E94FABAD054468 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +124,8 @@
 				AD5611E520CF6E1100125704 /* FCClzssQuestionScoredDataModel.m */,
 				AD5611E820CF6E2400125704 /* FCBaseDataModel.h */,
 				AD5611E720CF6E2400125704 /* FCBaseDataModel.m */,
+				AD5611FB20CFA5ED00125704 /* PieChartViewController.h */,
+				AD5611FC20CFA5ED00125704 /* PieChartViewController.m */,
 				AD5611EA20CF6E7700125704 /* YYModel */,
 				AD5611C220CF685600125704 /* 1.json */,
 				AD5611AB20CF67EF00125704 /* DQKFreezeWindowView-JK */,
@@ -113,6 +134,7 @@
 				AD5611A020CF67C800125704 /* LaunchScreen.storyboard */,
 				AD5611A320CF67C800125704 /* Info.plist */,
 				AD5611A420CF67C800125704 /* main.m */,
+				AD5611F520CFA10000125704 /* ExcelDemo-Bridging-Header.h */,
 			);
 			path = ExcelDemo;
 			sourceTree = "<group>";
@@ -156,6 +178,15 @@
 			path = YYModel;
 			sourceTree = "<group>";
 		};
+		CB0385481EFD67D45F433A8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E299BA17283A925F53FC255B /* Pods-ExcelDemo.debug.xcconfig */,
+				59750299DCC5797763A58AFF /* Pods-ExcelDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD5611A820CF67C800125704 /* Build configuration list for PBXNativeTarget "ExcelDemo" */;
 			buildPhases = (
+				9009D957495634534F0888FC /* [CP] Check Pods Manifest.lock */,
 				AD56118E20CF67C700125704 /* Sources */,
 				AD56118F20CF67C700125704 /* Frameworks */,
 				AD56119020CF67C700125704 /* Resources */,
+				42900085CE92FACBAC77761E /* [CP] Embed Pods Frameworks */,
+				B874CD10CBEB9678AE682CCD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +221,7 @@
 				TargetAttributes = {
 					AD56119120CF67C700125704 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -224,6 +259,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42900085CE92FACBAC77761E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ExcelDemo/Pods-ExcelDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExcelDemo/Pods-ExcelDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9009D957495634534F0888FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExcelDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B874CD10CBEB9678AE682CCD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExcelDemo/Pods-ExcelDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD56118E20CF67C700125704 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -235,6 +324,7 @@
 				AD5611A520CF67C800125704 /* main.m in Sources */,
 				AD5611BD20CF67EF00125704 /* DQKMainViewCell.m in Sources */,
 				AD5611F020CF6E7800125704 /* NSObject+YYModel.m in Sources */,
+				AD5611FD20CFA5ED00125704 /* PieChartViewController.m in Sources */,
 				AD56119720CF67C700125704 /* AppDelegate.m in Sources */,
 				AD5611F420CF7AFA00125704 /* FirstViewController.m in Sources */,
 				AD5611F120CF6E7800125704 /* YYClassInfo.m in Sources */,
@@ -379,8 +469,10 @@
 		};
 		AD5611A920CF67C800125704 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E299BA17283A925F53FC255B /* Pods-ExcelDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5BDQF9LPZ9;
 				INFOPLIST_FILE = ExcelDemo/Info.plist;
@@ -390,14 +482,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haoran.ExcelDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExcelDemo/ExcelDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		AD5611AA20CF67C800125704 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59750299DCC5797763A58AFF /* Pods-ExcelDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5BDQF9LPZ9;
 				INFOPLIST_FILE = ExcelDemo/Info.plist;
@@ -407,6 +504,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haoran.ExcelDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExcelDemo/ExcelDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

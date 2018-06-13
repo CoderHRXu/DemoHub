@@ -30,14 +30,9 @@ static NSString *questionCellID = @"questionCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    NSNumber *value = [NSNumber numberWithInt:UIDeviceOrientationLandscapeLeft];
-//    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
-//    [UIViewController attemptRotationToDeviceOrientation];
     NSLog(@"开始加载");
     FCClzssQuestionScoredDataModel *dataModel = [FCClzssQuestionScoredDataModel fc_modelWithResponse:[self loadJson]];
     [self handleClzssQuestionScoredDataModel:dataModel isBigQuestion:NO];
-    
-//    [self configUI];
     
 }
 

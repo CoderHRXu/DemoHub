@@ -35,12 +35,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bko-YT-1ya">
-                                <rect key="frame" x="164" y="231" width="46" height="30"/>
+                                <rect key="frame" x="164" y="146" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="看报表"/>
                                 <connections>
                                     <action selector="btnclick:" destination="i3V-GZ-BPK" eventType="touchUpInside" id="mXH-Df-qGm"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="i18-cb-s4q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQV-W3-HTy">
+                                <rect key="frame" x="172" y="225" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="饼图"/>
+                                <connections>
+                                    <action selector="btnclick:" destination="i3V-GZ-BPK" eventType="touchUpInside" id="jAT-D6-q0s"/>
+                                    <segue destination="v6M-Z5-Dx2" kind="show" id="8tZ-QI-C82"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,7 +75,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="45"/>
+            <point key="canvasLocation" x="268" y="-403"/>
+        </scene>
+        <!--Pie Chart View Controller-->
+        <scene sceneID="4TB-tY-Yc6">
+            <objects>
+                <viewController id="v6M-Z5-Dx2" customClass="PieChartViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m4r-3u-hWb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QGr-iI-sSH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cY9-QY-bNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="291"/>
         </scene>
     </scenes>
 </document>
