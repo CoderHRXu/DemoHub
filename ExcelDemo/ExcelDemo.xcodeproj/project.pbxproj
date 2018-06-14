@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D868D48670A7A19799B5348 /* Pods_ExcelDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20BA1294C2A85342138CFDE4 /* Pods_ExcelDemo.framework */; };
+		AD44F89720D113680079C273 /* BarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44F89620D113680079C273 /* BarChartViewController.m */; };
+		AD44F89920D114620079C273 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44F89820D114620079C273 /* TestViewController.swift */; };
 		AD56119720CF67C700125704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD56119620CF67C700125704 /* AppDelegate.m */; };
 		AD56119A20CF67C700125704 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD56119920CF67C700125704 /* ViewController.m */; };
 		AD56119D20CF67C700125704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD56119B20CF67C700125704 /* Main.storyboard */; };
@@ -33,6 +35,9 @@
 /* Begin PBXFileReference section */
 		20BA1294C2A85342138CFDE4 /* Pods_ExcelDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExcelDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59750299DCC5797763A58AFF /* Pods-ExcelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExcelDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExcelDemo/Pods-ExcelDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AD44F89520D113680079C273 /* BarChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarChartViewController.h; sourceTree = "<group>"; };
+		AD44F89620D113680079C273 /* BarChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarChartViewController.m; sourceTree = "<group>"; };
+		AD44F89820D114620079C273 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		AD56119220CF67C700125704 /* ExcelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExcelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD56119520CF67C700125704 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD56119620CF67C700125704 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +131,9 @@
 				AD5611E720CF6E2400125704 /* FCBaseDataModel.m */,
 				AD5611FB20CFA5ED00125704 /* PieChartViewController.h */,
 				AD5611FC20CFA5ED00125704 /* PieChartViewController.m */,
+				AD44F89520D113680079C273 /* BarChartViewController.h */,
+				AD44F89620D113680079C273 /* BarChartViewController.m */,
+				AD44F89820D114620079C273 /* TestViewController.swift */,
 				AD5611EA20CF6E7700125704 /* YYModel */,
 				AD5611C220CF685600125704 /* 1.json */,
 				AD5611AB20CF67EF00125704 /* DQKFreezeWindowView-JK */,
@@ -318,7 +326,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD44F89720D113680079C273 /* BarChartViewController.m in Sources */,
 				AD56119A20CF67C700125704 /* ViewController.m in Sources */,
+				AD44F89920D114620079C273 /* TestViewController.swift in Sources */,
 				AD5611E920CF6E2400125704 /* FCBaseDataModel.m in Sources */,
 				AD5611E620CF6E1100125704 /* FCClzssQuestionScoredDataModel.m in Sources */,
 				AD5611A520CF67C800125704 /* main.m in Sources */,
@@ -408,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -460,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -476,6 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5BDQF9LPZ9;
 				INFOPLIST_FILE = ExcelDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,6 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5BDQF9LPZ9;
 				INFOPLIST_FILE = ExcelDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
