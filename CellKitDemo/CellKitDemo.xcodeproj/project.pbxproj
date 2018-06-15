@@ -12,6 +12,8 @@
 		AD7C2DCD20D363720037D486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7C2DCB20D363720037D486 /* Main.storyboard */; };
 		AD7C2DCF20D363730037D486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7C2DCE20D363730037D486 /* Assets.xcassets */; };
 		AD7C2DD220D363730037D486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7C2DD020D363730037D486 /* LaunchScreen.storyboard */; };
+		AD7C2DDB20D36E580037D486 /* SwipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C2DD920D36E580037D486 /* SwipeCell.swift */; };
+		AD7C2DDC20D36E580037D486 /* SwipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7C2DDA20D36E580037D486 /* SwipeCell.xib */; };
 		C19CD46F69E42283C37094E6 /* Pods_CellKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF19DD48B0650982D010732 /* Pods_CellKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		AD7C2DCE20D363730037D486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7C2DD120D363730037D486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7C2DD320D363730037D486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7C2DD920D36E580037D486 /* SwipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
+		AD7C2DDA20D36E580037D486 /* SwipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCell.xib; sourceTree = "<group>"; };
 		AFF19DD48B0650982D010732 /* Pods_CellKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5F73568421F9FF228A0D8F /* Pods-CellKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CellKitDemo/Pods-CellKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +68,8 @@
 				AD7C2DC720D363720037D486 /* AppDelegate.swift */,
 				AD7C2DC920D363720037D486 /* ViewController.swift */,
 				AD7C2DCB20D363720037D486 /* Main.storyboard */,
+				AD7C2DD920D36E580037D486 /* SwipeCell.swift */,
+				AD7C2DDA20D36E580037D486 /* SwipeCell.xib */,
 				AD7C2DCE20D363730037D486 /* Assets.xcassets */,
 				AD7C2DD020D363730037D486 /* LaunchScreen.storyboard */,
 				AD7C2DD320D363730037D486 /* Info.plist */,
@@ -151,6 +157,7 @@
 			files = (
 				AD7C2DD220D363730037D486 /* LaunchScreen.storyboard in Resources */,
 				AD7C2DCF20D363730037D486 /* Assets.xcassets in Resources */,
+				AD7C2DDC20D36E580037D486 /* SwipeCell.xib in Resources */,
 				AD7C2DCD20D363720037D486 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +225,7 @@
 			files = (
 				AD7C2DCA20D363720037D486 /* ViewController.swift in Sources */,
 				AD7C2DC820D363720037D486 /* AppDelegate.swift in Sources */,
+				AD7C2DDB20D36E580037D486 /* SwipeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
