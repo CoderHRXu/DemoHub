@@ -29,7 +29,7 @@
 		AD70952E207E135F001C60AF /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		E0C6B7F0DB2214D105D53D00 /* Pods-Rx多线程.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx多线程.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx多线程/Pods-Rx多线程.debug.xcconfig"; sourceTree = "<group>"; };
 		EBA73432C9F1D68AC205E6C5 /* Pods-Rx多线程.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx多线程.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx多线程/Pods-Rx多线程.release.xcconfig"; sourceTree = "<group>"; };
-		F6D2765277DC929BD7083D5F /* Pods_Rx___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Rx___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D2765277DC929BD7083D5F /* Pods_Rx___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx___.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,6 @@
 				AD709512207E0815001C60AF /* Frameworks */,
 				AD709513207E0815001C60AF /* Resources */,
 				CE1D3CE177624B50F367103E /* [CP] Embed Pods Frameworks */,
-				8EF74AD9445BA60B5CF43C4F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,21 +179,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8EF74AD9445BA60B5CF43C4F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rx多线程/Pods-Rx多线程-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CE1D3CE177624B50F367103E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

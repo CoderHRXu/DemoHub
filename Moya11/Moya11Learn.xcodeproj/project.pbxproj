@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184E78B220B9AE7C004A2556 /* FCBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E78B120B9AE7C004A2556 /* FCBaseViewModel.swift */; };
 		493199C4A1890ED4AEF44F57 /* Pods_Moya11Learn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC698A0AEF3098C63D0EEC9 /* Pods_Moya11Learn.framework */; };
 		AD9BE95B203280D100F4B916 /* TargetType+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9BE95A203280D100F4B916 /* TargetType+Base.swift */; };
 		AD9BE95D2032827300F4B916 /* FCMeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9BE95C2032827300F4B916 /* FCMeApiService.swift */; };
@@ -15,7 +16,6 @@
 		AD9BE96420328EA000F4B916 /* Observable+JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9BE96220328EA000F4B916 /* Observable+JSONParser.swift */; };
 		AD9BE96520328EA000F4B916 /* Observable+ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9BE96320328EA000F4B916 /* Observable+ParserError.swift */; };
 		AD9BE96720328EB200F4B916 /* FCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9BE96620328EB200F4B916 /* FCBaseModel.swift */; };
-		AD9BE96B20328FE000F4B916 /* FCBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9BE96820328FA900F4B916 /* FCBaseViewModel.swift */; };
 		AD9BE96D2032900E00F4B916 /* FCMeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9BE96C2032900E00F4B916 /* FCMeViewModel.swift */; };
 		AD9BE96F2032903300F4B916 /* FCReadExamCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9BE96E2032903300F4B916 /* FCReadExamCountModel.swift */; };
 		AD9BE9742032950800F4B916 /* EvilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9BE9732032950800F4B916 /* EvilViewController.swift */; };
@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0FC698A0AEF3098C63D0EEC9 /* Pods_Moya11Learn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moya11Learn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		184E78B120B9AE7C004A2556 /* FCBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCBaseViewModel.swift; sourceTree = "<group>"; };
 		AD9BE95A203280D100F4B916 /* TargetType+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TargetType+Base.swift"; sourceTree = "<group>"; };
 		AD9BE95C2032827300F4B916 /* FCMeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMeApiService.swift; sourceTree = "<group>"; };
 		AD9BE95E20328D1100F4B916 /* FCNetworkPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCNetworkPlugin.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		AD9BE96220328EA000F4B916 /* Observable+JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+JSONParser.swift"; sourceTree = "<group>"; };
 		AD9BE96320328EA000F4B916 /* Observable+ParserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ParserError.swift"; sourceTree = "<group>"; };
 		AD9BE96620328EB200F4B916 /* FCBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCBaseModel.swift; sourceTree = "<group>"; };
-		AD9BE96820328FA900F4B916 /* FCBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FCBaseViewModel.swift; path = "../../../../../工作/代码/Teacher-Swift/JiKeJiaoShi/JiKeJiaoShi/Manager/NetworkManager/ViewModel/FCBaseViewModel.swift"; sourceTree = "<group>"; };
 		AD9BE96C2032900E00F4B916 /* FCMeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMeViewModel.swift; sourceTree = "<group>"; };
 		AD9BE96E2032903300F4B916 /* FCReadExamCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCReadExamCountModel.swift; sourceTree = "<group>"; };
 		AD9BE9732032950800F4B916 /* EvilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvilViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 				AD9BE96220328EA000F4B916 /* Observable+JSONParser.swift */,
 				AD9BE96320328EA000F4B916 /* Observable+ParserError.swift */,
 				AD9BE96620328EB200F4B916 /* FCBaseModel.swift */,
-				AD9BE96820328FA900F4B916 /* FCBaseViewModel.swift */,
+				184E78B120B9AE7C004A2556 /* FCBaseViewModel.swift */,
 				AD9BE96C2032900E00F4B916 /* FCMeViewModel.swift */,
 				AD9BE96E2032903300F4B916 /* FCReadExamCountModel.swift */,
 			);
@@ -152,7 +152,6 @@
 				ADBAF28E20327B7B00807D7D /* Frameworks */,
 				ADBAF28F20327B7B00807D7D /* Resources */,
 				73C39E4CF8261D4385D0F8E2 /* [CP] Embed Pods Frameworks */,
-				A29AC7CA3794537FD1E55B17 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,21 +240,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moya11Learn/Pods-Moya11Learn-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A29AC7CA3794537FD1E55B17 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moya11Learn/Pods-Moya11Learn-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D701B934F853782838F03691 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,11 +273,11 @@
 				ADBAF29720327B7B00807D7D /* ViewController.swift in Sources */,
 				AD9BE96120328D5900F4B916 /* FCLogger.swift in Sources */,
 				AD9BE96F2032903300F4B916 /* FCReadExamCountModel.swift in Sources */,
-				AD9BE96B20328FE000F4B916 /* FCBaseViewModel.swift in Sources */,
 				AD9BE9742032950800F4B916 /* EvilViewController.swift in Sources */,
 				AD9BE96520328EA000F4B916 /* Observable+ParserError.swift in Sources */,
 				AD9BE96720328EB200F4B916 /* FCBaseModel.swift in Sources */,
 				ADBAF29520327B7B00807D7D /* AppDelegate.swift in Sources */,
+				184E78B220B9AE7C004A2556 /* FCBaseViewModel.swift in Sources */,
 				AD9BE9772032C83600F4B916 /* ChineseIDCard.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

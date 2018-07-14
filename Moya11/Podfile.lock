@@ -36,6 +36,16 @@ DEPENDENCIES:
   - PromiseKit/Alamofire
   - RxSwift
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Evil
+    - HandyJSON
+    - Moya
+    - PromiseKit
+    - Result
+    - RxSwift
+
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   Evil: 67b381b8e8649993b03fcbbde4b9025707f122c5
@@ -47,4 +57,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 116e2c0977ed2df78d89d553755c7df2cefb1ad5
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2
