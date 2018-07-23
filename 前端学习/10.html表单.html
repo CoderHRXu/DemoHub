@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10.HTML表单</title>
+</head>
+<body>
+
+表单
+表单是一个包含表单元素的区域。<br>
+
+表单元素是允许用户在表单中输入内容,比如：文本域(textarea)、下拉列表、单选框(radio-buttons)、复选框(checkboxes)等等。
+
+表单使用表单标签 form 来设置:
+
+<br>
+<h2>文本域 text fields 和 密码字段</h2>
+<form>
+    username:<input type="text" name="user"><br><br>
+    password:<input type="password" name="password">
+</form>
+
+<h2>单选按钮radio button</h2>
+
+<form>
+    <input type="radio" name="sex" value="male">Male<br>
+    <input type="radio" name="sex" value="female">Female
+</form>
+
+<h2>复选框 Checkboxes</h2>
+定义了复选框. 用户需要从若干给定的选择中选取一个或若干选项
+<input type="checkbox" name="交通工具" value="汽车">汽车<br>
+<input type="checkbox" name="摩托车" value="摩托车">摩托车
+
+
+
+<h2>提交按钮 submit button</h2>
+input type="submit" 定义了提交按钮.
+<br>
+当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。
+由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理。:
+<br><br>
+<form name="input" action="html_form_action.php" method="get">
+    Username： <input type="text" name="user" value="默认用户名">
+    <input type="submit" value="Submit">
+
+</form>
+<br>
+假如在上面的文本框内键入几个字母，然后点击确认按钮，那么输入数据会传送到 "html_form_action.php" 的页面。该页面将显示出输入的结果。
+
+
+<h2>下拉列表</h2>
+<form action="">
+    <select name="cars">
+        <option value="沃尔沃"> 沃尔沃</option>
+        <option value="大众"> 大众</option>
+        <option value="宝马"> 宝马</option>
+        <option value="奥迪"> 奥迪</option>
+    </select>
+</form>
+
+
+<h2>文本域</h2>
+<textarea rows="10" cols="30">
+    我是一个文本框
+</textarea>
+
+
+<h2>创建按钮</h2>
+<form action="">
+    <input type="button" value="hello world">
+</form>
+
+<h2>带边框的表单</h2>
+
+<form>
+    <fieldset>
+        <legend>
+            个人信息
+        </legend>
+        Name: <input type="text" name="nane" size="30"><br>
+        E-mail: <input type="email" name="email" size="30"><br>
+        Date of birth: <input type="text" name="date" size="10"><br>
+
+
+
+    </fieldset>
+</form>
+
+
+<h2>发送邮件到 1046508320@qq.com</h2>
+<form action="MAILTO:1046508320@qq.com" method="post" enctype="text/plain">
+    Name:<br>
+    <input type="text" name="name"  placeholder="请输入用户名"><br>
+    E-mail:<br>
+    <input type="text" name="mail"  placeholder="请输入邮箱"><br>
+    Content:<br>
+    <input type="text" name="comment"  placeholder="请输入邮件正文" size="50"><br>
+
+    <br>
+    <input type="submit" value="发送">
+    <input type="reset" value="重置">
+
+
+</form>
+
+
+<h2>表单练习</h2>
+
+表单中的单选按钮可以设置以下几个属性：value、name、checked
+
+value：提交数据到服务器的值（后台程序PHP使用）
+name：为控件命名，以备后台程序 ASP、PHP 使用
+checked：当设置 checked="checked" 时，该选项被默认选中
+<form>
+    <p>你生活在哪个国家？</p>
+    <input type="radio" name="country" value="China" checked="checked">中国<br />
+    <input type="radio" name="country" value="the USA">美国
+</form>
+
+</body>
+</html>
