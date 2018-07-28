@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11.HTML框架</title>
+</head>
+<body>
+
+<p>通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。</p>
+<h2>iframe 设置高度与宽度</h2>
+
+height 和 width 属性用来定义iframe标签的高度与宽度。<br>
+
+属性默认以像素为单位, 但是你可以指定其按比例显示 (如："80%")。<br>
+
+<h2>实例</h2><br>
+<iframe src="05.html图像.html" width="400" height="400"></iframe>
+
+<h2>iframe 移除边框</h2><br>
+frameborder 属性用于定义iframe表示是否显示边框。
+
+设置属性值为 "0" 移除iframe的边框:<br>
+
+<iframe src="05.html图像.html" width="400" height="400" frameborder="0"></iframe>
+
+
+<br>
+<br>
+<br>
+
+<h2>使用iframe来显示目标链接页面</h2>
+<iframe src="05.html图像.html" name="iframe_a" width="400" height="400"></iframe>
+<p><a href="http://www.akpop.top" target="iframe_a">我的博客</a></p>
+
+</body>
+</html>
