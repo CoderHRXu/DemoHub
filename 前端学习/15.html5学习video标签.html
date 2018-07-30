@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h5video标签</title>
+</head>
+<body>
+<div style="text-align: center">
+
+    <p>video标签</p>
+    <!--<button onclick="playPause()">播放/暂停</button>-->
+    <!--<button onclick="makeBig()">放大</button>-->
+    <!--<button onclick="makeSmall()">缩小</button>-->
+    <!--<button onclick="makeNormal()">普通</button>-->
+
+    <button onclick="playPasue()">播放/暂停</button>
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+    <button onclick="makeNormal()">普通</button>
+    <br>
+    <br>
+    <video id="video1" width="200">
+        <source src="video/1.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script>
+
+    var myVideo = document.getElementById("video1")
+    /*播放 暂停*/
+    function playPasue() {
+        if (myVideo.paused){
+            myVideo.play();
+        }else {
+            myVideo.pause();
+        }
+
+    }
+    
+    function makeBig() {
+        var  width = myVideo.width;
+        width += 20;
+        myVideo.width = width;
+    }
+
+    function makeSmall() {
+        var  width = myVideo.width;
+        width -= 20;
+        myVideo.width = width;
+    }
+
+    function makeNormal() {
+        myVideo.width = 200;
+    }
+
+</script>
+
+</body>
+</html>
