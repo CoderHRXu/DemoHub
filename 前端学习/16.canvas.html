@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16.canvas画布</title>
+</head>
+<body>
+
+<div>
+
+
+    <canvas id="myCanvas1" width="400" height="200" style="border: 1px solid #000000;">
+
+    </canvas>
+
+    <br>
+    <h3>使用 JavaScript 来绘制图像</h3>
+    <p>canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：</p>
+
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+
+        <mrow>
+            <mrow>
+
+                <msup>
+                    <mi>x</mi>
+                    <mn>2</mn>
+                </msup>
+
+                <mo>+</mo>
+
+                <mrow>
+                    <mn>4</mn>
+                    <mo>⁢</mo>
+                    <mi>x</mi>
+                </mrow>
+
+                <mo>+</mo>
+                <mn>4</mn>
+
+            </mrow>
+
+            <mo>=</mo>
+            <mn>0</mn>
+
+        </mrow>
+    </math>
+
+</div>
+
+<script>
+
+    var myCanvas = document.getElementById("myCanvas1");
+    var ctx = myCanvas.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0, 0, 150, 75);
+//    var c=document.getElementById("myCanvas");
+//    var ctx=c.getContext("2d");
+//    ctx.moveTo(0,0);
+//    ctx.lineTo(200,100);
+//    ctx.stroke();
+
+    ctx.moveTo(0,0);
+    ctx.lineTo(100,50);
+    ctx.stroke();
+
+
+</script>
+
+</body>
+</html>
