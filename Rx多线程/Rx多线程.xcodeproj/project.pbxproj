@@ -122,6 +122,7 @@
 				AD709512207E0815001C60AF /* Frameworks */,
 				AD709513207E0815001C60AF /* Resources */,
 				CE1D3CE177624B50F367103E /* [CP] Embed Pods Frameworks */,
+				A65CEB21ED8A4A8264E45BCF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,6 +180,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A65CEB21ED8A4A8264E45BCF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rx多线程/Pods-Rx多线程-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CE1D3CE177624B50F367103E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
