@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <!--需求 一个文本框，默认值是name -->
+    完整写法
+    <input type="text" v-bind:value="name">
+    省略写法
+    <input type="text" :value="name">
+    动态绑定a标签跳转链接,项目中常用<br>
+    <!--<a href="http://www.akpop.top/index/id">跳转到我的博客</a>  id不会被vue替换，因为href是a标签的属性-->
+    <a v-bind="{href:'http://www.akpop.top/index/'+id}">跳转到我的博客</a>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            name:'无风的秋',
+            id : 1
+        }
+    });
+</script>
+
+</body>
+</html>
