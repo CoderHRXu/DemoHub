@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+
+    动态生成li<br>
+    <h4>遍历数组</h4>
+    <ul>
+
+        <li v-for="(item,index) in list">index:{{index}} - value:{{ item }}</li>
+    </ul>
+
+    注意item在前，index在后。2.0写法没有$index<br>
+
+    <h4>遍历有重复元素的数组</h4>
+    <ul>
+        <li v-for="(item, index) in copyList" :key="index">{{index}} - {{item}}</li>
+    </ul>
+    2.0中直接用:key= 来标记dom对象唯一性
+
+
+    <h4>遍历对象</h4>
+    <ul>
+        <li v-for="(value, key) in user"> {{key}} : {{value}}</li>
+    </ul>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            list: [11,22,33,44],
+            copyList: [1,2,3,4,4],
+            user:{
+                username:'无风的秋',
+                age:18
+            }
+
+        },
+
+
+    });
+</script>
+
+</body>
+</html>
