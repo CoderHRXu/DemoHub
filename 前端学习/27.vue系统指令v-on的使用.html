@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+</head>
+<body>
+
+<div id="app">
+    v-on的一些指令简写
+    <button @click="submit">提交</button>
+    <input type="text" @keydown ="kd">
+
+    <br>表单提交<br>
+    初始写法,直接发一个gey请求<br>
+    <form action="http://www.akpop.top" method="get">
+
+        <input type="submit" value="提交" >
+    </form>
+
+    <br>
+    拦截原先form的action，改成自己定义的方法,执行了submit方法
+    <form @submit.prevent action="http://www.akpop.top">
+
+    <input type="submit" value="提交" @click = 'submit' >
+    </form>
+
+</div>
+
+<script>
+
+    var vm = new Vue({
+
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+
+            submit: function () {
+                alert('点击按钮')
+            },
+
+            kd:function () {
+                alert('kd')
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>
