@@ -15,21 +15,22 @@
         {{ if1(name)}}
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
 
-        var vm = new Vue({
-            el:'#app',
-            data:{
-                name: '这是名称',
-            },
-            methods: {
-                'if1':function (str) {
-                    return str == 'wo'
-                }
-            }
-        })
-    </script>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            name: '这是名称',
+        },
+        methods: {
+            'if1':function (str) {
+                return str == 'wo'
+            }
+        }
+    })
+</script>
 </html>
