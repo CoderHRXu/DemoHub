@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+        <!-- 解决延迟加载的问题 -->
+    <span v-text="name"></span>
+
+    <div v-html="name"></div>
+
+    区别  v-text只是把name的值当文字输出， v-html会把name值当初html文本<br>
+
+    
+
+</div>
+
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+
+    new Vue({
+        el:'#app',
+        data:{
+            name:"<h1>这是名字</h1>",
+        },
+        methods:{
+
+        }
+    });
+</script>
+
+
+</html>

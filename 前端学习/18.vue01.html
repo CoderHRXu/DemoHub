@@ -6,17 +6,32 @@
 
     <link rel="stylesheet" href="css/02.vue01CSS.css">
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <!--1.导入 vue.js-->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 <body>
 
     <div id="app">
-        {{ message }}<br>
+        {{ message }} <br>
         <span v-if="seen" >Now you see me</span>
     </div>
 
-    <script src="js/01.vueJS.js"></script>
+    <!--<script src="js/01.vueJS.js"></script>-->
+    <script>
+
+        // 2.0 实例化vue对象
+        // vm 就是viewmodel
+        var vm = new Vue({
+            el:'#app',// 表示vue对象接管app的div区域
+            data:{
+
+                message:'这是message', // 相当于MVVM中的model
+                seen : true,
+            }
+        });
+
+    </script>
 
 </body>
 </html>
