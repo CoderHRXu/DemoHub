@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+
+    <button v-on:click = "toggle">显示隐藏切换</button><br>
+    使用v-if<br>
+    <div v-if="isShow">div的值</div><br>
+    使用v-show<br>
+    <div v-show="isShow">div的值</div>
+
+
+    <h4>使用 v-if 和 v-show 都能实现对一个元素的隐藏显示操作，但是v-if是将这个元素添加或移除到DOM中，而v-show是通过在这个元素添加style = "display:none"来控制显示和隐藏，实际效果都是一样的</h4>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            isShow: true,
+
+        },
+        methods:{
+            toggle: function () {
+                // 实现业务只需要isShow每次都取反即可
+                this.isShow = !this.isShow
+            }
+        }
+
+    });
+</script>
+
+</body>
+</html>
