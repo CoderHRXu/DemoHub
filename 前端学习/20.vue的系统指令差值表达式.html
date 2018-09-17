@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>差值表达式</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+    <div id="app">
+
+        {{name + '1'}}
+        {{ name == 'wo'? 'true': 'false'}}
+        {{ if1(name)}}
+    </div>
+
+    <script>
+
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                name: '这是名称',
+            },
+            methods: {
+                'if1':function (str) {
+                    return str == 'wo'
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
