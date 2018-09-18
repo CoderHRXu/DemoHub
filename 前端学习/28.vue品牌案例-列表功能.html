@@ -40,6 +40,10 @@
         <th>创建时间</th>
         <th>操作</th>
     </tr>
+ <!--v-show也可以-->
+    <tr v-if="list.length == 0">
+        <td colspan="4">当前列表无数据</td>
+    </tr>
 
     <tr v-for="item in list">
         <td>{{item.id}}</td>
