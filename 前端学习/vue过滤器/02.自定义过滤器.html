@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="app">
+
+    {{time | dateFormat }}
+
+</div>
+
+
+<script>
+
+    async function asyn1() {
+
+        console.log('asyn1 start');
+        await asyn2();
+        console.log('asyn1 end');
+    }
+
+    async function asyn2() {
+
+        console.log('asyn2');
+    }
+
+    console.log('script start')
+    setTimeout(function () {
+        console.log('time out');
+    })
+
+    asyn1()
+
+    new Promise(function (resolve) {
+        console.log('Prosmise1');
+        resolve()
+        console.log('Prosmise2');
+    }).then(function () {
+        console.log('Prosmise then');
+    })
+
+
+
+
+</script>
+
+
+<script>
+
+    new Vue({
+
+        el:"#app",
+        data:{
+            time : new Date()
+        },
+        // 在某一个vue对象内定义的过滤器就是私有过滤器
+        // 这种过滤器只有在当前vue对象el指定的监管区域在有用
+        filters: {
+
+            // input 是自定义过滤器的默认参数，input的值永远都是取自于 |  左边的内容
+
+            dateFormat :function (input) {
+
+                var res ='';
+                var year = input.getFullYear();
+                var mon = input.getMonth() + 1;
+                var day = input.getDay();
+
+                res = year + '-' + mon + '-' + day;
+                return res;
+            },
+            
+            json : function (obj) {
+                if (!obj) return ''
+                return JSON.stringify(obj)
+            },
+
+            uppercase: function (value) {
+                if (!value) return ''
+                value = value.toString()
+                return value.toUpperCase()
+            }
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

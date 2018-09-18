@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="app">
+
+    vue2.0要自定义过滤器
+    {{list | json | uppercase}}
+
+</div>
+
+<script>
+
+    new Vue({
+
+        el:"#app",
+        data:{
+            list : [ {name : '无风的球'}, {name : 'memeda'}]
+        },
+        filters: {
+
+            json : function (obj) {
+                if (!obj) return ''
+                return JSON.stringify(obj)
+            },
+
+            uppercase: function (value) {
+                if (!value) return ''
+                value = value.toString()
+                return value.toUpperCase()
+            }
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
