@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div{
+            text-align: center;
+        }
+
+        input{
+            border: 1px black;
+        }
+
+        #app{
+
+        }
+
+        #tb {
+            width:800px;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        #tb th{
+            background-color: #0094ff;
+            color: white;
+            font-size: 16px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        #tb td{
+
+            padding: 5px;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+</head>
+<body>
+
+<div id="app">
+
+    JavaScript获取键盘按键的键码(参照表)<br>
+    https://www.jb51.net/article/102524.htm<br>
+
+    产品id <br>
+    <input type="text" v-model="id"> <br>
+    产品名称<br>
+    <!-- @keydown.enter 按回车键才会触发-->
+    <input type="text" v-model="pname" @keydown.f2 ="addData"><br>
+
+    <button @click="addData">添加</button><br>
+
+    <input type="text" placeholder="请输入筛选内容" v-model="sname">
+
+
+
+<table id="tb">
+    <tr>
+        <th>编号</th>
+        <th>名称</th>
+        <th>创建时间</th>
+        <th>操作</th>
+    </tr>
+ <!--v-show也可以-->
+    <tr v-if="list.length == 0">
+        <td colspan="4">当前列表无数据</td>
+    </tr>
+
+    <tr v-for="item in list  ">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.ctime | dateFmt('yyyy-mm-dd')}}</td>
+        <td>
+            <!--这里把id传过去 阻断a标签链接-->
+            <a href="javascript:void (0)" @click="deleteData(item.id)">删除</a>
+        </td>
+    </tr>
+</table>
+
+</div>
+
+
+
+<script>
+
+
+    // 0.0 查看v-on指令中有哪些预定义的按键修饰符
+//    console.log(Vue.directive('on').keyCodes);  // 2.0报错
+    console.log(Vue.config.keyCodes);
+
+    // 指定F2按键触发事件
+    Vue.config.keyCodes.f2 = 113;
+
+    Vue.filter('dateFmt', function (input, formatstring) {
+
+                var res ='';
+                var year = input.getFullYear();
+                var mon = input.getMonth() + 1;
+                var day = input.getDay();
+                var hour = input.getHours();
+                var min = input.getMinutes();
+                var sec = input.getSeconds();
+
+                res = year + '-' + mon + '-' + day;
+
+                if (formatstring == 'yyyy-mm-dd'){
+                    res = year + '-' + mon + '-' + day;
+                }else {
+                    res = year + '-' + mon + '-' + day + ' '+hour +':'+min+':'+sec;
+                }
+
+                return res;
+            }
+
+
+    )
+
+    var vm = new Vue({
+
+        el:'#app',
+        data:{
+            id:0,
+            pname:'',
+            list: [
+                {id:1, name:'奔驰', ctime: new Date},
+                {id:2, name:'宝马', ctime: new Date},
+                {id:3, name:'奥迪', ctime: new Date},
+            ],
+            sname:'', // 自动获取到用户输入筛选的条件值
+
+
+
+        },
+        methods:{
+            
+            addData:function () {
+
+                // 1.包装成list要求的对象
+                var p = {id:this.id, name: this.pname, ctime:new Date()};
+                // 2.0 加入list数值
+                this.list.push(p);
+                // 3.清空输入框
+                this.id = 0;
+                this.pname = '';
+
+            },
+
+            deleteData:function (id) {
+
+                // 0.0 提示用户是否确认删除？
+                if (!confirm('是否删除数据？')){
+                    // 当用户点击取消，阻断后续代码运行
+                    return
+                }
+
+                // 1.0根据数据id，查找当前list中相对于的对象
+                var index = this.list.findIndex(function (item) {
+                    return item.id == id;
+                });
+                // 2.0 调用数组的splice方法，删除指定索引的位置的元素
+                this.list.splice(index,1)
+            },
+
+        },
+        filters:{
+
+            filterByName : function (value) {
+                if(!value) return ''
+                value = value.toString()
+
+                this.list.find(function(item){
+                    console.log(item.contains(value))
+
+                });
+            }
+
+        }
+    });
+
+</script>
+
+</body>
+</html>
