@@ -12,9 +12,9 @@
 
 <div id="app">
 
+    {{obj}}
     <button @click="getData">get请求</button>
 
-    {{obj}}
 </div>
 
 
@@ -31,12 +31,31 @@
             getData:function () {
 
                 // 1.0 url
-                var url = 'http://10.0.2.59:3000/getPrdList';
-
+//                var url = 'http://10.0.3.250:3000/getPrdList'; // 跨域
+                var url = 'http://www.akpop.top'
                 // 2.0 利用 vue-resource 发出ajax请求
                 this.$http.get(url).then(response => {
 
                     this.obj = response.body;
+
+                    // 假数据
+                    var data = {
+                        status:0,
+                        message:[
+                            {
+                                id:1,
+                                name:"奔驰",
+                                ctime:"2018-09-20 10:00:00"
+                            },
+                            {
+                                id:2,
+                                name:"奥迪",
+                                ctime:"2018-09-20 10:00:00"
+                            }
+                        ]
+                    };
+
+                 this.obj = data;
 
                 }, response =>{
                     // error callback

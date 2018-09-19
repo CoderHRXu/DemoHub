@@ -10,7 +10,11 @@
 </head>
 <body>
 
+<div id="app">
+    {{obj}}
+    <button @click="postData">post请求</button>
 
+</div>
 
 
 <script>
@@ -19,7 +23,22 @@
 
         el:'#app',
         data:{
+            obj:null,
+        },
+        methods:{
 
+            postData:function () {
+
+                // 1.0 url
+                var url = 'https://api-dev.fclassroom.cn/eop-account/api/account/teacher/old/login';
+                // 参考文档  https://github.com/pagekit/vue-resource/blob/develop/docs/http.md
+
+                this.$http.post(url, {loginName:15700000020, password:123456}).then(response =>{
+                        this.obj = response.body.message;
+                },response =>{
+
+                });
+            }
         }
     });
 
