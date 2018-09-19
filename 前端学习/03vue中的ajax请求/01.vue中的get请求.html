@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../Vue/vue2.5.17.js"></script>
+    <script src="../Vue/vue-resource1.5.1.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+
+    <button @click="getData">get请求</button>
+
+    {{obj}}
+</div>
+
+
+
+<script>
+
+    var vm = new Vue({
+
+        el:'#app',
+        data:{
+            obj:null,
+        },
+        methods:{
+            getData:function () {
+
+                // 1.0 url
+                var url = 'http://10.0.2.59:3000/getPrdList';
+
+                // 2.0 利用 vue-resource 发出ajax请求
+                this.$http.get(url).then(response => {
+
+                    this.obj = response.body;
+
+                }, response =>{
+                    // error callback
+                });
+            }
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
