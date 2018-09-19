@@ -10,21 +10,41 @@
 </head>
 <body>
 
-    <div id="app">
 
-        <button @click="getData">get请求</button>
+
+    <div id="app">
+        {{obj}}
+        <button @click="jsopData">jsonp请求</button>
     </div>
 
 
 
-<script>
+<script type="text/javascript" >
 
     var vm = new Vue({
 
         el:'#app',
         data:{
-
+            obj:null,
         },
+        methods:{
+
+            jsopData:function () {
+
+                var url = 'http://localhost:3000/getPrdList'; // 跨域
+//                var url = 'https://api-dev.fclassroom.cn/eop-account/api/account/teacher/old/login';
+
+                // 利用vue-resource中的jsonp方法实现跨域请求 需要服务器支持
+                //
+                this.$http.jsonp(url).then(response => {
+                    consle.log("----"+ response.body)
+                    this.obj = response.body
+
+                }, response => {
+
+                });
+            }
+        }
 
     });
 
