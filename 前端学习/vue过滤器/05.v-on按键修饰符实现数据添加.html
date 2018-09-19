@@ -5,13 +5,13 @@
     <title>Title</title>
     <style>
 
-        div{
-            text-align: center;
-        }
+        /*div{*/
+            /*text-align: center;*/
+        /*}*/
 
-        input{
-            border: 1px black;
-        }
+        /*input{*/
+            /*border: 1px black;*/
+        /*}*/
 
         #app{
 
@@ -57,7 +57,7 @@
 
     <button @click="addData">添加</button><br>
 
-    <input type="text" v-focus placeholder="请输入筛选内容" v-model="sname">
+    <input type="text" v-focus v-color="color" placeholder="请输入筛选内容" v-model="sname">
 
 
 
@@ -100,8 +100,49 @@
 
     // 注意点：在定义指令的时候不需要加上v-前缀
     // 但是在使用这个指令的时候必须要加上v-前缀
-    var inputObj = this.el;
-    focus()
+    // vue1.0写法
+//    Vue.directive('focus', function () {
+//
+//        // 实现当前使用的v-focus指令的文本框，自动获取焦点
+//        // 1.0 获取到当前使用了v-focus的文本框对象
+//        var inputObj = this.el;
+//        inputObj.focus()
+//
+//
+//    })
+
+
+    // 2.0写法
+    // 注册一个全局自定义指令 `v-focus`
+    Vue.directive('focus', {
+        // 当被绑定的元素插入到 DOM 中时……
+        inserted: function (el) {
+            // 聚焦元素
+            el.focus()
+        }
+    });
+
+
+    // 定义v-color的指令
+    Vue.directive('color', function (el, binding) {
+        el.style.color = binding.value
+    });
+//    Vue.directive('color', function () {
+//        this.el.style.color = this.vm[this.expression];
+//    });
+//    Vue.directive('color',{
+//        inserted: function (el) {
+//            console
+//            el.style.color = this.vm[this.expression]
+//        }
+//    })
+//        Vue.directive('color', function () {
+//
+//            console.log( this.expression);
+//            this.el.style.color = this.vm[this.expression]
+//
+//
+//        })
 
     Vue.filter('dateFmt', function (input, formatstring) {
 
@@ -139,6 +180,7 @@
                 {id:3, name:'奥迪', ctime: new Date},
             ],
             sname:'', // 自动获取到用户输入筛选的条件值
+            color :'red',
 
 
 
