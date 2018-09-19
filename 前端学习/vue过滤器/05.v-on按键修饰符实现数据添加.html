@@ -57,6 +57,8 @@
 
     <button @click="addData">添加</button><br>
 
+    <my-red>搜索条件</my-red>
+
     <input type="text" v-focus v-color="color" placeholder="请输入筛选内容" v-model="sname">
 
 
@@ -143,6 +145,16 @@
 //
 //
 //        })
+
+
+    // 3.0 定义一个元素指令
+    // 注意点：元素指令定义是可以加上v-的，而使用的时候，定义的名称是什么，使用的时候就是什么不需要加v-
+    Vue.elementDirective('my-red', {
+        binding: function () {
+            this.el.style.color = 'red';
+        }
+    });
+
 
     Vue.filter('dateFmt', function (input, formatstring) {
 
