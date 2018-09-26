@@ -43,12 +43,10 @@
 <body>
     <div id="app">
 
-        产品id <br>
-        <input type="text" v-model="id"> <br>
         产品名称<br>
         <input type="text" v-model="pname"><br>
 
-        <button>添加数据</button>
+        <button @click="addData">添加数据</button>
 
         <table id="tb">
             <tr>
@@ -74,8 +72,6 @@
 
 <script type="text/javascript" >
 
-    // vue的生命周期
-
 
 
     var vm = new Vue({
@@ -90,8 +86,7 @@
         },
         // 生命周期方法 vue对象示例创建成果之后，会自动调用这个方法
         created:function () {
-            console.log("created 触发");
-            this.getlist();
+            this.getlist()
         },
 
         methods:{
@@ -111,6 +106,28 @@
                         this.list = response.body.data;
 
                     });
+            },
+
+            addData :function () {
+                // 实现数据添加接口
+                // 1.0 获取用户填写的文本框的值，只需要this.pname即可
+                // 2.0 调用ajax的post方法将数据post给服务器
+                var url = 'http://localhost:3000/addPrd';
+                var para = {name: this.pname};
+                var option = {emulateJSON:true};
+                this.$http.post(url, para ).then(response =>{
+
+                    if (response.body.status != 0) {
+                        alert(response.body.message);
+                        return;
+                    }
+
+                    // 3.0 直接将列表数据重新加载一次
+                    this.getlist();
+
+                },err =>{
+
+                })
             }
         }
 
