@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        div{
+            text-align: left;
+        }
+
+        /*input{*/
+            /*border: 2px black;*/
+        /*}*/
+
+        #tb {
+            width:800px;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        #tb th{
+            background-color: #0094ff;
+            color: white;
+            font-size: 16px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        #tb td{
+
+            padding: 5px;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="../Vue/vue2.5.17.js"></script>
+    <script src="../Vue/vue-resource1.5.1.js"></script>
+
+</head>
+<body>
+    <div id="app">
+
+        产品id <br>
+        <input type="text" v-model="id"> <br>
+        产品名称<br>
+        <input type="text" v-model="pname"><br>
+
+        <button>添加数据</button>
+
+        <table id="tb">
+            <tr>
+                <th>编号</th>
+                <th>名称</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+            <tr v-for="item in list ">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.ctime}}</td>
+                <td>
+                    <a href="javascript:void (0)">删除</a>
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+
+
+
+<script type="text/javascript" >
+
+    // vue的生命周期
+
+
+
+    var vm = new Vue({
+
+        el:'#app',
+        data:{
+            id:0,
+            pname:'',
+            list: [
+                {id:1, name:'奔驰', ctime: new Date},
+                {id:2, name:'宝马', ctime: new Date},
+                {id:3, name:'奥迪', ctime: new Date},
+            ],
+        },
+        // 生命周期方法 vue对象示例创建成果之后，会自动调用这个方法
+        created:function () {
+            this.getlist();
+        },
+
+        methods:{
+
+            getlist:function () {
+
+                // 请求服务器api 获取列表
+                this.http.get('http://xxxxx')
+                    .then(function (response) {
+
+                        // 1.0 处理异常信息
+                        if (response.body.status != 0){
+                            alert(response.body.message);
+                            return;
+                        }
+                        // 2.0 处理正常的数据逻辑
+                        this.list = response.body.list;
+
+                    });
+            }
+        }
+
+    });
+
+</script>
+
+
+</body>
+</html>

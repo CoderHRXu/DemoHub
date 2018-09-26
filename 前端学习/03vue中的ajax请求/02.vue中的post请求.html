@@ -35,6 +35,7 @@
 
                 this.$http.post(url, {loginName:15700000020, password:123456}).then(response =>{
                         this.obj = response.body.message;
+                        alert(response.body.message);
                 },response =>{
 
                 });
