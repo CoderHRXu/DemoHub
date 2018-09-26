@@ -60,7 +60,7 @@
                 <td>{{item.name}}</td>
                 <td>{{item.ctime}}</td>
                 <td>
-                    <a href="javascript:void (0)">删除</a>
+                    <a href="javascript:void (0)" @click="delData(item.id)">删除</a>
                 </td>
 
             </tr>
@@ -117,7 +117,8 @@
                 var url = 'http://localhost:3000/addPrd';
                 var para = {name: this.pname};
                 var option = {emulateJSON:true};
-                this.$http.post(url, para ).then(response =>{
+                this.$http.post(url, para )
+                    .then(response =>{
 
                     if (response.body.status != 0) {
                         alert(response.body.message);
@@ -129,7 +130,25 @@
 
                 },err =>{
 
-                })
+                });
+            },
+
+            delData : function (id) {
+
+                var url = 'http://localhost:3000/delPrd/'+ id;
+                this.$http.get(url)
+                    .then(response =>{
+
+                    if (response.body.status != 0) {
+                        alert(response.body.message);
+                        return;
+                    }
+
+                    this.getlist();
+
+                }, err => {
+
+                });
             }
         }
 
