@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../Vue/vue2.5.17.js"></script>
+
+    <!-- 使用动画的步骤总结：
+     1.在需要进行动画控制的元素上增加 transition= '自定义'
+     2.利用css控制
+     -->
+
+    <style>
+
+        .show-enter-active,.show-leave-active{
+            transition: all 0.4s ease;
+            padding-left: 0px;
+            opacity: 1.0;
+        }
+
+        .show-enter,.show-leave-active{
+            padding-left: 100px;
+            opacity: 0;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <button @click="toggle">显示和隐藏数据</button><br>
+        1.0写法<br>
+        <span v-show="isShow" transition="show">hello vue.js</span><br>
+        2.0写法 transition注意<br>
+
+        <transition name="show">
+            <span v-show="isShow">{{msg}}</span>
+        </transition>
+
+
+
+    </div>
+
+</body>
+
+<script>
+
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            isShow : false,
+            msg :'hello vue.js'
+        },
+        methods:{
+
+
+            toggle : function () {
+                this.isShow = !this.isShow;
+            }
+        },
+    });
+
+</script>
+
+</html>
