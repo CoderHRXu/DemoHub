@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../Vue/vue2.5.17.js"> </script>
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+
+</body>
+
+<script>
+
+    var vm = new Vue({
+
+        el:"#app",
+
+        data:{
+            message:'hello vue',
+        },
+
+        methods:{
+
+        },
+
+        /* 生命周期函数 */
+        // 执行顺序如下
+        beforeCreate : function () {
+            console.log("1.0 beforeCreate", this.message);
+        },
+        /* 从created开始才能拿到data中的数据 */
+        created : function () {
+            console.log("2.0 created", this.message);
+        },
+        beforeMount : function () {
+            console.log("3.0 beforeMount", this.message);
+        },
+        mounted : function () {
+            console.log("4.0 mounted", this.message);
+        },
+    });
+
+
+</script>
+</html>
