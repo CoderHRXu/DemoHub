@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <link rel="stylesheet" href="../css/animate3.7.0.css">
+    <script src="../Vue/vue2.5.17.js"></script>
+    <style>
+        .show{
+            transition: all 1s ease;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="app">
+
+    <button @click="toggle">显示和隐藏数据</button><br>
+    // 绑定方法
+    <transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter">
+
+        <div v-if="isShow"  class="show">{{msg}}</div>
+    </transition>
+</div>
+
+</body>
+
+<script>
+
+    // 1.0 定义动画的钩子函数
+//    Vue.transition('show', {
+//        // 1.0 这里主要是通过js定义当前实现动画的初始位置
+//        beforeEnter:function (el) {
+//            el.style
+//        },
+//        enter:function () {
+//
+//        },
+//
+//        }
+//    )
+
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            isShow : false,
+            msg :'hello vue.js'
+        },
+        methods:{
+
+
+            toggle : function () {
+                this.isShow = !this.isShow;
+            },
+
+            beforeEnter:function (el) {
+                el.style.transform = "translate(100px, 0)";
+            },
+            enter:function (el, done) {
+
+                el.offsetWidth; // 实时刷新
+                el.style.transform = "translate(0px, 0)";
+                done(); // 手动调用done 动画结束
+            },
+            afterEnter:function (el) {
+                this.isShow = !this.isShow;
+
+            }
+
+        },
+    });
+</script>
+</html>
