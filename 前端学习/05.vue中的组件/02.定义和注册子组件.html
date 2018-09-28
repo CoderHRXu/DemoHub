@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../Vue/vue2.5.17.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+
+    <account></account>
+
+    如果非要在这里直接用子组件login，那么可以把组件定义在vue对象中<br>
+    <login></login>
+
+</div>
+
+
+<script>
+
+    // 1.0定义一个账号组件
+    Vue.component('account',{
+        template:'<div><h1>账号组件</h1><br><login></login></div>',
+        // 在账号组件中定义一个子组件 (局部组件，子组件)
+        components:{
+            'login':{
+                template:'<h2>登录子组件</h2>'
+            }
+        }
+
+    });
+
+
+    new Vue({
+        el:'#app',
+        components:{
+            'login':{
+                template:'<h2>登录子组件 全局</h2>'
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
