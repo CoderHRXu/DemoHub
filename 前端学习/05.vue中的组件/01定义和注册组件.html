@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../Vue/vue2.5.17.js"></script>
+</head>
+<body>
+
+    vue组件基础: https://cn.vuejs.org/v2/guide/components.html
+    <template id="account">
+        <div>
+            <a href="#">登录</a>
+            <span>这是account组件</span>
+            <a href="#">注册</a>
+        </div>
+
+    </template>
+
+    <template id="button-counter">
+        <button v-on:click="count++">You clicked me {{ count }} times.</button>
+    </template>
+
+    <div id="app">
+        <!--1.3使用组件-->
+        <login></login>
+        <!--2.0 使用-->
+        <register></register>
+        <!--3.0 方法使用-->
+
+        <br>第3种方法(推荐)<br>
+        VUE2.0之后的自定义组件，需要有一个root element，索性把自定义的组件，包在一个div种，才能正常使用，否则只会显示第一个element。
+        <account></account>
+
+        <br>官网demo<br>
+        <button-counter></button-counter>
+
+    </div>
+
+    <script>
+
+        // 1.0 定义全局组件 写法1
+
+        // 1.1定义组件
+        var login = Vue.extend({
+            template:'<h1>登录页面</h1>'
+        });
+
+        // 1.2注册组件
+        Vue.component('login', login);
+
+
+        // 2.0 定义全局组件写法2
+        Vue.component('register',{
+            template:'<h1>注册页面</h1>'
+        });
+
+        // 3.0 定义一个账号组件
+        Vue.component("account",{
+            template:"#account"
+        });
+
+        // 官网demo
+        // 定义一个名为 button-counter 的新组件
+        Vue.component('button-counter', {
+            data: function () {
+                return {
+                    count: 0
+                }
+            },
+            template: "#button-counter"
+        })
+
+        var vm = new Vue({
+
+            el:"#app",
+            data:{
+
+            },
+            methods:{
+
+            },
+
+        });
+
+    </script>
+</body>
+</html>
