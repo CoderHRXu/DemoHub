@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../Vue/vue2.5.17.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <a href="#" @click="cname='login'">登录</a>
+    <a href="#" @click="cname='register'">注册</a>
+
+    利用component标签中的 :is 参数来进行组件的切换
+    <component :is="cname"></component>
+
+
+
+</div>
+
+
+<script>
+
+    // 1.0全局注册登录组件和注册组件
+    Vue.component('login',{
+        template:'<div>登录页面</div>'
+    });
+
+    Vue.component('register',{
+        template:'<div>注册页面</div>'
+    });
+
+    new Vue({
+        el:'#app',
+        data:{
+            cname:'login',
+        },
+    });
+</script>
+</body>
+</html>
