@@ -9,8 +9,10 @@
 
     vue组件基础: https://cn.vuejs.org/v2/guide/components.html
     <template id="account">
+
         <div>
-            <a href="#">登录</a>
+            {{msg}}<br>
+            <a href="#" @click="login">登录</a>
             <span>这是account组件</span>
             <a href="#">注册</a>
         </div>
@@ -57,7 +59,19 @@
 
         // 3.0 定义一个账号组件
         Vue.component("account",{
-            template:"#account"
+            template:"#account",
+
+            // 在组件中使用data定义的是一个方法而不是一个对象，否则无效果
+            data:function () {
+                return {
+                    msg:'账户组件页面'
+                }
+            },
+            methods:{
+                login : function () {
+                    alert('login')
+                }
+            },
         });
 
         // 官网demo
