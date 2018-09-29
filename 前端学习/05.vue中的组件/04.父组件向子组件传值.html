@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../Vue/vue2.5.17.js"></script>
+</head>
+<body>
+
+
+
+    <template id="new-component">
+        <div>new-component {{name}}</div>
+    </template>
+
+    <div id="app">
+
+
+        <!--<subCom :id="id"></subCom>-->
+
+        <br>
+        ----------------------------------------------------------------------
+        <br>
+        <blog-post :title="title"></blog-post>
+        <blog-post :id="id"></blog-post>
+        <blog-post title="Why Vue is so fun" id="222"></blog-post>
+
+        <xhr :name="title"></xhr>
+
+        <new-component name="组件名字"></new-component>
+
+    </div>
+
+
+
+    <script>
+        
+
+        Vue.component('xhr',{
+
+            props:['name'],
+           template:'<h2>这是xhr组件{{name}}</h2>'
+        });
+
+        Vue.component('blog-post', {
+            props: ['title', 'id'],
+            template: '<div><h3>{{ title }}</h3><h3>{{ id }}</h3></div>'
+        });
+
+        Vue.component('new-component',{
+            props: ['name'],
+            template:'#new-component'
+        });
+
+        // 可以看做是一个根组件
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                id:100,
+                title :'这是vue对象的title'
+            },
+
+        });
+    </script>
+</body>
+</html>
