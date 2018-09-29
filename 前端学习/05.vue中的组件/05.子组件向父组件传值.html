@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../Vue/vue2.5.17.js"></script>
+
+
+</head>
+<body>
+
+    <template id="sub">
+        <div>这是子组件</div>
+    </template>
+
+
+
+    <div id="app">
+
+        <sub></sub>
+
+    </div>
+
+    <script>
+
+
+        Vue.component('sub',{
+            template:'#sub',
+            methods:{
+                senddata:function () {
+                    // 将helloword传值给父组件
+                    this.$emit('send', 'hello');
+                }
+            }
+        });
+
+        var vm = Vue({
+
+            el:'#app',
+            data:{
+
+            },
+            methods:{
+
+                getdata: function (input) {
+                    alert(input);
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>
