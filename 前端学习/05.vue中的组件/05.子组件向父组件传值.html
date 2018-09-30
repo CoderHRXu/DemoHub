@@ -10,32 +10,37 @@
 </head>
 <body>
 
-    <template id="sub">
-        <div>这是子组件</div>
+
+https://cn.vuejs.org/v2/guide/components.html#%E4%BD%BF%E7%94%A8%E4%BA%8B%E4%BB%B6%E6%8A%9B%E5%87%BA%E4%B8%80%E4%B8%AA%E5%80%BC
+
+    // 子组件定义senddata事件
+    <template id="sub-component">
+        <div><button @click="senddata">这是子组件的按钮</button></div>
     </template>
 
 
 
     <div id="app">
 
-        <sub></sub>
+        <sub-component v-on:send="getdata"></sub-component>
 
     </div>
 
     <script>
 
 
-        Vue.component('sub',{
-            template:'#sub',
-            methods:{
+        Vue.component('sub-component',{
+            template:'#sub-component',
+            methods :{
                 senddata:function () {
                     // 将helloword传值给父组件
+                    console.log('子组件按钮');
                     this.$emit('send', 'hello');
                 }
             }
         });
 
-        var vm = Vue({
+        var vm = new Vue({
 
             el:'#app',
             data:{
