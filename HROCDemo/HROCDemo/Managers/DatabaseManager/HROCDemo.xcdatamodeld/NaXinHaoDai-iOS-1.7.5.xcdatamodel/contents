@@ -42,14 +42,9 @@
         <attribute name="unreadCounts" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userSource" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="additionnalInfo" optional="YES" toMany="YES" deletionRule="Cascade" syncable="YES"/>
-        <relationship name="customer" optional="YES" toMany="YES" deletionRule="Cascade" syncable="YES"/>
-        <relationship name="loans" optional="YES" toMany="YES" deletionRule="Cascade" syncable="YES"/>
-        <relationship name="platformAuthInfo" optional="YES" maxCount="1" deletionRule="Cascade" syncable="YES"/>
-        <relationship name="realNameAuthInfo" optional="YES" maxCount="1" deletionRule="Cascade" syncable="YES"/>
     </entity>
     <elements>
         <element name="AppSetting" positionX="178" positionY="-27" width="128" height="240"/>
-        <element name="User" positionX="-45" positionY="0" width="128" height="510"/>
+        <element name="User" positionX="-45" positionY="0" width="128" height="435"/>
     </elements>
 </model>
