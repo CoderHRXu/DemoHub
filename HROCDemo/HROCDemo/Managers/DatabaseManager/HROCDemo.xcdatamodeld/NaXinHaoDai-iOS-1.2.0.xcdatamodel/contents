@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="AppSetting" representedClassName="AppSetting" syncable="YES" codeGenerationType="class">
+        <attribute name="appType" optional="YES" attributeType="Integer 64" defaultValueString="2" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="appVersion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="buildVersion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="h5Version" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFirstLaunch" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPreVersion" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastAnalysisUploadDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastDataPurgingDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastLaunchDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastPage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdateAlertDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="launchTimes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="CarInfo" representedClassName="CarInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="car1stRegDateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carBrand" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carCardPlateNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carCardPublishDateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carCardRegDateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carCardType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carCardVen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carCardVin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carInsurancePolicyNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carOwnership" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carOwnershipKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carPlateStatus" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="carProperties" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carPropertiesStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carPurchaseDateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carPurchasePrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carSeries" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carTimes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carUsingKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carUsingStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="completeness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isOCRSuccess" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="versionCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="accountStatementImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="carInfoForAccountStatement" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="carLoanStatementImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="carInfoForCarLoanStatement" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="carPhotoImgs" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ImageInfo" inverseName="carInfoForCarPhoto" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="carRegImgs" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ImageInfo" inverseName="carInfoForCarReg" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="commercialInsuranceImgs" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ImageInfo" inverseName="carInfoForCommercialInsurance" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="compulsoryInsuranceImgs" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ImageInfo" inverseName="carInfoForCompulsoryInsurance" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="carInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="driverLicenceImg" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="carInfoForDriverLicence" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="driverLicenseBackImgs" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ImageInfo" inverseName="carInfoFroDriverLicenceBack" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="loan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Loan" inverseName="carInfo" inverseEntity="Loan" syncable="YES"/>
+    </entity>
+    <entity name="CarPhotoInfo" representedClassName="CarPhotoInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="completeness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="versionCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="carPhotoInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="loan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Loan" inverseName="carPhotoInfo" inverseEntity="Loan" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ImageInfo" inverseName="carPhotoInfoForPhotos" inverseEntity="ImageInfo" syncable="YES"/>
+    </entity>
+    <entity name="CompanyInfo" representedClassName="CompanyInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="addrCityCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addrCityText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="completeness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="department" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detailAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="jobCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="joinDateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payDateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentMethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentMethodCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="salary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="socialInsuranceNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitPropertyKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitPropertyStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="versionCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="workYears" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bankStatementImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="companyInfoForBankStatement" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="creditReportImages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="companyInfoForCreditReport" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="companyInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="insuranceImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="companyInfoForInsuranceImgs" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="loan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Loan" inverseName="companyInfo" inverseEntity="Loan" syncable="YES"/>
+        <relationship name="workCerImages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="companyInfoForWorkCer" inverseEntity="ImageInfo" syncable="YES"/>
+    </entity>
+    <entity name="CreditInfo" representedClassName="CreditInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="completeness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="infoType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loanTotalAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maxCreditAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="monthlyRepayment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numOfCreditCard" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="versionCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="bankStatementImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="creditInfoForBankStatementImgs" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="creditReportImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="creditInfoForCreditReport" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="creditInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="fieldTripsInfoImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="creditInfoForFieldTripsInfo" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="insuranceImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="creditInfoForInsuranceImgs" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="letterOfCreditImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="creditInfoForLetterOfCredit" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="loan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Loan" inverseName="creditInfo" inverseEntity="Loan" syncable="YES"/>
+    </entity>
+    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
+        <attribute name="channel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="customerId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="customerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labelName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="saveTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="carInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CarInfo" inverseName="customer" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carPhotoInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CarPhotoInfo" inverseName="customer" inverseEntity="CarPhotoInfo" syncable="YES"/>
+        <relationship name="companyInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CompanyInfo" inverseName="customer" inverseEntity="CompanyInfo" syncable="YES"/>
+        <relationship name="creditInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CreditInfo" inverseName="customer" inverseEntity="CreditInfo" syncable="YES"/>
+        <relationship name="enterpriseInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="EnterpriseInfo" inverseName="customer" inverseEntity="EnterpriseInfo" syncable="YES"/>
+        <relationship name="houseInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HouseInfo" inverseName="customer" inverseEntity="HouseInfo" syncable="YES"/>
+        <relationship name="incomeInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="IncomeInfo" inverseName="customer" inverseEntity="IncomeInfo" syncable="YES"/>
+        <relationship name="personalInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PersonalInfo" inverseName="customer" inverseEntity="PersonalInfo" syncable="YES"/>
+        <relationship name="relativeInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RelativeInfo" inverseName="customer" inverseEntity="RelativeInfo" syncable="YES"/>
+        <relationship name="userInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="customer" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="EnterpriseInfo" representedClassName="EnterpriseInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="completeness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enterpriseAddrCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enterpriseAddrDetailStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enterpriseAddrStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enterpriseFieldType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enterpriseMonthlyTurnover" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enterpriseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enterprisePhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enterpriseRegDateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="jobKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="monthlyRent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="natureOfBusinessSiteCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="natureOfBusinessSiteStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shareRatio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitPropertyKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitPropertyStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="versionCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="workYears" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bankStatementsImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="enterpriseInfoForBankStatements" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="bizLicenceImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="enterpriseInfoForBizLicence" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="creditReportImages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="enterpriseInfoForCreditReport" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="enterpriseInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="enterpriseInfoImages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="enterpriseInfoForInformation" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="enterpriseShareholderImages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="enterpriseInfoForShareholder" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="loan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Loan" inverseName="enterpriseInfo" inverseEntity="Loan" syncable="YES"/>
+        <relationship name="rentContractImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="enterpriseInfoForRentContract" inverseEntity="ImageInfo" syncable="YES"/>
+    </entity>
+    <entity name="HouseInfo" representedClassName="HouseInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="completeness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasHouseStr" optional="YES" attributeType="String" defaultValueString="否" syncable="YES"/>
+        <attribute name="hasSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="houseAddressCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="houseAddressDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="houseAddressStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="houseType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopHouseStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopHouseStatusKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="versionCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="houseInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="houseImages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="houseInfo" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="loan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Loan" inverseName="houseInfo" inverseEntity="Loan" syncable="YES"/>
+    </entity>
+    <entity name="ImageInfo" representedClassName="ImageInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="category" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="contentSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="draftId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="idx" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isUploaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="localUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mediaName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ossUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prodType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sContentUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="subType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="carInfoForAccountStatement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarInfo" inverseName="accountStatementImgs" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carInfoForCarLoanStatement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarInfo" inverseName="carLoanStatementImgs" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carInfoForCarPhoto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarInfo" inverseName="carPhotoImgs" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carInfoForCarReg" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarInfo" inverseName="carRegImgs" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carInfoForCommercialInsurance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarInfo" inverseName="commercialInsuranceImgs" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carInfoForCompulsoryInsurance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarInfo" inverseName="compulsoryInsuranceImgs" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carInfoForDriverLicence" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarInfo" inverseName="driverLicenceImg" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carInfoFroDriverLicenceBack" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarInfo" inverseName="driverLicenseBackImgs" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carPhotoInfoForPhotos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarPhotoInfo" inverseName="photos" inverseEntity="CarPhotoInfo" syncable="YES"/>
+        <relationship name="companyInfoForBankStatement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompanyInfo" inverseName="bankStatementImgs" inverseEntity="CompanyInfo" syncable="YES"/>
+        <relationship name="companyInfoForCreditReport" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompanyInfo" inverseName="creditReportImages" inverseEntity="CompanyInfo" syncable="YES"/>
+        <relationship name="companyInfoForInsuranceImgs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompanyInfo" inverseName="insuranceImgs" inverseEntity="CompanyInfo" syncable="YES"/>
+        <relationship name="companyInfoForWorkCer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompanyInfo" inverseName="workCerImages" inverseEntity="CompanyInfo" syncable="YES"/>
+        <relationship name="creditInfoForBankStatementImgs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreditInfo" inverseName="bankStatementImgs" inverseEntity="CreditInfo" syncable="YES"/>
+        <relationship name="creditInfoForCreditReport" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreditInfo" inverseName="creditReportImgs" inverseEntity="CreditInfo" syncable="YES"/>
+        <relationship name="creditInfoForFieldTripsInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreditInfo" inverseName="fieldTripsInfoImgs" inverseEntity="CreditInfo" syncable="YES"/>
+        <relationship name="creditInfoForInsuranceImgs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreditInfo" inverseName="insuranceImgs" inverseEntity="CreditInfo" syncable="YES"/>
+        <relationship name="creditInfoForLetterOfCredit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreditInfo" inverseName="letterOfCreditImgs" inverseEntity="CreditInfo" syncable="YES"/>
+        <relationship name="enterpriseInfoForBankStatements" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EnterpriseInfo" inverseName="bankStatementsImgs" inverseEntity="EnterpriseInfo" syncable="YES"/>
+        <relationship name="enterpriseInfoForBizLicence" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EnterpriseInfo" inverseName="bizLicenceImgs" inverseEntity="EnterpriseInfo" syncable="YES"/>
+        <relationship name="enterpriseInfoForCreditReport" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EnterpriseInfo" inverseName="creditReportImages" inverseEntity="EnterpriseInfo" syncable="YES"/>
+        <relationship name="enterpriseInfoForInformation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EnterpriseInfo" inverseName="enterpriseInfoImages" inverseEntity="EnterpriseInfo" syncable="YES"/>
+        <relationship name="enterpriseInfoForRentContract" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EnterpriseInfo" inverseName="rentContractImgs" inverseEntity="EnterpriseInfo" syncable="YES"/>
+        <relationship name="enterpriseInfoForShareholder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EnterpriseInfo" inverseName="enterpriseShareholderImages" inverseEntity="EnterpriseInfo" syncable="YES"/>
+        <relationship name="houseInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HouseInfo" inverseName="houseImages" inverseEntity="HouseInfo" syncable="YES"/>
+        <relationship name="incomeInfoForCreditReport" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IncomeInfo" inverseName="creditReportImgs" inverseEntity="IncomeInfo" syncable="YES"/>
+        <relationship name="incomeInfoForSalaryReport" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IncomeInfo" inverseName="salaryReportImgs" inverseEntity="IncomeInfo" syncable="YES"/>
+        <relationship name="personalInfoForIdCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonalInfo" inverseName="idCardImg" inverseEntity="PersonalInfo" syncable="YES"/>
+        <relationship name="personalInfoForIdCardBack" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonalInfo" inverseName="idCardBackImg" inverseEntity="PersonalInfo" syncable="YES"/>
+    </entity>
+    <entity name="IncomeInfo" representedClassName="IncomeInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="completeness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="freelanceSalary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="freelanceSource" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="versionCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="creditReportImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="incomeInfoForCreditReport" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="incomeInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="loan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Loan" inverseName="incomeInfo" inverseEntity="Loan" syncable="YES"/>
+        <relationship name="salaryReportImgs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="incomeInfoForSalaryReport" inverseEntity="ImageInfo" syncable="YES"/>
+    </entity>
+    <entity name="Loan" representedClassName="Loan" syncable="YES" codeGenerationType="class">
+        <attribute name="borrowerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="draftId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isDraft" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="loanId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="loanType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="plateNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="saveTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startAuditTime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="carInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CarInfo" inverseName="loan" inverseEntity="CarInfo" syncable="YES"/>
+        <relationship name="carPhotoInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CarPhotoInfo" inverseName="loan" inverseEntity="CarPhotoInfo" syncable="YES"/>
+        <relationship name="companyInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CompanyInfo" inverseName="loan" inverseEntity="CompanyInfo" syncable="YES"/>
+        <relationship name="creditInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CreditInfo" inverseName="loan" inverseEntity="CreditInfo" syncable="YES"/>
+        <relationship name="enterpriseInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="EnterpriseInfo" inverseName="loan" inverseEntity="EnterpriseInfo" syncable="YES"/>
+        <relationship name="houseInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HouseInfo" inverseName="loan" inverseEntity="HouseInfo" syncable="YES"/>
+        <relationship name="incomeInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="IncomeInfo" inverseName="loan" inverseEntity="IncomeInfo" syncable="YES"/>
+        <relationship name="personalInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PersonalInfo" inverseName="loan" inverseEntity="PersonalInfo" syncable="YES"/>
+        <relationship name="relativeInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RelativeInfo" inverseName="loan" inverseEntity="RelativeInfo" syncable="YES"/>
+        <relationship name="userInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="loans" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="PersonalInfo" representedClassName="PersonalInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="accptDiscountKey" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="accptDiscountStr" optional="YES" attributeType="String" defaultValueString="否" syncable="YES"/>
+        <attribute name="age" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="applyBuzTypeKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="applyBuzTypeStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="backSuccessFlag" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardAddCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardAddDetialStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardAddStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardBackSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardBackUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardBackUrlOrig" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardExpireDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardFrontSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardFrontUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardFrontUrlOrig" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="childrenCountStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="completeness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="educationKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="educationStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frontSuccessFlag" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="houseAddDetialStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="houseAddressCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="houseAddressStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="housePhoneNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="housingCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="im1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="installment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="installmentStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isChanganInsureKey" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="isChanganInsureStr" optional="YES" attributeType="String" defaultValueString="否" syncable="YES"/>
+        <attribute name="jobKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lendRate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="livingTypeKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="livingTypeStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loanChannelId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loanMoneyStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loanPurposesKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loanPurposesStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maritalStatusKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maritalStatusStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moveToDateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="otherLoanPurpose" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneServicePwd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rentStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repaymentMmethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settledFromStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sexKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sexStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="supportPeopleCount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="versionCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="zxfRateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="personalInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="idCardBackImg" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="personalInfoForIdCardBack" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="idCardImg" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ImageInfo" inverseName="personalInfoForIdCard" inverseEntity="ImageInfo" syncable="YES"/>
+        <relationship name="loan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Loan" inverseName="personalInfo" inverseEntity="Loan" syncable="YES"/>
+    </entity>
+    <entity name="PlatformAuthInfo" representedClassName="PlatformAuthInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roleName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="platformAuthInfo" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="RealNameAuthInfo" representedClassName="RealNameAuthInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="identityNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="realNameAuthInfo" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="RelativeInfo" representedClassName="RelativeInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="colleagueKnownKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="colleagueKnownStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="colleagueName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="colleaguePhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="colleagueRemarks" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="completeness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="immediateFamilyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="immediateFamilyPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="immediateFamilyRelation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="immediateKnownKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="immediateKnownStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="immediateRemarks" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="immediateWorkUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeCardNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeJob" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeJobCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeJobStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeKnownKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeKnownStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativePhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeRemarks" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeWorkUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeWorkUnitAddrCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeWorkUnitAddrDetailStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeWorkUnitAddrStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeWorkUnitPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="versionCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="relativeInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="loan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Loan" inverseName="relativeInfo" inverseEntity="Loan" syncable="YES"/>
+        <relationship name="relatives" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RelativePersonalInfo" inverseName="relationsForRelativeInfo" inverseEntity="RelativePersonalInfo" syncable="YES"/>
+    </entity>
+    <entity name="RelativePersonalInfo" representedClassName="RelativePersonalInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="relationshipType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeCardNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeKnownKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeKnownStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativePhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeRelationshipKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeRelationshipStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeRemarks" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeWorkUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationsForRelativeInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RelativeInfo" inverseName="relatives" inverseEntity="RelativeInfo" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="borrowerAuditEntrance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="empNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasNewApply" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="iconPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isManagerRandom" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPlanVisible" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPlatformAuth" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isRealNameAuth" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loggedIn" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="loginDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="managerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderTicket" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scores" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="showButtonStatus" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unreadCounts" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userRole" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="userInfo" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="loans" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Loan" inverseName="userInfo" inverseEntity="Loan" syncable="YES"/>
+        <relationship name="platformAuthInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PlatformAuthInfo" inverseName="user" inverseEntity="PlatformAuthInfo" syncable="YES"/>
+        <relationship name="realNameAuthInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RealNameAuthInfo" inverseName="user" inverseEntity="RealNameAuthInfo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AppSetting" positionX="178" positionY="-27" width="128" height="240"/>
+        <element name="CarInfo" positionX="-495" positionY="579" width="128" height="540"/>
+        <element name="CarPhotoInfo" positionX="-288" positionY="9" width="128" height="135"/>
+        <element name="CompanyInfo" positionX="-189" positionY="27" width="128" height="435"/>
+        <element name="CreditInfo" positionX="-288" positionY="27" width="128" height="285"/>
+        <element name="Customer" positionX="-279" positionY="36" width="128" height="330"/>
+        <element name="EnterpriseInfo" positionX="-191" positionY="-126" width="128" height="465"/>
+        <element name="HouseInfo" positionX="-495" positionY="447" width="128" height="240"/>
+        <element name="ImageInfo" positionX="7" positionY="441" width="128" height="720"/>
+        <element name="IncomeInfo" positionX="-191" positionY="288" width="128" height="180"/>
+        <element name="Loan" positionX="-342" positionY="45" width="128" height="375"/>
+        <element name="PersonalInfo" positionX="-497" positionY="-27" width="128" height="990"/>
+        <element name="PlatformAuthInfo" positionX="369" positionY="366" width="128" height="105"/>
+        <element name="RealNameAuthInfo" positionX="351" positionY="117" width="128" height="90"/>
+        <element name="RelativeInfo" positionX="-198" positionY="423" width="128" height="525"/>
+        <element name="RelativePersonalInfo" positionX="-279" positionY="36" width="128" height="225"/>
+        <element name="User" positionX="-45" positionY="0" width="128" height="465"/>
+    </elements>
+</model>

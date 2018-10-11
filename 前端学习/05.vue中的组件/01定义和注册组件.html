@@ -14,7 +14,7 @@
             {{msg}}<br>
             <a href="#" @click="login">登录</a>
             <span>这是account组件</span>
-            <a href="#">注册</a>
+            <a href="#" @click="register">注册</a>
         </div>
 
     </template>
@@ -58,7 +58,7 @@
         Vue.component('login', login);
 
 
-        // 2.0 定义全局组件写法2
+        // 2.0 定义全局组件 写法2
         Vue.component('register',{
             template:'<h1>注册页面</h1>'
         });
@@ -76,6 +76,9 @@
             methods:{
                 login : function () {
                     alert('login')
+                },
+                register: function () {
+                    alert('register');
                 }
             },
         });

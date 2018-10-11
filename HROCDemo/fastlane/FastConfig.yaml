@@ -1,0 +1,55 @@
+
+# 只修改此配置文件，对fastfile文件不做改动
+# YAML 数据结构可以用类似大纲的缩排方式呈现，结构通过缩进来表示，数组通过减号“-”来表示，map结构里面的key/value对用冒号“:”来分隔
+# 配置完，可使用 fastlane cy 来检查YAML格式是否正确。 cy: check YAML 的缩写
+# YAML 百科：http://baike.baidu.com/link?url=t1dstphqFl3BVDHEaOSBJ2iqgChmDSU4olzmfm3mo16Mi3rRZXPurmLsXPG-W4yjK_htGDbO0rexCP_LgrbK0q
+
+# ITC 开发者帐号
+username: luoyongbao115@sunfit.cn
+password: NXhd123456
+
+# App 名字 使用英文字母
+app_name: HROCDemo
+
+# 工程里要用到的 bundle Id
+bundle_id:
+  - com.rjs.nxhd
+  - com.rjs.nxhdbeta
+# Ttel中的产品 ID
+# 1001：贷贷通   1002：疾风  1003：纳鑫好贷
+# 1011：乐位    1012：顺位  1013：车生活
+# 1021：鲸知
+# 1031：Ttel
+ttel_product_id: 1003
+
+# 给 fastlane 的match action 使用
+match:
+ # 证书和PP文件的Git仓库
+ git_url: http://MLRC082:rjs123@git.dev.rjs.com/iOS-Team/Certificate.git
+ # 所在分支
+ git_brunch: naxin
+
+# 给不同的lane 指定参数
+lane:
+
+ sit:
+   # 打SIT包要用到的 scheme
+  scheme: HROCDemo-SIT
+  app_identifier: com.rjs.nxhdbeta
+ uat:
+   # 打UAT包要用到的 scheme
+  scheme: HROCDemo-UAT
+  app_identifier: com.rjs.nxhdbeta
+ pro:
+   # 打PRO包要用到的 scheme
+  scheme: HROCDemo-PRO
+  app_identifier: com.rjs.nxhd
+
+#提审，上传到ITC
+ dep:
+  # 提审包使用的 scheme
+  scheme: HROCDemo-PRO
+  # 提审包使用的 bundle_id
+  app_identifier: com.rjs.nxhd
+  # ITC 开发者帐号
+  username: luoyongbao115@sunfit.cn

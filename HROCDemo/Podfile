@@ -1,0 +1,33 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
+use_frameworks!
+inhibit_all_warnings!
+
+project 'HROCDemo.xcodeproj'
+
+target 'HROCDemo' do
+
+pod 'YTKNetwork'                    #YTK 网络请求库
+# pod 'MagicalRecord'                 #CoreData 封装
+pod 'YYKit', '~>1.0.9'              #YYKit
+
+pod 'MBProgressHUD', '0.9.2'
+# pod 'Charts', '3.0.2'
+pod 'Masonry'
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'SDWebImage', '~> 3.8.2'
+pod 'SMPageControl'
+# pod 'ActionSheetPicker-3.0'
+pod 'SSZipArchive'
+pod 'IQKeyboardManager'
+pod 'OpenShare'
+# pod 'UMengAnalytics-NO-IDFA'
+# pod 'Zhugeio'
+# pod 'GTSDK'
+#pod 'GTSDK', '~> 1.6.2.0'
+
+
+pod 'InputKit'
+end

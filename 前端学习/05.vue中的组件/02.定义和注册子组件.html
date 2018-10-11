@@ -26,7 +26,12 @@
         // 在账号组件中定义一个子组件 (局部组件，子组件)
         components:{
             'login':{
-                template:'<h2>登录子组件</h2>'
+                template:'<div><h2>登录子组件</h2><xxx></xxx></div>',
+                components: {
+                    'xxx':{
+                        template:'<h3>这是孙子组件</h3>'
+                    }
+                }
             }
         }
 

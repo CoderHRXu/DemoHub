@@ -1,0 +1,29 @@
+import_from_git(url: 'http://git.dev.rjs.com/iOS-Team/Fastlanes.git')
+    
+    lane :pemInfo do |options|
+        
+        pem(
+            app_identifier: "com.rjs.nxhdbeta",
+            p12_password: "rjs123",
+            development: true,
+            output_path: "./apns/nxhdbeta/development"
+            )
+        pem(
+            app_identifier: "com.rjs.nxhd",
+            p12_password: "rjs123",
+            development: true,
+            output_path: "./apns/nxhd/development"
+            )
+        pem(
+            app_identifier: "com.rjs.nxhdbeta",
+            p12_password: "rjs123",
+            output_path: "./apns/nxhdbeta/production"
+            )
+        pem(
+            app_identifier: "com.rjs.nxhd",
+            p12_password: "rjs123",
+            output_path: "./apns/nxhd/production"
+            )
+        
+    end
+    

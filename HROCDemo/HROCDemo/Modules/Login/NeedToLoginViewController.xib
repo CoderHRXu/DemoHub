@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NeedToLoginViewController">
+            <connections>
+                <outlet property="loginBtn" destination="Ca2-uz-oDH" id="xEb-md-prI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwt-O9-QLF" userLabel="Center View">
+                    <rect key="frame" x="0.0" y="194" width="375" height="280"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="def_notloggedin" translatesAutoresizingMaskIntoConstraints="NO" id="Cyv-gB-Glp">
+                            <rect key="frame" x="143" y="0.0" width="90" height="162"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="162" id="Y7x-MN-hWf"/>
+                                <constraint firstAttribute="width" constant="90" id="uY5-O6-NDF"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca2-uz-oDH">
+                            <rect key="frame" x="118" y="234" width="140" height="40"/>
+                            <color key="backgroundColor" red="0.80784313725490198" green="0.65490196078431373" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="445-tx-V19"/>
+                                <constraint firstAttribute="height" constant="40" id="W9w-CQ-3ws"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <state key="normal" title="点此登录">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Ca2-uz-oDH" firstAttribute="top" secondItem="Cyv-gB-Glp" secondAttribute="bottom" constant="72" id="AFa-N6-fsU"/>
+                        <constraint firstItem="Cyv-gB-Glp" firstAttribute="centerX" secondItem="Jwt-O9-QLF" secondAttribute="centerX" id="Cfk-6n-z1b"/>
+                        <constraint firstAttribute="height" constant="280" id="a6o-7Z-3RF"/>
+                        <constraint firstItem="Ca2-uz-oDH" firstAttribute="centerX" secondItem="Jwt-O9-QLF" secondAttribute="centerX" id="gb6-2n-8Mp"/>
+                        <constraint firstItem="Cyv-gB-Glp" firstAttribute="top" secondItem="Jwt-O9-QLF" secondAttribute="top" id="sce-RS-dM8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Jwt-O9-QLF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="1sC-Dt-UVp"/>
+                <constraint firstAttribute="trailing" secondItem="Jwt-O9-QLF" secondAttribute="trailing" id="9TX-Ed-iEV"/>
+                <constraint firstItem="Jwt-O9-QLF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ggi-PA-Iv8"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="def_notloggedin" width="90" height="161"/>
+    </resources>
+</document>
