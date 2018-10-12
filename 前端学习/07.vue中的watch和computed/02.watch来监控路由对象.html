@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../Vue/vue2.5.17.js"></script>
+    <script src="../Vue/vue-router3.0.1.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+
+    <router-link to="/login">登录</router-link>
+
+    <router-link to="/register/user">注册</router-link>
+
+    <!--router-view用于占位-->
+    <router-view></router-view>
+</div>
+
+<script>
+
+    var login = Vue.extend({
+        template:'<div><h1>登录</h1></div>'
+    });
+
+    var register = Vue.extend({
+        template:'<div><h1>注册{{name}}</h1></div>',
+        data:function () {
+            return {
+                name : ''
+            }
+        },
+
+        created: function () {
+            this.name =  this.$route.params.name1;
+        }
+
+    });
+
+    // 2.0 实例化路由对象
+    var router = new VueRouter({
+
+        // 注意这里的key是routes
+        routes:[
+            { path:'/', component:login},// 表示根路径默认指向login组件
+            { path:'/login', component:login},
+            { path:'/register/:name1', component:register},
+        ]
+    });
+
+    // 3.0 开启路由
+    var app = new  Vue({
+        el:'#app',
+        router : router ,// 开启路由对象
+        watch:{
+            '$route':function (newRoute, oldRoute) {
+                console.log(newRoute);
+                console.log(oldRoute);
+                // 将来就可以在这个函数中获取到当前的路由规则字符串是谁
+                // 可以针对一些特定的页面做一些处理 比如页面左上角的返回按钮的隐藏与显示
+            }
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
