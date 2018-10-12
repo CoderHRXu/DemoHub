@@ -3,7 +3,7 @@
 //  HROCDemo
 //
 //  Created by Jeremy on 2016/11/24.
-//  Copyright © 2016年 RJS. All rights reserved.
+//  Copyright © 2018年 XHR. All rights reserved.
 //
 
 #import "NeedToLoginViewController.h"

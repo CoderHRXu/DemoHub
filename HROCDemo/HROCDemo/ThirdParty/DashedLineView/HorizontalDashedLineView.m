@@ -3,7 +3,7 @@
 //  Dingdong
 //
 //  Created by Jeremy on 2016/10/24.
-//  Copyright © 2016年 RJS. All rights reserved.
+//  Copyright © 2018年 XHR. All rights reserved.
 //
 
 #import "HorizontalDashedLineView.h"

@@ -3,7 +3,7 @@
 //  Dingdong
 //
 //  Created by Jeremy on 2016/11/22.
-//  Copyright © 2016年 RJS. All rights reserved.
+//  Copyright © 2018年 XHR. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
