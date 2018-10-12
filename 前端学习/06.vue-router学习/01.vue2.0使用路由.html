@@ -12,7 +12,7 @@
 
             <router-link to="/login">登录</router-link>
 
-            <router-link to="/register">注册</router-link>
+            <router-link to="/register/user">注册</router-link>
 
             <!--router-view用于占位-->
             <router-view></router-view>
@@ -22,16 +22,27 @@
     <script>
 
         // 1.0 准备组件
-        var App = Vue.extend({
-
-        });
+//        var App = Vue.extend({
+//
+//        });
 
         var login = Vue.extend({
             template:'<div><h1>登录</h1></div>'
         });
 
         var register = Vue.extend({
-            template:'<div><h1>注册</h1></div>'
+            template:'<div><h1>注册{{name}}</h1></div>',
+            data:function () {
+                return {
+                    name : ''
+                }
+            },
+
+            created: function () {
+                this.name =  this.$route.params.name1;
+            }
+
+
         });
 
         // 2.0 实例化路由对象
@@ -39,9 +50,9 @@
 
             // 注意这里的key是routes
             routes:[
-                {path:'/', component:login},// 表示根路径默认指向login组件
-                {path:'/login', component:login},
-                {path:'/register', component:register},
+                { path:'/', component:login},// 表示根路径默认指向login组件
+                { path:'/login', component:login},
+                { path:'/register/:name1', component:register},
             ]
         });
 
