@@ -10,15 +10,45 @@
 
     <div id="app">
 
+            <router-link to="/login">登录</router-link>
+
+            <router-link to="/register">注册</router-link>
+
+            <!--router-view用于占位-->
+            <router-view></router-view>
     </div>
 
 
     <script>
 
+        // 1.0 准备组件
+        var App = Vue.extend({
 
-        // 开始路由代码编写
+        });
+
+        var login = Vue.extend({
+            template:'<div><h1>登录</h1></div>'
+        });
+
+        var register = Vue.extend({
+            template:'<div><h1>注册</h1></div>'
+        });
+
+        // 2.0 实例化路由对象
+        var router = new VueRouter({
+
+            // 注意这里的key是routes
+            routes:[
+                {path:'/', component:login},// 表示根路径默认指向login组件
+                {path:'/login', component:login},
+                {path:'/register', component:register},
+            ]
+        });
+
+        // 3.0 开启路由
         var app = new  Vue({
-
+            el:'#app',
+            router : router // 开启路由对象
         });
 
     </script>
