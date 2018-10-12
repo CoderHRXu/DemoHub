@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../Vue/vue2.5.17.js"></script>
+    <script src="../Vue/vue-router3.0.1.js"></script>
+
+</head>
+<body>
+
+    vue中的watch类似OC中的KVO
+
+    <div id="app">
+        <input type="text" v-model="firstName">
+        <input type="text" v-model="secondName">
+        {{fullName}}
+    </div>
+
+
+<script>
+
+    var app = new Vue({
+        el:"#app",
+        data:{
+
+            firstName:'James',
+            secondName:'Bound',
+            fullName : 'James.Bound',
+
+
+        },
+
+        watch:{
+
+            firstName:function (newValue, oldValue) {
+//                console.log(newValue + '|'+ oldValue);
+                this.fullName = this.firstName + '.' + this.secondName;
+            },
+
+            secondName:function (newValue, oldValue) {
+                this.fullName = this.firstName + '.' + this.secondName;
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>
