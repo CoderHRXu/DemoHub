@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../Vue/vue2.5.17.js"></script>
+    <script src="../Vue/vue-router3.0.1.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+
+    <router-link to="/account/register">注册</router-link>
+    <router-link to="/account/login">登录</router-link>
+    <router-view></router-view>
+
+</div>
+
+<script>
+
+
+    // 1.0 准备组件
+    var App = Vue.extend();
+
+    var account = Vue.extend({
+        template:'<div><h1>账号组件</h1><router-view></router-view></div>'
+
+    });
+
+    var login = Vue.extend({
+        template: '<div><h1>登录</h1></div>'
+    });
+
+    var register = Vue.extend({
+        template:'<div><h1>注册</h1></div>'
+    });
+
+
+    // 2.0 实例化路由对象
+    var router = new VueRouter({
+        routes:[
+            {
+                path:'/account',
+                component:account,
+                children:[
+                    {
+                        path:'login',
+                        component:login
+                    },
+
+                    {
+                        path: 'register',
+                        component: register
+                    }
+                ]
+            }
+        ]
+    });
+
+    // 3.0 使路由生效
+
+    new Vue({
+
+        el:"#app",
+        router :router
+    });
+
+</script>
+
+</body>
+</html>
