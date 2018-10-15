@@ -1,0 +1,33 @@
+{
+  "name": "vue-project-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --open --port 5--8"
+  },
+  "author": "xuhaoran",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.11.1",
+    "less": "^2.7.2",
+    "less-loader": "^2.7.2",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.0"
+  },
+  "dependencies": {
+    "i": "^0.3.6",
+    "vue": "^2.5.17"
+  }
+}
