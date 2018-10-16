@@ -14,9 +14,17 @@
 
 <script>
 
+
+    function add(x , y) {
+        return console.log( x + y ) ;
+    }
+
+
+    // import calc from 'calc.js';
+    import {add} from 'calc.js';
+
     // 负责导出 .vue这个组件对象(它本质是一个vue对象，所以vue中该定义的元素都可以使用)
-
-
+    // module.exports = {  // es5 导出对象的方法
     export default {
             data(){        // 等价于 es5 => data:function () {
                 return {
@@ -24,7 +32,10 @@
                 };
             },
         methods:{
-
+//            add : add // es5 写法
+                add, // es6 写法
+                add1 : calc.add,
+                substric: calc.substict,
         },
         created(){
 
