@@ -1,0 +1,43 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+use_frameworks!
+
+
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    
+    
+    def ui_pods
+
+        pod 'PullToRefreshKit' #Swift版下拉刷新，支持横向侧拉
+        pod 'SnapKit'
+        pod 'ESTabBarController-swift'
+        pod 'IQKeyboardManagerSwift'
+        pod 'Kingfisher'
+
+
+    end
+
+    def net_pod
+        
+    end
+
+    def common_pod
+    	pod 'SwifterSwift'
+        pod 'R.swift'
+    end
+
+    def sdk_pods
+        
+    end
+    
+    
+    
+    
+     #A lightweight, pure-Swift library for downloading and caching images from the web.
+    target 'HRSwiftDemo' do  
+        ui_pods
+        common_pod
+        net_pod
+        sdk_pods
+    end
+

@@ -12,9 +12,13 @@
 		180C26442170F2B3001E458E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180C26422170F2B3001E458E /* Main.storyboard */; };
 		180C26462170F2B5001E458E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180C26452170F2B5001E458E /* Assets.xcassets */; };
 		180C26492170F2B5001E458E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180C26472170F2B5001E458E /* LaunchScreen.storyboard */; };
+		7B4C7D178348FE595D57446E /* Pods_HRSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85656C6E8E7087274576316D /* Pods_HRSwiftDemo.framework */; };
+		ADACAC4A2178723E00E93518 /* HRRootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC492178723E00E93518 /* HRRootTabBarController.swift */; };
+		ADACAC512178757200E93518 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC502178757200E93518 /* ConfigManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1160B99F11EB38F792B34DAC /* Pods-HRSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		180C263B2170F2B3001E458E /* HRSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		180C263E2170F2B3001E458E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		180C26402170F2B3001E458E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		180C26452170F2B5001E458E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180C26482170F2B5001E458E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180C264A2170F2B5001E458E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85656C6E8E7087274576316D /* Pods_HRSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HRSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADACAC492178723E00E93518 /* HRRootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRRootTabBarController.swift; sourceTree = "<group>"; };
+		ADACAC502178757200E93518 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		C8825A44E2EB178ED6482624 /* Pods-HRSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4C7D178348FE595D57446E /* Pods_HRSwiftDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				180C263D2170F2B3001E458E /* HRSwiftDemo */,
 				180C263C2170F2B3001E458E /* Products */,
+				676B11F7BA3C5AF4B1F45BE6 /* Pods */,
+				53E3E62A49342867C2EA048D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +65,9 @@
 		180C263D2170F2B3001E458E /* HRSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				ADACAC47217871EB00E93518 /* Modules */,
+				ADACAC4E2178753500E93518 /* Manager */,
+				ADACAC4C2178748B00E93518 /* SupportingFiles */,
 				180C263E2170F2B3001E458E /* AppDelegate.swift */,
 				180C26402170F2B3001E458E /* ViewController.swift */,
 				180C26422170F2B3001E458E /* Main.storyboard */,
@@ -64,6 +78,70 @@
 			path = HRSwiftDemo;
 			sourceTree = "<group>";
 		};
+		53E3E62A49342867C2EA048D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85656C6E8E7087274576316D /* Pods_HRSwiftDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		676B11F7BA3C5AF4B1F45BE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1160B99F11EB38F792B34DAC /* Pods-HRSwiftDemo.debug.xcconfig */,
+				C8825A44E2EB178ED6482624 /* Pods-HRSwiftDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ADACAC47217871EB00E93518 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC4D2178751400E93518 /* Home */,
+				ADACAC482178720000E93518 /* Base */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		ADACAC482178720000E93518 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC492178723E00E93518 /* HRRootTabBarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ADACAC4C2178748B00E93518 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		ADACAC4D2178751400E93518 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ADACAC4E2178753500E93518 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC4F2178754F00E93518 /* ConfigManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		ADACAC4F2178754F00E93518 /* ConfigManager */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC502178757200E93518 /* ConfigManager.swift */,
+			);
+			path = ConfigManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 180C264D2170F2B5001E458E /* Build configuration list for PBXNativeTarget "HRSwiftDemo" */;
 			buildPhases = (
+				5FCB667B19ED74B41E063588 /* [CP] Check Pods Manifest.lock */,
+				ADACAC4B2178735500E93518 /* R.SwiftScript */,
 				180C26372170F2B3001E458E /* Sources */,
 				180C26382170F2B3001E458E /* Frameworks */,
 				180C26392170F2B3001E458E /* Resources */,
+				89716461AA26B14028A81A67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +211,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5FCB667B19ED74B41E063588 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HRSwiftDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89716461AA26B14028A81A67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADACAC4B2178735500E93518 /* R.SwiftScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.SwiftScript;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"R.swift update\"\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/HRSwiftDemo/SupportingFiles\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		180C26372170F2B3001E458E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				180C26412170F2B3001E458E /* ViewController.swift in Sources */,
+				ADACAC4A2178723E00E93518 /* HRRootTabBarController.swift in Sources */,
 				180C263F2170F2B3001E458E /* AppDelegate.swift in Sources */,
+				ADACAC512178757200E93518 /* ConfigManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,9 +440,11 @@
 		};
 		180C264E2170F2B5001E458E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1160B99F11EB38F792B34DAC /* Pods-HRSwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HRSwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,6 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuhaoran.HRSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,9 +460,11 @@
 		};
 		180C264F2170F2B5001E458E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8825A44E2EB178ED6482624 /* Pods-HRSwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HRSwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuhaoran.HRSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
