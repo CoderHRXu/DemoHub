@@ -54,6 +54,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1803B74F2178DF7800958714 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		180C26322170F2B3001E458E = {
 			isa = PBXGroup;
 			children = (
@@ -80,10 +87,6 @@
 				ADACAC4E2178753500E93518 /* Manager */,
 				ADACAC4C2178748B00E93518 /* SupportingFiles */,
 				180C26402170F2B3001E458E /* ViewController.swift */,
-				180C26422170F2B3001E458E /* Main.storyboard */,
-				180C26452170F2B5001E458E /* Assets.xcassets */,
-				180C26472170F2B5001E458E /* LaunchScreen.storyboard */,
-				180C264A2170F2B5001E458E /* Info.plist */,
 				ADACAC5C217881AF00E93518 /* Images.xcassets */,
 			);
 			path = HRSwiftDemo;
@@ -127,6 +130,10 @@
 		ADACAC4C2178748B00E93518 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				180C26422170F2B3001E458E /* Main.storyboard */,
+				180C26452170F2B5001E458E /* Assets.xcassets */,
+				180C26472170F2B5001E458E /* LaunchScreen.storyboard */,
+				180C264A2170F2B5001E458E /* Info.plist */,
 				ADACAC5A21787FEE00E93518 /* R.generated.swift */,
 			);
 			path = SupportingFiles;
@@ -142,6 +149,7 @@
 		ADACAC4E2178753500E93518 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1803B74F2178DF7800958714 /* NetworkManager */,
 				ADACAC4F2178754F00E93518 /* ConfigManager */,
 			);
 			path = Manager;
@@ -275,11 +283,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 			);
@@ -287,11 +300,16 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 			);
@@ -482,7 +500,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = HRSwiftDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HRSwiftDemo/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,7 +522,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = HRSwiftDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HRSwiftDemo/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

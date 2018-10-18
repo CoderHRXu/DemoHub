@@ -19,7 +19,11 @@ use_frameworks!
     end
 
     def net_pod
-        
+        pod 'Moya'
+        pod 'Moya/RxSwift'
+        pod 'RxSwift'
+        pod 'PromiseKit'
+        pod 'PromiseKit/Alamofire'
     end
 
     def common_pod
