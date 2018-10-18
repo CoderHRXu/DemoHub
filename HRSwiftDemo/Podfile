@@ -10,7 +10,8 @@ use_frameworks!
 
         pod 'PullToRefreshKit' #Swift版下拉刷新，支持横向侧拉
         pod 'SnapKit'
-        pod 'ESTabBarController-swift', :git => 'https://github.com/Aite/ESTabBarController', :branch => 'swift-4.2'
+        pod 'ESTabBarController-swift', '2.5'
+#        pod 'ESTabBarController-swift', :git => 'https://github.com/Aite/ESTabBarController', :branch => 'swift-4.2'
         pod 'IQKeyboardManagerSwift'
         pod 'Kingfisher'
 
@@ -44,7 +45,7 @@ use_frameworks!
     post_install do |installer|
 
         installer.pods_project.targets.each do |target|
-            if ['ESTabBarController-swift'].include? target.name
+            if ['ESTabBarController-swift', 'R.swift'].include? target.name
                 target.build_configurations.each do |config|
                 config.build_settings['SWIFT_VERSION'] = '4.1.3'
                 end

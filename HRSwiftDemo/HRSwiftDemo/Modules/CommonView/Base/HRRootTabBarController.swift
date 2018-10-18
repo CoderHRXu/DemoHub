@@ -51,7 +51,8 @@ class HRRootTabBarController: ESTabBarController {
         var itemContentView : ESTabBarItemContentView?
         // 加号特殊处理
         if title == nil {
-            itemContentView                 = ExampleBasicContentView.init(frame: CGRect.init(x: 0, y: 0, width: 60, height: 60))
+            itemContentView                 = ExampleBasicContentView.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100))
+            
         }else{
             itemContentView                 = ExampleBouncesContentView.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
             itemContentView?.imageView.size = CGSize(width: 40, height: 30)
@@ -66,8 +67,6 @@ class HRRootTabBarController: ESTabBarController {
 
     
     private func addChildVC(){
-        
-        let sb = R.storyboard.main()
         
         
         let homeVC              = setUpOneChildView(ViewController(), image: R.image.tabbar_notify_normal()!, selectedImage: R.image.tabbar_notify_selected()!, title: "动态")
