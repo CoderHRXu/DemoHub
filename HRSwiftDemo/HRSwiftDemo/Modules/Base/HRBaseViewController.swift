@@ -15,8 +15,6 @@ enum NaviBarStyle : Int {
     case darkGray       = 3
 }
 
-
-
 class HRBaseViewController: UIViewController {
 
     

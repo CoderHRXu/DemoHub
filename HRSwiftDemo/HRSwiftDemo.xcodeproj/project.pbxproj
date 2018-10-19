@@ -21,6 +21,11 @@
 		ADACAC5B21787FEE00E93518 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC5A21787FEE00E93518 /* R.generated.swift */; };
 		ADACAC5F21796BFF00E93518 /* HRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC5E21796BFF00E93518 /* HRBaseViewController.swift */; };
 		ADACAC612179751200E93518 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC602179751200E93518 /* HomeViewController.swift */; };
+		ADACAC63217977B100E93518 /* TargetType+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC62217977B100E93518 /* TargetType+Base.swift */; };
+		ADACAC652179791F00E93518 /* HRBaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC642179791F00E93518 /* HRBaseProvider.swift */; };
+		ADACAC6B217984C200E93518 /* HRHomeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC6A217984C200E93518 /* HRHomeApiService.swift */; };
+		ADACAC6E2179A8D100E93518 /* HRNetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC6D2179A8D100E93518 /* HRNetworkPlugin.swift */; };
+		ADACAC712179A94900E93518 /* HRLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC702179A90500E93518 /* HRLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		ADACAC5A21787FEE00E93518 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		ADACAC5E21796BFF00E93518 /* HRBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRBaseViewController.swift; sourceTree = "<group>"; };
 		ADACAC602179751200E93518 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ADACAC62217977B100E93518 /* TargetType+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TargetType+Base.swift"; path = "HRSwiftDemo/Manager/NetworkManager/TargetType+Base.swift"; sourceTree = SOURCE_ROOT; };
+		ADACAC642179791F00E93518 /* HRBaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HRBaseProvider.swift; path = HRSwiftDemo/Manager/NetworkManager/HRBaseProvider.swift; sourceTree = SOURCE_ROOT; };
+		ADACAC6A217984C200E93518 /* HRHomeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRHomeApiService.swift; sourceTree = "<group>"; };
+		ADACAC6D2179A8D100E93518 /* HRNetworkPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRNetworkPlugin.swift; sourceTree = "<group>"; };
+		ADACAC702179A90500E93518 /* HRLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRLogger.swift; sourceTree = "<group>"; };
 		C8825A44E2EB178ED6482624 /* Pods-HRSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,13 +66,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1803B74F2178DF7800958714 /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkManager;
-			sourceTree = "<group>";
-		};
 		180C26322170F2B3001E458E = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +148,10 @@
 		ADACAC4D2178751400E93518 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				ADACAC602179751200E93518 /* HomeViewController.swift */,
+				ADACAC66217983DA00E93518 /* Controller */,
+				ADACAC692179840600E93518 /* ViewModel */,
+				ADACAC68217983F900E93518 /* Model */,
+				ADACAC67217983E900E93518 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -153,7 +159,8 @@
 		ADACAC4E2178753500E93518 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				1803B74F2178DF7800958714 /* NetworkManager */,
+				ADACAC6F2179A8F600E93518 /* LogManager */,
+				ADACAC6C2179865B00E93518 /* NetworkManager */,
 				ADACAC4F2178754F00E93518 /* ConfigManager */,
 			);
 			path = Manager;
@@ -182,6 +189,54 @@
 				ADACAC5721787DE600E93518 /* ExampleBasicContentView.swift */,
 			);
 			path = TabbarItemContentView;
+			sourceTree = "<group>";
+		};
+		ADACAC66217983DA00E93518 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC602179751200E93518 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ADACAC67217983E900E93518 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADACAC68217983F900E93518 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADACAC692179840600E93518 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC6A217984C200E93518 /* HRHomeApiService.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADACAC6C2179865B00E93518 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC62217977B100E93518 /* TargetType+Base.swift */,
+				ADACAC642179791F00E93518 /* HRBaseProvider.swift */,
+				ADACAC6D2179A8D100E93518 /* HRNetworkPlugin.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		ADACAC6F2179A8F600E93518 /* LogManager */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC702179A90500E93518 /* HRLogger.swift */,
+			);
+			path = LogManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,9 +342,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -304,9 +361,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -345,8 +404,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADACAC712179A94900E93518 /* HRLogger.swift in Sources */,
+				ADACAC6B217984C200E93518 /* HRHomeApiService.swift in Sources */,
 				ADACAC5921787DED00E93518 /* ExampleBasicContentView.swift in Sources */,
 				180C26412170F2B3001E458E /* ViewController.swift in Sources */,
+				ADACAC63217977B100E93518 /* TargetType+Base.swift in Sources */,
 				ADACAC5821787DEB00E93518 /* ExampleBouncesContentView.swift in Sources */,
 				ADACAC5B21787FEE00E93518 /* R.generated.swift in Sources */,
 				ADACAC4A2178723E00E93518 /* HRRootTabBarController.swift in Sources */,
@@ -355,6 +417,8 @@
 				ADACAC5F21796BFF00E93518 /* HRBaseViewController.swift in Sources */,
 				ADACAC532178772600E93518 /* HRNavigationController.swift in Sources */,
 				ADACAC512178757200E93518 /* ConfigManager.swift in Sources */,
+				ADACAC6E2179A8D100E93518 /* HRNetworkPlugin.swift in Sources */,
+				ADACAC652179791F00E93518 /* HRBaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
