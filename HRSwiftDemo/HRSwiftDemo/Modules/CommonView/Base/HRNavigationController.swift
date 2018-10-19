@@ -12,17 +12,18 @@ class HRNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.isTranslucent     = false
-        navigationBar.tintColor         = UIColor.white
-        navigationBar.barTintColor      = UIColor.init(hexString: "#3D88EA")
+        navigationBar.isTranslucent         = false
+        navigationBar.tintColor             = UIColor.white
+        navigationBar.barTintColor          = UIColor.init(hexString: "#3D88EA")
         //隐藏NavigationBar黑线
         navigationBar.setBackgroundImage(UIImage.init(), for: .any, barMetrics: .default)
-        navigationBar.shadowImage       = UIImage.init()
+        navigationBar.shadowImage           = UIImage.init()
         //设置字体和字体颜色
-        navigationBar.titleTextAttributes = [
+        navigationBar.titleTextAttributes   = [
             NSAttributedString.Key.foregroundColor : UIColor.white,
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16)
         ];
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     // MARK: - Override

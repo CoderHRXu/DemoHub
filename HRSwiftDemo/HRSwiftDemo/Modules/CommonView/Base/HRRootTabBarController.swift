@@ -17,6 +17,7 @@ class HRRootTabBarController: ESTabBarController {
         super.viewDidLoad()
         setUpTabBar()
         addChildVC()
+//        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     /**
@@ -97,5 +98,6 @@ class HRRootTabBarController: ESTabBarController {
         
         
     }
-
+    
+    
 }

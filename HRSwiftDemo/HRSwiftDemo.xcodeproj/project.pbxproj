@@ -19,7 +19,7 @@
 		ADACAC5821787DEB00E93518 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC5621787DE600E93518 /* ExampleBouncesContentView.swift */; };
 		ADACAC5921787DED00E93518 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC5721787DE600E93518 /* ExampleBasicContentView.swift */; };
 		ADACAC5B21787FEE00E93518 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC5A21787FEE00E93518 /* R.generated.swift */; };
-		ADACAC5D217881AF00E93518 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADACAC5C217881AF00E93518 /* Images.xcassets */; };
+		ADACAC5F21796BFF00E93518 /* HRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC5E21796BFF00E93518 /* HRBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 		ADACAC5621787DE600E93518 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		ADACAC5721787DE600E93518 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
 		ADACAC5A21787FEE00E93518 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		ADACAC5C217881AF00E93518 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ADACAC5E21796BFF00E93518 /* HRBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRBaseViewController.swift; sourceTree = "<group>"; };
 		C8825A44E2EB178ED6482624 /* Pods-HRSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +87,6 @@
 				ADACAC4E2178753500E93518 /* Manager */,
 				ADACAC4C2178748B00E93518 /* SupportingFiles */,
 				180C26402170F2B3001E458E /* ViewController.swift */,
-				ADACAC5C217881AF00E93518 /* Images.xcassets */,
 			);
 			path = HRSwiftDemo;
 			sourceTree = "<group>";
@@ -123,6 +122,7 @@
 			children = (
 				ADACAC492178723E00E93518 /* HRRootTabBarController.swift */,
 				ADACAC522178772600E93518 /* HRNavigationController.swift */,
+				ADACAC5E21796BFF00E93518 /* HRBaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -243,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				180C26492170F2B5001E458E /* LaunchScreen.storyboard in Resources */,
-				ADACAC5D217881AF00E93518 /* Images.xcassets in Resources */,
 				180C26462170F2B5001E458E /* Assets.xcassets in Resources */,
 				180C26442170F2B3001E458E /* Main.storyboard in Resources */,
 			);
@@ -349,6 +348,7 @@
 				ADACAC5B21787FEE00E93518 /* R.generated.swift in Sources */,
 				ADACAC4A2178723E00E93518 /* HRRootTabBarController.swift in Sources */,
 				180C263F2170F2B3001E458E /* AppDelegate.swift in Sources */,
+				ADACAC5F21796BFF00E93518 /* HRBaseViewController.swift in Sources */,
 				ADACAC532178772600E93518 /* HRNavigationController.swift in Sources */,
 				ADACAC512178757200E93518 /* ConfigManager.swift in Sources */,
 			);
