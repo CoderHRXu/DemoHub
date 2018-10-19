@@ -13,7 +13,7 @@ class ViewController: HRBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        vcName = "名称"
     }
 
     override func viewWillAppear(_ animated: Bool) {
