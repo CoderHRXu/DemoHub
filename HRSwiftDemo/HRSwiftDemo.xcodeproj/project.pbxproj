@@ -26,6 +26,11 @@
 		ADACAC6B217984C200E93518 /* HRHomeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC6A217984C200E93518 /* HRHomeApiService.swift */; };
 		ADACAC6E2179A8D100E93518 /* HRNetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC6D2179A8D100E93518 /* HRNetworkPlugin.swift */; };
 		ADACAC712179A94900E93518 /* HRLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC702179A90500E93518 /* HRLogger.swift */; };
+		ADACAC75217F11DF00E93518 /* HRBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC74217F11DF00E93518 /* HRBaseModel.swift */; };
+		ADACAC77217F12A600E93518 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC76217F12A600E93518 /* BaseViewModel.swift */; };
+		ADACAC79217F15D000E93518 /* ObservableType+ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC78217F15D000E93518 /* ObservableType+ParseError.swift */; };
+		ADACAC7B217F16DD00E93518 /* Observable+JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC7A217F16DD00E93518 /* Observable+JSONParser.swift */; };
+		ADACAC7D217F170700E93518 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC7C217F170700E93518 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,11 +51,16 @@
 		ADACAC5A21787FEE00E93518 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		ADACAC5E21796BFF00E93518 /* HRBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRBaseViewController.swift; sourceTree = "<group>"; };
 		ADACAC602179751200E93518 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		ADACAC62217977B100E93518 /* TargetType+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TargetType+Base.swift"; path = "HRSwiftDemo/Manager/NetworkManager/TargetType+Base.swift"; sourceTree = SOURCE_ROOT; };
-		ADACAC642179791F00E93518 /* HRBaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HRBaseProvider.swift; path = HRSwiftDemo/Manager/NetworkManager/HRBaseProvider.swift; sourceTree = SOURCE_ROOT; };
+		ADACAC62217977B100E93518 /* TargetType+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TargetType+Base.swift"; path = "HRSwiftDemo/Manager/NetworkManager/BaseViewModel/TargetType+Base.swift"; sourceTree = SOURCE_ROOT; };
+		ADACAC642179791F00E93518 /* HRBaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HRBaseProvider.swift; path = HRSwiftDemo/Manager/NetworkManager/BaseViewModel/HRBaseProvider.swift; sourceTree = SOURCE_ROOT; };
 		ADACAC6A217984C200E93518 /* HRHomeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRHomeApiService.swift; sourceTree = "<group>"; };
 		ADACAC6D2179A8D100E93518 /* HRNetworkPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRNetworkPlugin.swift; sourceTree = "<group>"; };
 		ADACAC702179A90500E93518 /* HRLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRLogger.swift; sourceTree = "<group>"; };
+		ADACAC74217F11DF00E93518 /* HRBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRBaseModel.swift; sourceTree = "<group>"; };
+		ADACAC76217F12A600E93518 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		ADACAC78217F15D000E93518 /* ObservableType+ParseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+ParseError.swift"; sourceTree = "<group>"; };
+		ADACAC7A217F16DD00E93518 /* Observable+JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+JSONParser.swift"; sourceTree = "<group>"; };
+		ADACAC7C217F170700E93518 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C8825A44E2EB178ED6482624 /* Pods-HRSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,9 +234,12 @@
 		ADACAC6C2179865B00E93518 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				ADACAC62217977B100E93518 /* TargetType+Base.swift */,
-				ADACAC642179791F00E93518 /* HRBaseProvider.swift */,
+				ADACAC73217F11CC00E93518 /* Model */,
+				ADACAC72217F0E6800E93518 /* BaseViewModel */,
 				ADACAC6D2179A8D100E93518 /* HRNetworkPlugin.swift */,
+				ADACAC7C217F170700E93518 /* NetworkError.swift */,
+				ADACAC78217F15D000E93518 /* ObservableType+ParseError.swift */,
+				ADACAC7A217F16DD00E93518 /* Observable+JSONParser.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -237,6 +250,24 @@
 				ADACAC702179A90500E93518 /* HRLogger.swift */,
 			);
 			path = LogManager;
+			sourceTree = "<group>";
+		};
+		ADACAC72217F0E6800E93518 /* BaseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC62217977B100E93518 /* TargetType+Base.swift */,
+				ADACAC642179791F00E93518 /* HRBaseProvider.swift */,
+				ADACAC76217F12A600E93518 /* BaseViewModel.swift */,
+			);
+			path = BaseViewModel;
+			sourceTree = "<group>";
+		};
+		ADACAC73217F11CC00E93518 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADACAC74217F11DF00E93518 /* HRBaseModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,17 +435,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADACAC7B217F16DD00E93518 /* Observable+JSONParser.swift in Sources */,
 				ADACAC712179A94900E93518 /* HRLogger.swift in Sources */,
 				ADACAC6B217984C200E93518 /* HRHomeApiService.swift in Sources */,
+				ADACAC77217F12A600E93518 /* BaseViewModel.swift in Sources */,
+				ADACAC75217F11DF00E93518 /* HRBaseModel.swift in Sources */,
 				ADACAC5921787DED00E93518 /* ExampleBasicContentView.swift in Sources */,
 				180C26412170F2B3001E458E /* ViewController.swift in Sources */,
 				ADACAC63217977B100E93518 /* TargetType+Base.swift in Sources */,
 				ADACAC5821787DEB00E93518 /* ExampleBouncesContentView.swift in Sources */,
+				ADACAC7D217F170700E93518 /* NetworkError.swift in Sources */,
 				ADACAC5B21787FEE00E93518 /* R.generated.swift in Sources */,
 				ADACAC4A2178723E00E93518 /* HRRootTabBarController.swift in Sources */,
 				ADACAC612179751200E93518 /* HomeViewController.swift in Sources */,
 				180C263F2170F2B3001E458E /* AppDelegate.swift in Sources */,
 				ADACAC5F21796BFF00E93518 /* HRBaseViewController.swift in Sources */,
+				ADACAC79217F15D000E93518 /* ObservableType+ParseError.swift in Sources */,
 				ADACAC532178772600E93518 /* HRNavigationController.swift in Sources */,
 				ADACAC512178757200E93518 /* ConfigManager.swift in Sources */,
 				ADACAC6E2179A8D100E93518 /* HRNetworkPlugin.swift in Sources */,

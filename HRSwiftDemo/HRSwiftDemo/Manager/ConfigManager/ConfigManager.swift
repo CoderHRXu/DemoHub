@@ -25,3 +25,16 @@ let Gray_COLOR                          = UIColor(red: 243, green: 243, blue: 24
 let COLOR_NavigationBar                 = UIColor(red: 66, green: 133, blue: 244, alpha:1.0)
 
 
+//MARK: Notification
+extension Notification.Name {
+    
+    /// 用户状态变更
+    static let UserStatusHasChanged     = Notification.Name("UserStatusHasChangedNoti")
+    
+    /// 无法识别的scheme
+    static let UnSupportScheme          = Notification.Name("UnSupportSchemeNoti")
+    
+    /// 无法识别的host
+    static let UnSupportHost            = Notification.Name("UnSupportHostNoti")
+    
+}

@@ -10,7 +10,7 @@ import Foundation
 import Moya
 import Result
 
-public class HRNetworkPlugin : PluginType{
+public class HRNetworkPlugin : PluginType {
     
     // Plugin提供了一种插件的机制让你可以在网络请求的关键节点插入代码，比如显示小菊花等等。
     /// Called immediately before a request is sent over the network (or stubbed).
@@ -59,3 +59,20 @@ public class HRNetworkPlugin : PluginType{
     
 }
 
+public class HUDPlugin: PluginType {
+    
+    public func willSend(_ request: RequestType, target: TargetType) {
+        
+//        HUDView.showHud()
+        
+        guard let _ = request.request  else {
+            return
+        }
+        
+    }
+    
+    public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
+        
+//        HUDView.hideHud()
+    }
+}
