@@ -20,7 +20,7 @@ enum HRHomeApiService{
     /// 车列表
     case getPrdList
 
-    /// 增加h车
+    /// 增加车
     case addPrd(carBandName: String)
 
 }
@@ -51,7 +51,7 @@ extension HRHomeApiService : TargetType {
         switch self {
             
         case .post(let name):
-            return .requestParameters(parameters: ["name": name ], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["name": name ], encoding: JSONEncoding.default)
 
         case .push(let title, let content):
             return .requestParameters(parameters: ["title" : title, "content" : content], encoding: URLEncoding.default)
@@ -73,12 +73,13 @@ extension HRHomeApiService : TargetType {
         case .push:
             return .post
         case .getPrdList:
-            fallthrough
-        case .addPrd:
             return .get
+        case .addPrd:
+            return .post
         }
         
     }
 
+    
     
 }

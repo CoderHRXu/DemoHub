@@ -55,7 +55,7 @@ extension ObservableType where E : Response {
                 throw NetworkError.ParseJSONError
             }
             
-            switch bean.code {
+            switch bean.status {
                 
             case NetworkStatusCodeType.Success.rawValue:
                 return Observable<Response>.just(response)
@@ -69,7 +69,7 @@ extension ObservableType where E : Response {
                 
             default:
                 
-                throw NetworkError.ServerError(code: bean.code ?? NSNotFound, msg: bean.message ?? "")
+                throw NetworkError.ServerError(code: bean.status ?? NSNotFound, msg: bean.message ?? "")
             }
         })
     }

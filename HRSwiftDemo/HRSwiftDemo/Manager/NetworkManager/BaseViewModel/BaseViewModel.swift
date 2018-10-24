@@ -19,16 +19,15 @@ class BaseViewModel {
     
     func sendRequest<T:TargetType>(target: T, withHUD : Bool = false) -> Observable<Response> {
         
-        
-        var plugin = [PluginType]()
+        // 确定插件
+         var plugins: [PluginType] = [HRNetworkPlugin()]
         if withHUD {
-            plugin = [HRNetworkPlugin(), HUDPlugin()]
-        }else{
-            plugin = [HRNetworkPlugin()]
+            plugins.append(HUDPlugin())
         }
+        
         return Observable.create({ (observer) -> Disposable in
             
-            let cancellableToken = HRBaseProvider<T>(plugins: plugin).request(target, completion: { (result) in
+            let cancellableToken = HRBaseProvider<T>(plugins: plugins).request(target, completion: { (result) in
                 switch result {
                 case let .success(response):
                     observer.onNext(response)

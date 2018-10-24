@@ -10,9 +10,14 @@ import UIKit
 import Moya
 import Result
 import Alamofire
+import PromiseKit
 
 class HomeViewController: HRBaseViewController {
 
+    let homeVM = HomeViewModel()
+    var carList = [CarListModel]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +28,8 @@ class HomeViewController: HRBaseViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
 //        moyaBaseUse()
-        moyaAdvancedUse()
+//        moyaAdvancedUse()
+        requestCarlist()
     }
 
     
@@ -125,7 +131,27 @@ class HomeViewController: HRBaseViewController {
     }
     
     
-    
+    func requestCarlist() {
+        
+//        homeVM.getCarList().done { (items) in
+//
+//            self.carList = items
+//            print("========= \n \(items)")
+//            }.catch { (err) in
+//
+//        }
+        
+        // 连环调用用then,最后一个请求用done
+        homeVM.addCarBand(carBandName: "马自达").then { (items) -> Promise<[CarListModel]> in
+            print("增加\(items)")
+            return self.homeVM.getCarList()
+            }.done({ (newItems) in
+                print("列表\(newItems)")
+            }).catch { (err) in
+                print("错误\(err)")
+        }
+        
+    }
     
     
     

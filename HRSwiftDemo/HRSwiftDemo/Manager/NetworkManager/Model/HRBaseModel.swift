@@ -12,7 +12,7 @@ import HandyJSON
 class HRBaseModel: HandyJSON {
     
     /// 状态码
-    var code:Int?
+    var status:Int?
     
     /// 错误消息
     var message:String?

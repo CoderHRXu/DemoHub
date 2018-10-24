@@ -47,11 +47,11 @@ public class HRNetworkPlugin : PluginType {
             
             let jsStr: String = try! res.mapString()
             
-            HRLogger.info("API Return ✅✅: \(jsStr)")
+            HRLogger.info("API Return ✅✅: \n\(jsStr)")
             
         case let .failure(err):
             
-            HRLogger.error("API Return ❌❌: \(err)")
+            HRLogger.error("API Return ❌❌:\n \(err)")
             
         }
     }
