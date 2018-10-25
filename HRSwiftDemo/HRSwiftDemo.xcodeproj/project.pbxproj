@@ -13,6 +13,10 @@
 		180C26462170F2B5001E458E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180C26452170F2B5001E458E /* Assets.xcassets */; };
 		180C26492170F2B5001E458E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180C26472170F2B5001E458E /* LaunchScreen.storyboard */; };
 		7B4C7D178348FE595D57446E /* Pods_HRSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85656C6E8E7087274576316D /* Pods_HRSwiftDemo.framework */; };
+		AD19EBCA2181906400BAD37D /* MyFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19EBC92181906400BAD37D /* MyFormViewController.swift */; };
+		AD19EBCD21819DD900BAD37D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19EBCB21819DD900BAD37D /* CustomCell.swift */; };
+		AD19EBCE21819DD900BAD37D /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD19EBCC21819DD900BAD37D /* CustomCell.xib */; };
+		AD19EBD02181ACE200BAD37D /* MyCustomRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19EBCF2181ACE200BAD37D /* MyCustomRow.swift */; };
 		AD49055A2180229100860238 /* CarListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4905592180229100860238 /* CarListModel.swift */; };
 		AD9621DB21801A3D009F0DA0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9621DA21801A3D009F0DA0 /* HomeViewModel.swift */; };
 		ADACAC4A2178723E00E93518 /* HRRootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACAC492178723E00E93518 /* HRRootTabBarController.swift */; };
@@ -45,6 +49,10 @@
 		180C26482170F2B5001E458E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180C264A2170F2B5001E458E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85656C6E8E7087274576316D /* Pods_HRSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HRSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD19EBC92181906400BAD37D /* MyFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFormViewController.swift; sourceTree = "<group>"; };
+		AD19EBCB21819DD900BAD37D /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		AD19EBCC21819DD900BAD37D /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		AD19EBCF2181ACE200BAD37D /* MyCustomRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomRow.swift; sourceTree = "<group>"; };
 		AD4905592180229100860238 /* CarListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListModel.swift; sourceTree = "<group>"; };
 		AD9621DA21801A3D009F0DA0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ADACAC492178723E00E93518 /* HRRootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRRootTabBarController.swift; sourceTree = "<group>"; };
@@ -209,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				ADACAC602179751200E93518 /* HomeViewController.swift */,
+				AD19EBC92181906400BAD37D /* MyFormViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,6 +225,9 @@
 		ADACAC67217983E900E93518 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD19EBCB21819DD900BAD37D /* CustomCell.swift */,
+				AD19EBCC21819DD900BAD37D /* CustomCell.xib */,
+				AD19EBCF2181ACE200BAD37D /* MyCustomRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +351,7 @@
 			files = (
 				180C26492170F2B5001E458E /* LaunchScreen.storyboard in Resources */,
 				180C26462170F2B5001E458E /* Assets.xcassets in Resources */,
+				AD19EBCE21819DD900BAD37D /* CustomCell.xib in Resources */,
 				180C26442170F2B3001E458E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +392,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HRSwiftDemo/Pods-HRSwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -398,6 +412,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -449,6 +464,7 @@
 				ADACAC5921787DED00E93518 /* ExampleBasicContentView.swift in Sources */,
 				180C26412170F2B3001E458E /* ViewController.swift in Sources */,
 				ADACAC63217977B100E93518 /* TargetType+Base.swift in Sources */,
+				AD19EBCA2181906400BAD37D /* MyFormViewController.swift in Sources */,
 				ADACAC5821787DEB00E93518 /* ExampleBouncesContentView.swift in Sources */,
 				ADACAC7D217F170700E93518 /* NetworkError.swift in Sources */,
 				ADACAC5B21787FEE00E93518 /* R.generated.swift in Sources */,
@@ -457,11 +473,13 @@
 				180C263F2170F2B3001E458E /* AppDelegate.swift in Sources */,
 				AD49055A2180229100860238 /* CarListModel.swift in Sources */,
 				ADACAC5F21796BFF00E93518 /* HRBaseViewController.swift in Sources */,
+				AD19EBD02181ACE200BAD37D /* MyCustomRow.swift in Sources */,
 				ADACAC79217F15D000E93518 /* ObservableType+ParseError.swift in Sources */,
 				AD9621DB21801A3D009F0DA0 /* HomeViewModel.swift in Sources */,
 				ADACAC532178772600E93518 /* HRNavigationController.swift in Sources */,
 				ADACAC512178757200E93518 /* ConfigManager.swift in Sources */,
 				ADACAC6E2179A8D100E93518 /* HRNetworkPlugin.swift in Sources */,
+				AD19EBCD21819DD900BAD37D /* CustomCell.swift in Sources */,
 				ADACAC652179791F00E93518 /* HRBaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

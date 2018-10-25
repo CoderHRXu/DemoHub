@@ -14,7 +14,7 @@ use_frameworks!
 #        pod 'ESTabBarController-swift', :git => 'https://github.com/Aite/ESTabBarController', :branch => 'swift-4.2'
         pod 'IQKeyboardManagerSwift'
         pod 'Kingfisher'
-
+        pod 'Eureka'
 
     end
 

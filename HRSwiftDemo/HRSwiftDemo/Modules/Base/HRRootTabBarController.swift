@@ -72,7 +72,7 @@ class HRRootTabBarController: ESTabBarController {
         
         let homeVC              = setUpOneChildView(HomeViewController(), image: R.image.tabbar_notify_normal()!, selectedImage: R.image.tabbar_notify_selected()!, title: "动态")
         
-        let learningVc          = setUpOneChildView(ViewController(), image:R.image.tabbar_learn_normal()!, selectedImage: R.image.tabbar_learn_selected()!, title: "学情追踪")
+        let learningVc          = setUpOneChildView(MyFormViewController(), image:R.image.tabbar_learn_normal()!, selectedImage: R.image.tabbar_learn_selected()!, title: "学情追踪")
         
         let plusVc              = setUpOneChildView(ViewController(), image: R.image.tab_plus()!, selectedImage: R.image.tab_plus()!, title:nil)
         
