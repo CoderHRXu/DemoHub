@@ -47,4 +47,19 @@ class HomeViewModel: BaseViewModel {
             
         })
     }
+    
+    
+    func uploadImage(image: UIImage) -> Promise<[String: Any]> {
+        
+       
+        return Promise.init(resolver: { (result) in
+            sendRequest(target: HRHomeApiService.upload(image: image), withHUD: false).parseError().mapModelDictionary().subscribe(onNext: { (dic) in
+
+                result.fulfill(dic)
+            }, onError: { (err) in
+                result.reject(err)
+
+            }).disposed(by: disposeBag)
+        })
+    }
 }

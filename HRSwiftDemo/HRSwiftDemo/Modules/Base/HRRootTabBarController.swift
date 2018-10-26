@@ -78,7 +78,7 @@ class HRRootTabBarController: ESTabBarController {
         
         //题库
         
-        let questionsVc         = setUpOneChildView(ViewController(), image:R.image.tabbar_questions_normal()!, selectedImage:R.image.tabbar_questions_selected()!, title: "题库")
+        let questionsVc         = setUpOneChildView(PhotoUploadViewController(), image:R.image.tabbar_questions_normal()!, selectedImage:R.image.tabbar_questions_selected()!, title: "题库")
         
         //个人中心
         let meVC                = setUpOneChildView(ViewController(), image:R.image.tabbar_me_normal()!, selectedImage: R.image.tabbar_me_selected()!, title: "我的")

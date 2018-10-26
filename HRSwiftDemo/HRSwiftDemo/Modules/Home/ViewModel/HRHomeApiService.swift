@@ -22,6 +22,9 @@ enum HRHomeApiService{
 
     /// 增加车
     case addPrd(carBandName: String)
+    
+    /// 文件上传
+    case upload(image: UIImage)
 
 }
 
@@ -42,6 +45,8 @@ extension HRHomeApiService : TargetType {
             
         case .addPrd:
             return "addPrd"
+        case .upload:
+            return "upload"
         }
     }
     
@@ -61,6 +66,14 @@ extension HRHomeApiService : TargetType {
             
         case .addPrd(let carBandName):
             return .requestParameters(parameters: ["name" : carBandName], encoding: URLEncoding.default)
+            
+        case .upload(let image):
+            
+            let data = image.jpegData(compressionQuality: 1)
+            let formData = MultipartFormData(provider: .data(data!), name: "image", fileName: "ycy", mimeType: "image/jpg")
+            
+            return .uploadCompositeMultipart([formData], urlParameters: ["image" : "ycy"])
+
         }
     }
     
@@ -76,6 +89,9 @@ extension HRHomeApiService : TargetType {
             return .get
         case .addPrd:
             return .post
+        case .upload:
+            return .post
+
         }
         
     }
