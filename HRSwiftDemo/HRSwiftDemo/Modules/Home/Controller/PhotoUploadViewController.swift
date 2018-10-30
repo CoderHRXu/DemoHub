@@ -13,6 +13,8 @@ class PhotoUploadViewController: HRBaseViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    let viewModel = HomeViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,14 @@ class PhotoUploadViewController: HRBaseViewController {
         
     }
     
+    func upload(image: UIImage)  {
+     
+        self.viewModel.uploadImage(image: image).done { (dict) in
+            print("上传成功\(dict)")
+            }.catch { (err) in
+                print(err);
+        }
+    }
 }
 
 extension PhotoUploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -38,6 +48,7 @@ extension PhotoUploadViewController : UIImagePickerControllerDelegate, UINavigat
         
         let image = info[.originalImage] as! UIImage
         imageView.image = image
+        upload(image: image)
         self.dismiss(animated: true, completion: nil)
         
     }

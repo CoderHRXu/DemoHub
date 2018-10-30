@@ -13,7 +13,7 @@ extension TargetType {
     
     /// The target's base `URL`.
     var baseURL: URL {
-        return URL.init(string: "http://10.0.3.50:3000")!
+        return URL.init(string: "http://localhost:3000")!
     }
     
     /// The path to be appended to `baseURL` to form the full `URL`.

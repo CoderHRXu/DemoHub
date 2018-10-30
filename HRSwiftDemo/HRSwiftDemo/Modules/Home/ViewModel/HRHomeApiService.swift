@@ -70,9 +70,9 @@ extension HRHomeApiService : TargetType {
         case .upload(let image):
             
             let data = image.jpegData(compressionQuality: 1)
-            let formData = MultipartFormData(provider: .data(data!), name: "image", fileName: "ycy", mimeType: "image/jpg")
+            let formData = MultipartFormData(provider: .data(data!), name: "image", fileName: "ycy.jpg", mimeType: "image/jpg")
             
-            return .uploadCompositeMultipart([formData], urlParameters: ["image" : "ycy"])
+            return .uploadCompositeMultipart([formData], urlParameters: ["otherKey" : "ycy"])
 
         }
     }
