@@ -36,6 +36,7 @@
 		AD59123B217051640058C884 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59123A217051640058C884 /* NSString+Category.m */; };
 		AD59123E217051970058C884 /* NSMutableArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59123C217051960058C884 /* NSMutableArray+Helper.m */; };
 		AD8B2093216F31C60093D7F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 590DC39C1E4B0437007FC0AD /* main.m */; };
+		ADCBC08C2188458D00139E35 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCBC08B2188458D00139E35 /* Person.m */; };
 		ADE444E3216F27DA005D346F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 590DC3851E4B01BC007FC0AD /* AppDelegate.m */; };
 		ADE444E4216F286C005D346F /* CacheHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 590DC3D61E4B0C2D007FC0AD /* CacheHandler.m */; };
 		ADE444E5216F286C005D346F /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 590DC4011E4B0C2D007FC0AD /* LocationManager.m */; };
@@ -305,6 +306,8 @@
 		AD59123A217051640058C884 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		AD59123C217051960058C884 /* NSMutableArray+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Helper.m"; sourceTree = "<group>"; };
 		AD59123D217051970058C884 /* NSMutableArray+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Helper.h"; sourceTree = "<group>"; };
+		ADCBC08A2188458D00139E35 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		ADCBC08B2188458D00139E35 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		ADE444CA216F2124005D346F /* NaXinHaoDai-iOS-1.7.5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "NaXinHaoDai-iOS-1.7.5.xcdatamodel"; sourceTree = "<group>"; };
 		ADE444CB216F2124005D346F /* NaXinHaoDai-iOS-1.4.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "NaXinHaoDai-iOS-1.4.0.xcdatamodel"; sourceTree = "<group>"; };
 		ADE444CC216F2124005D346F /* NaXinHaoDai-iOS-1.3.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "NaXinHaoDai-iOS-1.3.0.xcdatamodel"; sourceTree = "<group>"; };
@@ -899,9 +902,19 @@
 			path = NotificationManager;
 			sourceTree = "<group>";
 		};
+		ADCBC0892188457500139E35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADCBC08A2188458D00139E35 /* Person.h */,
+				ADCBC08B2188458D00139E35 /* Person.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ADE444D2216F24F2005D346F /* Module1 */ = {
 			isa = PBXGroup;
 			children = (
+				ADCBC0892188457500139E35 /* Model */,
 				ADE444D6216F2567005D346F /* AViewController.h */,
 				ADE444D7216F2567005D346F /* AViewController.m */,
 			);
@@ -1446,6 +1459,7 @@
 				ADE4463B216F28D8005D346F /* PBPresentAnimatedTransitioningController.m in Sources */,
 				ADE44501216F286C005D346F /* RegisterSecondStepViewController.m in Sources */,
 				ADE44662216F28D8005D346F /* PopoverAction.m in Sources */,
+				ADCBC08C2188458D00139E35 /* Person.m in Sources */,
 				ADE44683216F28D8005D346F /* GTMNSString+HTML.m in Sources */,
 				ADE44502216F286C005D346F /* NeedToLoginViewController.m in Sources */,
 				ADE44503216F286C005D346F /* GifViewController.m in Sources */,
