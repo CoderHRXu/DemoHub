@@ -29,7 +29,13 @@ class HomeViewController: HRBaseViewController {
         
 //        moyaBaseUse()
 //        moyaAdvancedUse()
-        requestCarlist()
+//        requestCarlist()
+//        let num = roundString(round: 3, numberString: "0.1555")
+//        print(num)
+        print(removeSuffix(numberString: "10.23"));
+        print(removeSuffix(numberString: "10.20"));
+        print(removeSuffix(numberString: "10.00"));
+
     }
 
     
@@ -154,5 +160,55 @@ class HomeViewController: HRBaseViewController {
     }
     
     
+    /// 四舍五入2位小数小数
+    ///
+    /// - round: 小数位（默认2位小数）
+    /// - Parameter numberString: 格式化之前 eg 0.125
+    /// - Returns: 格式化之后 eg: 0.13
+    func roundNumberString(round:Int = 2, numberString : String) -> Double {
+        if numberString.isEmpty || round == 0 {
+            return 0.0
+        }
+        
+        let roudingBehavior     = NSDecimalNumberHandler(roundingMode: .plain, scale: Int16(round), raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
+        let aDn                 = NSDecimalNumber(string: numberString)
+        let resultDn            = aDn.rounding(accordingToBehavior: roudingBehavior)
+        return resultDn.doubleValue
+        
+    }
     
+    /// 过滤器 将.2f格式化的字符串，去除末尾0
+    ///
+    /// - Parameter numberString: .2f格式化后的字符串
+    /// - Returns: 去除末尾0之后的
+    func removeSuffix(numberString : String) -> String {
+        
+        if numberString.count > 1 {
+            let strs = numberString.components(separatedBy: ".")
+            let last = strs.last!
+            if strs.count == 2 {
+                if last == "00" {
+                    
+                    let indexEndOfText      = numberString.index(numberString.endIndex, offsetBy:-3)
+                    return String(numberString[..<indexEndOfText])
+                    
+                }else{
+                    
+                    let indexStartOfText    = numberString.index(numberString.endIndex, offsetBy:-1)
+                    let str                 = numberString[indexStartOfText...]
+                    let indexEndOfText      = numberString.index(numberString.endIndex, offsetBy:-1)
+                    if str == "0" {
+                        return String(numberString[..<indexEndOfText])
+                    }
+                    
+                }
+                
+            }
+            
+            return numberString
+            
+        }else{
+            return ""
+        }
+    }
 }

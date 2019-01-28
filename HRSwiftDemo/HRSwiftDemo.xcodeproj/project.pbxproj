@@ -116,6 +116,7 @@
 				180C263E2170F2B3001E458E /* AppDelegate.swift */,
 				ADACAC47217871EB00E93518 /* Modules */,
 				ADACAC4E2178753500E93518 /* Manager */,
+				ADA3C68521FEAEAE00F8A3FB /* Category */,
 				ADACAC4C2178748B00E93518 /* SupportingFiles */,
 				180C26402170F2B3001E458E /* ViewController.swift */,
 			);
@@ -137,6 +138,13 @@
 				C8825A44E2EB178ED6482624 /* Pods-HRSwiftDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ADA3C68521FEAEAE00F8A3FB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		ADACAC47217871EB00E93518 /* Modules */ = {
