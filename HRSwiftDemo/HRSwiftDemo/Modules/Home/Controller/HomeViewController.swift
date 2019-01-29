@@ -11,12 +11,13 @@ import Moya
 import Result
 import Alamofire
 import PromiseKit
+import RxSwift
 
 class HomeViewController: HRBaseViewController {
 
     let homeVM = HomeViewModel()
     var carList = [CarListModel]()
-    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +33,11 @@ class HomeViewController: HRBaseViewController {
 //        requestCarlist()
 //        let num = roundString(round: 3, numberString: "0.1555")
 //        print(num)
-        print(removeSuffix(numberString: "10.23"));
-        print(removeSuffix(numberString: "10.20"));
-        print(removeSuffix(numberString: "10.00"));
+//        print(removeSuffix(numberString: "10.23"));
+//        print(removeSuffix(numberString: "10.20"));
+//        print(removeSuffix(numberString: "10.00"));
+        
+        flatMapLearn()
 
     }
 
@@ -159,6 +162,80 @@ class HomeViewController: HRBaseViewController {
         
     }
     
+    
+    /// 使用rx实现AB连续依赖网络请求
+    func flatMapLearn() {
+        
+        rx_addCar(carBandName: "马自达").asObservable()
+            .mapModelArray(modelType: CarListModel.self).flatMap { (car) in
+                return self.rx_getCarList()
+            }.mapModelArray(modelType: CarListModel.self).subscribe(onNext: { (carArray) in
+                print(carArray)
+            }, onError: { (err) in
+                print(err)
+            }, onCompleted: {
+                
+            }) {
+                
+        }.disposed(by: disposeBag)
+        
+    }
+
+    
+    func rx_addCar(carBandName: String) -> Observable<Response> {
+        
+        return Observable.create({ (observer) -> Disposable in
+            let provider = MoyaProvider<HRHomeApiService>(plugins:[HRNetworkPlugin()])
+            let cancellableToken = provider.request(HRHomeApiService.addPrd(carBandName: carBandName), completion: { (result) in
+                
+                switch result{
+                    
+                case let .success(response):
+                    
+                    observer.onNext(response)
+                    observer.onCompleted()
+                    break
+                    
+                case let .failure(error):
+                    print("请求失败\(error)")
+                    break
+                }
+            })
+            
+            return Disposables.create {
+                cancellableToken.cancel()
+            }
+
+        }).share(replay: 1, scope: .forever)
+    }
+    
+    func rx_getCarList() -> Observable<Response> {
+        
+        return Observable.create({ (observer) -> Disposable in
+            let provider = MoyaProvider<HRHomeApiService>(plugins:[HRNetworkPlugin()])
+            let cancellableToken = provider.request(.getPrdList, completion: { (result) in
+                switch result{
+                    
+                case let .success(response):
+                    
+                    observer.onNext(response)
+                    observer.onCompleted()
+                    break
+                    
+                case let .failure(error):
+                    print("请求失败\(error)")
+                    break
+                }
+                
+
+            })
+            
+            return Disposables.create {
+                cancellableToken.cancel()
+            }
+
+        }).share(replay: 1, scope: .forever)
+    }
     
     /// 四舍五入2位小数小数
     ///
