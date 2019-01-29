@@ -37,7 +37,8 @@ class HomeViewController: HRBaseViewController {
 //        print(removeSuffix(numberString: "10.20"));
 //        print(removeSuffix(numberString: "10.00"));
         
-        flatMapLearn()
+//        flatMapLearn()
+        learnCombine()
 
     }
 
@@ -162,6 +163,22 @@ class HomeViewController: HRBaseViewController {
         
     }
     
+    func learnCombine() {
+        
+        Observable.combineLatest(rx_addCar(carBandName: "哈哈哈").mapModelArray(modelType: CarListModel.self), rx_getCarList().mapModelArray(modelType: CarListModel.self)){obj1,obj2 in
+            print(obj1)
+            print(obj2)
+            print("全部完成")
+            }.subscribe(onNext: { (next) in
+                print("----")
+            }, onError: { (err) in
+                print(err)
+            }, onCompleted: {
+                print("completed")
+            }) {
+                
+        }.disposed(by: disposeBag)
+    }
     
     /// 使用rx实现AB连续依赖网络请求
     func flatMapLearn() {
@@ -185,13 +202,13 @@ class HomeViewController: HRBaseViewController {
     func rx_addCar(carBandName: String) -> Observable<Response> {
         
         return Observable.create({ (observer) -> Disposable in
-            let provider = MoyaProvider<HRHomeApiService>(plugins:[HRNetworkPlugin()])
+            let provider = MoyaProvider<HRHomeApiService>()
             let cancellableToken = provider.request(HRHomeApiService.addPrd(carBandName: carBandName), completion: { (result) in
                 
                 switch result{
                     
                 case let .success(response):
-                    
+                    print("rx_addCar 完成")
                     observer.onNext(response)
                     observer.onCompleted()
                     break
@@ -212,12 +229,12 @@ class HomeViewController: HRBaseViewController {
     func rx_getCarList() -> Observable<Response> {
         
         return Observable.create({ (observer) -> Disposable in
-            let provider = MoyaProvider<HRHomeApiService>(plugins:[HRNetworkPlugin()])
+            let provider = MoyaProvider<HRHomeApiService>()
             let cancellableToken = provider.request(.getPrdList, completion: { (result) in
                 switch result{
                     
                 case let .success(response):
-                    
+                    print("rx_getCarList 完成")
                     observer.onNext(response)
                     observer.onCompleted()
                     break
