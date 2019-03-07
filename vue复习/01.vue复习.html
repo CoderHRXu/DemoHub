@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01.vue基础复习</title>
+    <script src="Vue/vue2.5.17.js"></script>
+
+</head>
+<body>
+    
+    <div id="app">
+        {{message}}<br>
+        <span v-if='seen'>Now you see</span>
+    </div>
+
+    <script>
+        // 2.0 实例化vue对象
+        var vm = new Vue({
+            el:"#app", // 表示vue对象接管的区域
+            data:{
+                message :'这是message',
+                seen : true,
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>跑马灯</title>
+    <script src="Vue/vue2.5.17.js"></script>
+    
+</head>
+<body>
+    
+    <div id="app">
+        <input type="button" value="浪起来" @click=lang></input>
+        <input type="button" value="暂停" @click=stop></input>
+
+        <h4>{{ msg }}</h4>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                msg : '猥琐发育别浪~~~!',
+                intervalId : null
+            },
+            methods: {
+                // es6 写法
+                lang (){
+                    /* 注意this所指代的对象
+                    var _this = this;
+                    setInterval(function(){
+                        var start = _this.msg.substring(0, 1);
+                        var end = _this.msg.substring(1);
+                        _this.msg = end + start;
+                    }, 400)
+                    */
+                    if (this.intervalId != null) return;
+                    // ES6 箭头函数写法，无需转换this
+                    this.intervalId = setInterval(()=> {
+                        
+                            var start = this.msg.substring(0, 1);
+                            var end = this.msg.substring(1);
+                            this.msg = end + start;
+                    }, 400)
+                },
+
+                stop : function(){
+                    clearInterval(this.intervalId); 
+                    // 每次清除定时器，要把intervalId置为null
+                    this.intervalId = null;
+                }
+            },
+        })
+    </script>
+</body>
+</html>

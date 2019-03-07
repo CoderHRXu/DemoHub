@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="Vue/vue2.5.17.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{name + '1'}}<br>
+        {{name == 'wo'? 'true' : 'false'}}<br>
+        {{if1(name)}}
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                name:'wo'
+            },
+            methods: {
+                'if1' : function (str){
+                    return str == 'wo';
+                }
+            },
+        })
+    </script>
+</body>
+</html>
