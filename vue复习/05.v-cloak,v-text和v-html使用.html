@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+  
+    <div id="app">
+        <span v-cloak>{{msg}} 呜呜呜呜</span>
+        <span v-text="text">v-text 是是是</span>
+        <span v-html="html">v-html</span>
+        解决延迟加载的问题
+        区别  v-text只是把name的值当文字输出， v-html会把name值当初html文本<br>
+    </div>
+    <!--<script src="Vue/vue2.5.17.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+          el:"#app",
+          data:{
+              msg: '这是msg',
+              text:'这是v-text',
+              html:'<h2>这是v-html</h2>'
+          },
+          
+        });
+    </script>
+</body>
+
+</html>

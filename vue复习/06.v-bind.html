@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind</title>
+    <script src="Vue/vue2.5.17.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <span>需求 一个文本框，默认值是name</span>
+        <p>完整写法</p>
+        <input type="text" v-bind:value="name">
+        <p>省略写法</p>
+        <input type="text" :value="name">
+        <p>动态绑定a标签跳转链接,项目中常用</p>
+        <a v-bind="{href:'http://www.akpop.top/'+id}">跳转到我的博客</a>
+    </div>
+
+    <script>
+        var vm = new  Vue({
+            el:"#app",
+            data:{
+                name : '无风的秋',
+                id : 'archives/'
+            },
+        });
+    </script>
+</body>
+</html>

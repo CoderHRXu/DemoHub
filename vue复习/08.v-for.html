@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for</title>
+    <script src="Vue/vue2.5.17.js"></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <h3>动态生成li</h3>
+        <h4>遍历数组</h4>
+        <ul>
+            <li v-for="(item, index) in list">这是index:{{index}} - 这是value:{{item}}</li>
+        </ul>
+        注意item在前，index在后。2.0写法没有$index<br>
+
+        <h4>遍历有重复元素的数组</h4>
+        <ul>
+            <li v-for="(item, index) in copyList" :key="index">{{index}} - {{item}}</li>
+        </ul>
+
+        <h4>遍历对象</h4>
+        <ul>
+            <li v-for="(value, key) in user"> {{key}} : {{value}}</li>
+        </ul>
+
+        <h4>遍历二维数组</h4>
+        <ul>
+            <li v-for="(fruit, index) in fruits"> {{index +1}} : {{fruit.name}}
+                <ul>
+                    <li v-for="(color, childIndex) in fruit.color">
+
+                        {{index+1}}.{{childIndex+1}} 颜色是 {{color}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+
+                list: [11,22,33,44],
+                copyList: [1,2,3,4,4],
+                user:{
+                    username:'无风的秋',
+                    age:18
+                },
+                fruits: [
+                    {name :'香蕉', color:['green', 'yellow'] },
+                    {name :'苹果', color:['red', 'pink'] },
+                    {name :'西瓜', color:['blue'] },
+                ],
+            }
+        });
+    </script>
+</body>
+</html>

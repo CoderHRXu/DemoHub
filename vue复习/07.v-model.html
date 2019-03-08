@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model</title>
+    <script src="Vue/vue2.5.17.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p>需求 一个文本框，默认值是name</p>
+        <p>v-modem 实现双向数据绑定</p>
+        <input type="text" v-model="name"><br>
+
+        <h3>表单练习</h3>
+        <form>
+            用户名<br>
+            <input type="text" v-model="user.uname"><br>
+            密码<br>
+            <input type="password" v-model="user.upassword"><br>
+            <input type="submit" @click="submit" value="注册">
+
+        </form>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                name:'无风的秋',
+                id : 1,
+                user:{
+                    uname:'2',
+                    upassword:'3'
+                },
+            },
+            methods:{
+                submit (){
+                    alert('用户名'+ this.user.uname + ' 密码'+this.user.upassword)
+                },
+            }
+        });
+    </script>
+</body>
+</html>
