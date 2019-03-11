@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Vue/vue2.5.17.js"></script>
+
+    <style>
+        .red{
+            color: red;
+        }
+
+        .thin{
+            font-weight: 200;
+        }
+
+        .italic{
+            font-style: italic;
+        }
+
+        .active{
+            letter-spacing: 0.5em;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="app">
+        <!--<h1 class="red thin">这是一个很大很大的h1，达到你无法想象</h1>-->
+        第一种使用方式，直接使用数组<br>
+        vue用 :class 绑定元素的class 类名必须要写成数组形式，且数组中的元素 class的名称要用'' 包裹
+        <h1 :class="['thin', 'red']">这是一个很大很大的h1，达到你无法想象</h1><br>
+        第2种使用方式，数组中使用3元表达式<br>
+        <h1 :class = "['thin', 'red', flag?'active' : '']">
+            这是一个很大很大的h1，达到你无法想象
+        </h1>
+
+
+        第3种使用方式，在数组中使用对象代替三元表达式<br>
+        <h1 :class = "['thin', 'red', {'active': flag}]">
+            这是一个很大很大的h1，达到你无法想象
+        </h1>
+
+        第4种使用方式，数组中直接使用对象<br>
+        <h1 :class = "{red : true, thin: true, italic:true, active:true}">
+            这是一个很大很大的h1，达到你无法想象
+        </h1>
+
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                flag:true
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>
