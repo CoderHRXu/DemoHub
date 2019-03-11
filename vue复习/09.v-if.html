@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if</title>
+    <script src="Vue/vue2.5.17.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <input type="button" @click="toggle" value="显示隐藏切换">
+    使用v-if
+    <div v-if="isShow">div的值</div><br>
+    使用v-show
+    <div v-show="isShow">div的值</div>
+
+</div>
+
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+           isShow:true,
+        },
+        methods:{
+            toggle (){
+                // 实现业务只需要isShow每次取反
+                this.isShow = !this.isShow;
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

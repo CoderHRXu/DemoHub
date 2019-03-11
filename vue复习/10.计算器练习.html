@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器练习</title>
+    <script src="Vue/vue2.5.17.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="n1">
+        <select name="select" id="select" v-model="opt">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" v-model="n2">
+
+        <input type="button" value="=" @click="calc">
+
+        <input type="text" v-model="res">
+
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                n1:0,
+                n2:0,
+                res:0,
+                opt:"+"
+            },
+            methods:{
+
+                // 计算器计算方法
+                calc () {
+
+                    /*
+                    switch (this.opt){
+                        case "+":
+                            this.res = parseInt(this.n1) + parseInt(this.n2);
+
+                            break;
+
+                        case "-":
+                            this.res = parseInt(this.n1) - parseInt(this.n2);
+                            break;
+
+                        case "*":
+                            this.res = parseInt(this.n1) * parseInt(this.n2);
+                            break;
+
+                        case "/":
+                            this.res = parseInt(this.n1) / parseInt(this.n2);
+                            break;
+
+
+                    }
+                    */
+
+                    // 第2个方法 投机取巧 正式开发中尽量少用
+                    var codeStr = 'parseInt(this.n1)' + this.opt + ' parseInt(this.n2)';
+                    this.res = eval(codeStr);
+                }
+
+            }
+        });
+    </script>
+
+</body>
+</html>
