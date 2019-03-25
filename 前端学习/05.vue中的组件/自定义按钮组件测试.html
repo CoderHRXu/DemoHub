@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../Vue/vue2.5.17.js"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+</head>
+
+<body>
+
+<div id="app">
+  <p>{{name}}</p>
+  <span>自定义按钮测试</span>
+  <icon-button :iconName="123" :text="name"></icon-button>
+</div>
+
+<script>
+
+  var iconButton = {<div>
+    组件组件
+    <i class="icon"></i>
+    <span class="buttonText">{{text}}</span>
+  <span>这是组件</span>
+  </div>}
+  // import Iconbutton from "./IconButton"
+  Vue.component("iconbutton", ``)
+  var vm = new Vue({
+    el:'#app',
+    data:{
+      name:'这是父类容器'
+    },
+    methods:{
+
+
+    },
+  });
+
+
+</script>
+</body>
+
+</html>
