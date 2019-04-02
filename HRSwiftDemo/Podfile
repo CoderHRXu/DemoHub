@@ -26,7 +26,7 @@ use_frameworks!
         pod 'PromiseKit'
         pod 'PromiseKit/Alamofire'
         pod 'ObjectMapper'
-        pod 'HandyJSON'
+        pod 'HandyJSON', :git => 'https://github.com/alibaba/HandyJSON.git', :branch => 'dev_for_swift5.0'
     end
 
     def common_pod
