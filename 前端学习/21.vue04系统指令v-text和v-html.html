@@ -14,7 +14,8 @@
 
     区别  v-text只是把name的值当文字输出， v-html会把name值当初html文本<br>
 
-    
+    <div v-html="script"></div>
+    v-html指令，不可以渲染带`script`的富文本
 
 </div>
 
@@ -30,6 +31,7 @@
         el:'#app',
         data:{
             name:"<h1>这是名字</h1>",
+            script:"<div>这是带脚本的div<script> console.log('打印脚本') </script></div>>"
         },
         methods:{
 
