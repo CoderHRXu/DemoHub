@@ -24,6 +24,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"1");
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"2");
+    });
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"3");
+    });
+    NSLog(@"4");
+    
     [self initOnlineSynthesizer];
 //    [self initLocalSynthesizer];
 }
