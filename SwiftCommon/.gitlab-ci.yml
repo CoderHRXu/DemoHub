@@ -1,0 +1,76 @@
+stages:
+  - 初始化
+  - 构建
+  - 提审
+
+初始化:
+  stage: 初始化
+  script:
+   - echo "Build Proj"
+   - gem install fastlane -NV
+   - fastlane add_plugin pgyer
+  only:
+  - develop
+  - tags
+  tags:
+   - haoran-Mac
+
+同步证书:
+  stage: 初始化
+  script:
+    - echo "Try to match cer"
+    - fastlane syncCer
+  when: manual
+  only:
+  - develop
+  - tags
+  tags:
+   - haoran-Mac
+
+构建-SIT:
+  stage: 构建
+  script:
+    - echo "Start pack SIT"
+    - fastlane sit
+  when: manual
+  only:
+  - develop
+  - tags
+  tags:
+   - haoran-Mac
+
+构建-UAT:
+  stage: 构建
+  script:
+    - echo "Start pack UAT"
+    - fastlane uat
+  when: manual
+  only:
+  - develop
+  - tags
+  tags:
+   - haoran-Mac
+
+构建-PRO:
+  stage: 构建
+  script:
+    - echo "Start pack PRO"
+    - fastlane pro
+  when: manual
+  only:
+  - develop
+  - tags
+  tags:
+   - haoran-Mac
+
+提审:
+  stage: 提审
+  script:
+    - echo "Start pack PRO"
+    - fastlane dep
+  when: manual
+  only:
+  - develop
+  - tags
+  tags:
+   - haoran-Mac

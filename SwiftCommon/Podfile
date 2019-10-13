@@ -1,0 +1,86 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+use_frameworks!
+
+
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    
+    
+    def ui_pods
+
+        pod 'PullToRefreshKit' #Swift版下拉刷新，支持横向侧拉
+        pod 'SnapKit'
+        pod 'ESTabBarController-swift'
+        # pod 'BetterSegmentedControl', '~> 0.8' #https://github.com/gmarm/BetterSegmentedControl
+        # pod 'HMSegmentedControl', '1.5.3', :inhibit_warnings => true
+        pod 'IQKeyboardManagerSwift'
+#        pod 'InputKitSwift'
+        pod 'Kingfisher'
+        pod 'CoreAnimator'
+        pod 'RxCocoa'
+        pod 'RxDataSources'
+#        pod 'CollectionViewSlantedLayout'
+        # pod 'JXPhotoBrowser', '1.6.1'
+        pod 'PKHUD'
+
+    end
+
+    def net_pod
+        pod 'Format' # Simple formatting syntax for decimal numbers, currency, mass, addresses, ordinal numbers and hexadecimal colors.
+        pod 'Moya'
+        pod 'Moya/RxSwift'
+        pod 'RxSwift' 
+        # pod 'PromiseKit'
+        # pod 'PromiseKit/Alamofire'
+        pod 'HandyJSON' #A Json Serialization & Deserialization Library for Swift
+    end
+
+    def common_pod
+        pod 'SwifterSwift'
+        # pod 'MagicalRecord', '2.3.2' #Super Awesome Easy Fetching for Core Data 1!!!11!!!!1!.
+        # pod 'R.swift'
+        # pod 'HRQRCodeScanTool', '0.2.1'
+    end
+
+    def sdk_pods
+        
+    end
+    
+    
+    
+    
+     #A lightweight, pure-Swift library for downloading and caching images from the web.
+    target 'SwiftCommon' do  
+        ui_pods
+        common_pod
+        net_pod
+        sdk_pods
+    end
+
+    post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        
+#        if target.name == 'HandyJSON' || target.name == 'Format' || target.name == 'ESTabBarController-swift'
+#            target.build_configurations.each do |config|
+#            config.build_settings['SWIFT_VERSION'] = '3.3'
+#            end
+#        end
+
+#        if target.name == 'HRQRCodeScanTool' || target.name == 'JXPhotoBrowser'
+#            target.build_configurations.each do |config|
+#                if config.name == 'Debug' || config.name == 'Debug-SIT' || config.name == 'Debug-DEV' || config.name == 'Debug-UAT'
+#                    config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = '$(inherited) DEBUG=1'
+#                end
+#        end
+
+        
+#        if target.name == 'RxSwift'
+#            target.build_configurations.each do |config|
+#                 if config.name == 'Debug' || config.name == 'Debug-sit' || config.name == 'Debug-dev' || config.name == 'Debug-uat' || config.name == 'Debug-pro'
+#                    config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['-D', 'TRACE_RESOURCES']
+#                end
+#        end
+#    end
+#    end
+    end
+end

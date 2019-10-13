@@ -27,6 +27,10 @@
 		590DC8C31E4B0D57007FC0AD /* approvalArea.plist in Resources */ = {isa = PBXBuildFile; fileRef = 590DC8BB1E4B0D57007FC0AD /* approvalArea.plist */; };
 		595D29561E70298B00DC9089 /* ImageUploadConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 595D29551E70298B00DC9089 /* ImageUploadConfiguration.plist */; };
 		59C4DDF01E6D956C001AD1D9 /* NeedToLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C4DDD31E6D956C001AD1D9 /* NeedToLoginViewController.xib */; };
+		AD57485C22F71CCC00A8C977 /* FeedBackSenceSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AD57485B22F71CCC00A8C977 /* FeedBackSenceSectionHeader.m */; };
+		AD59055122F707F700A339EA /* FeedBackSenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59055022F707F700A339EA /* FeedBackSenceViewController.m */; };
+		AD59055422F7084E00A339EA /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59055322F7084E00A339EA /* UICollectionViewLeftAlignedLayout.m */; };
+		AD59055722F7092700A339EA /* FeedBackSenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59055622F7092700A339EA /* FeedBackSenceCell.m */; };
 		AD5912292170510A0058C884 /* NSArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AD591227217051090058C884 /* NSArray+Helper.m */; };
 		AD59122C217051210058C884 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59122B217051210058C884 /* NSDate+Utilities.m */; };
 		AD591231217051370058C884 /* NSMutableAttributedString+FCInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59122D217051360058C884 /* NSMutableAttributedString+FCInitialize.m */; };
@@ -290,6 +294,14 @@
 		59D9F83D1E4C3702003391B1 /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
 		719A4C87D330368066A998EF /* Pods-HROCDemo.debug-pro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HROCDemo.debug-pro.xcconfig"; path = "Pods/Target Support Files/Pods-HROCDemo/Pods-HROCDemo.debug-pro.xcconfig"; sourceTree = "<group>"; };
 		9F3444FE9D6546251C30FEBF /* Pods-HROCDemo.release-sit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HROCDemo.release-sit.xcconfig"; path = "Pods/Target Support Files/Pods-HROCDemo/Pods-HROCDemo.release-sit.xcconfig"; sourceTree = "<group>"; };
+		AD57485A22F71CCC00A8C977 /* FeedBackSenceSectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedBackSenceSectionHeader.h; sourceTree = "<group>"; };
+		AD57485B22F71CCC00A8C977 /* FeedBackSenceSectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedBackSenceSectionHeader.m; sourceTree = "<group>"; };
+		AD59054F22F707F700A339EA /* FeedBackSenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedBackSenceViewController.h; sourceTree = "<group>"; };
+		AD59055022F707F700A339EA /* FeedBackSenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedBackSenceViewController.m; sourceTree = "<group>"; };
+		AD59055222F7084D00A339EA /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
+		AD59055322F7084E00A339EA /* UICollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
+		AD59055522F7092700A339EA /* FeedBackSenceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedBackSenceCell.h; sourceTree = "<group>"; };
+		AD59055622F7092700A339EA /* FeedBackSenceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedBackSenceCell.m; sourceTree = "<group>"; };
 		AD591227217051090058C884 /* NSArray+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helper.m"; sourceTree = "<group>"; };
 		AD591228217051090058C884 /* NSArray+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Helper.h"; sourceTree = "<group>"; };
 		AD59122A217051200058C884 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
@@ -785,6 +797,7 @@
 		59C4D9141E6D1051001AD1D9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AD59054E22F707CA00A339EA /* GCBTest */,
 				3F6421681ED874BA00E197FC /* BaseClass */,
 				ADE444D2216F24F2005D346F /* Module1 */,
 				ADE444D3216F2530005D346F /* Module2 */,
@@ -900,6 +913,21 @@
 				59D9F83D1E4C3702003391B1 /* NotificationManager.m */,
 			);
 			path = NotificationManager;
+			sourceTree = "<group>";
+		};
+		AD59054E22F707CA00A339EA /* GCBTest */ = {
+			isa = PBXGroup;
+			children = (
+				AD59054F22F707F700A339EA /* FeedBackSenceViewController.h */,
+				AD59055022F707F700A339EA /* FeedBackSenceViewController.m */,
+				AD59055222F7084D00A339EA /* UICollectionViewLeftAlignedLayout.h */,
+				AD59055322F7084E00A339EA /* UICollectionViewLeftAlignedLayout.m */,
+				AD59055522F7092700A339EA /* FeedBackSenceCell.h */,
+				AD59055622F7092700A339EA /* FeedBackSenceCell.m */,
+				AD57485A22F71CCC00A8C977 /* FeedBackSenceSectionHeader.h */,
+				AD57485B22F71CCC00A8C977 /* FeedBackSenceSectionHeader.m */,
+			);
+			path = GCBTest;
 			sourceTree = "<group>";
 		};
 		ADCBC0892188457500139E35 /* Model */ = {
@@ -1242,6 +1270,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1395,6 +1424,7 @@
 				ADE44666216F28D8005D346F /* CityAnalyze.m in Sources */,
 				ADE444E4216F286C005D346F /* CacheHandler.m in Sources */,
 				ADE44670216F28D8005D346F /* XFProgressHUD.m in Sources */,
+				AD59055422F7084E00A339EA /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				ADE444E5216F286C005D346F /* LocationManager.m in Sources */,
 				ADE444E6216F286C005D346F /* BaseBean.m in Sources */,
 				ADE444E7216F286C005D346F /* BaseChainRequest.m in Sources */,
@@ -1406,12 +1436,14 @@
 				ADE4467C216F28D8005D346F /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
 				ADE44678216F28D8005D346F /* NSDictionary+NilSafe.m in Sources */,
 				ADE444EB216F286C005D346F /* AppLaunchManager.m in Sources */,
+				AD57485C22F71CCC00A8C977 /* FeedBackSenceSectionHeader.m in Sources */,
 				AD591232217051370058C884 /* NSMutableAttributedString+Generate.m in Sources */,
 				ADE444EC216F286C005D346F /* Utils.m in Sources */,
 				ADE4466F216F28D8005D346F /* MBProgressHUD+Add.m in Sources */,
 				ADE444ED216F286C005D346F /* XFTabBarController.m in Sources */,
 				ADE4466E216F28D8005D346F /* MD5Encryption.m in Sources */,
 				ADE4467F216F28D8005D346F /* UIImage+XF.m in Sources */,
+				AD59055122F707F700A339EA /* FeedBackSenceViewController.m in Sources */,
 				ADE44627216F28D7005D346F /* PinyinFormatter.m in Sources */,
 				ADE44626216F28D7005D346F /* ChineseToPinyinResource.m in Sources */,
 				ADE44658216F28D8005D346F /* NXShareView.m in Sources */,
@@ -1453,6 +1485,7 @@
 				AD59122C217051210058C884 /* NSDate+Utilities.m in Sources */,
 				ADE4466B216F28D8005D346F /* SuperAnalyzeShippingAddress.m in Sources */,
 				ADE44693216F2D43005D346F /* GetAppOnlineInfoRequest.m in Sources */,
+				AD59055722F7092700A339EA /* FeedBackSenceCell.m in Sources */,
 				ADE444FE216F286C005D346F /* ResetPasswdFirstStepViewController.m in Sources */,
 				ADE444FF216F286C005D346F /* ResetPasswdSecondStepViewController.m in Sources */,
 				ADE44500216F286C005D346F /* RegisterFirstStepViewController.m in Sources */,
