@@ -14,6 +14,9 @@
 		ADC22BC72354BB5000758FD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC22BC12354BB5000758FD5 /* LaunchScreen.storyboard */; };
 		ADC22BC82354BB5000758FD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC22BC32354BB5000758FD5 /* Main.storyboard */; };
 		ADC22BD42354BB5B00758FD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BD22354BB5A00758FD5 /* ViewController.swift */; };
+		ADC22BD62354BEEB00758FD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BD52354BEEB00758FD5 /* BaseViewController.swift */; };
+		ADC22BD82354C0EF00758FD5 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BD72354C0EF00758FD5 /* RootTabBarController.swift */; };
+		ADC22BDA2354C40200758FD5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BD92354C40200758FD5 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		ADC22BC42354BB5000758FD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADC22BC52354BB5000758FD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC22BD22354BB5A00758FD5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADC22BD52354BEEB00758FD5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		ADC22BD72354C0EF00758FD5 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		ADC22BD92354C40200758FD5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		F410DFC6E3883F8215A9118E /* Pods-SwiftCommon.release-uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCommon.release-uat.xcconfig"; path = "Target Support Files/Pods-SwiftCommon/Pods-SwiftCommon.release-uat.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,8 +131,8 @@
 		ADC22BCB2354BB5A00758FD5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				ADC22BCC2354BB5A00758FD5 /* Login */,
 				ADC22BD12354BB5A00758FD5 /* Base */,
+				ADC22BCC2354BB5A00758FD5 /* Login */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -174,6 +180,9 @@
 			isa = PBXGroup;
 			children = (
 				ADC22BD22354BB5A00758FD5 /* ViewController.swift */,
+				ADC22BD52354BEEB00758FD5 /* BaseViewController.swift */,
+				ADC22BD72354C0EF00758FD5 /* RootTabBarController.swift */,
+				ADC22BD92354C40200758FD5 /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -301,6 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC22BD42354BB5B00758FD5 /* ViewController.swift in Sources */,
+				ADC22BD82354C0EF00758FD5 /* RootTabBarController.swift in Sources */,
+				ADC22BDA2354C40200758FD5 /* BaseNavigationController.swift in Sources */,
+				ADC22BD62354BEEB00758FD5 /* BaseViewController.swift in Sources */,
 				ADC22B9E23535E0000758FD5 /* AppDelegate.swift in Sources */,
 				ADC22BA023535E0000758FD5 /* SceneDelegate.swift in Sources */,
 			);
