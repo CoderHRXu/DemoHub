@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4005EBBB064E7FE2D1F39E08 /* Pods_SwiftCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40229AB1E3428CAA59E04CC4 /* Pods_SwiftCommon.framework */; };
 		ADC22B9E23535E0000758FD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22B9D23535E0000758FD5 /* AppDelegate.swift */; };
 		ADC22BA023535E0000758FD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22B9F23535E0000758FD5 /* SceneDelegate.swift */; };
-		ADC22BA223535E0000758FD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BA123535E0000758FD5 /* ViewController.swift */; };
-		ADC22BA523535E0000758FD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC22BA323535E0000758FD5 /* Main.storyboard */; };
-		ADC22BA723535E0100758FD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC22BA623535E0100758FD5 /* Assets.xcassets */; };
-		ADC22BAA23535E0100758FD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC22BA823535E0100758FD5 /* LaunchScreen.storyboard */; };
+		ADC22BC62354BB5000758FD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC22BC02354BB5000758FD5 /* Assets.xcassets */; };
+		ADC22BC72354BB5000758FD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC22BC12354BB5000758FD5 /* LaunchScreen.storyboard */; };
+		ADC22BC82354BB5000758FD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC22BC32354BB5000758FD5 /* Main.storyboard */; };
+		ADC22BD42354BB5B00758FD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BD22354BB5A00758FD5 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +28,12 @@
 		ADC22B9A23535E0000758FD5 /* SwiftCommon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCommon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC22B9D23535E0000758FD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC22B9F23535E0000758FD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADC22BA123535E0000758FD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ADC22BA423535E0000758FD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ADC22BA623535E0100758FD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ADC22BA923535E0100758FD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ADC22BAB23535E0100758FD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADC22BBD2353666400758FD5 /* SwiftCommon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftCommon.entitlements; sourceTree = "<group>"; };
+		ADC22BBF2354BB5000758FD5 /* SwiftCommon.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SwiftCommon.entitlements; sourceTree = "<group>"; };
+		ADC22BC02354BB5000758FD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADC22BC22354BB5000758FD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADC22BC42354BB5000758FD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADC22BC52354BB5000758FD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADC22BD22354BB5A00758FD5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F410DFC6E3883F8215A9118E /* Pods-SwiftCommon.release-uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCommon.release-uat.xcconfig"; path = "Target Support Files/Pods-SwiftCommon/Pods-SwiftCommon.release-uat.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +69,6 @@
 				2DEEE6C0C254C823B9D75D85 /* Pods-SwiftCommon.release-dev.xcconfig */,
 				F410DFC6E3883F8215A9118E /* Pods-SwiftCommon.release-uat.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -94,16 +93,96 @@
 		ADC22B9C23535E0000758FD5 /* SwiftCommon */ = {
 			isa = PBXGroup;
 			children = (
-				ADC22BBD2353666400758FD5 /* SwiftCommon.entitlements */,
 				ADC22B9D23535E0000758FD5 /* AppDelegate.swift */,
 				ADC22B9F23535E0000758FD5 /* SceneDelegate.swift */,
-				ADC22BA123535E0000758FD5 /* ViewController.swift */,
-				ADC22BA323535E0000758FD5 /* Main.storyboard */,
-				ADC22BA623535E0100758FD5 /* Assets.xcassets */,
-				ADC22BA823535E0100758FD5 /* LaunchScreen.storyboard */,
-				ADC22BAB23535E0100758FD5 /* Info.plist */,
+				ADC22BD32354BB5B00758FD5 /* CommonViews */,
+				ADC22BCA2354BB5A00758FD5 /* Manager */,
+				ADC22BCB2354BB5A00758FD5 /* Modules */,
+				ADC22BBE2354BB5000758FD5 /* SupportingFiles */,
 			);
 			path = SwiftCommon;
+			sourceTree = "<group>";
+		};
+		ADC22BBE2354BB5000758FD5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22BBF2354BB5000758FD5 /* SwiftCommon.entitlements */,
+				ADC22BC02354BB5000758FD5 /* Assets.xcassets */,
+				ADC22BC12354BB5000758FD5 /* LaunchScreen.storyboard */,
+				ADC22BC32354BB5000758FD5 /* Main.storyboard */,
+				ADC22BC52354BB5000758FD5 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		ADC22BCA2354BB5A00758FD5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		ADC22BCB2354BB5A00758FD5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22BCC2354BB5A00758FD5 /* Login */,
+				ADC22BD12354BB5A00758FD5 /* Base */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		ADC22BCC2354BB5A00758FD5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22BCD2354BB5A00758FD5 /* ViewModel */,
+				ADC22BCE2354BB5A00758FD5 /* Controller */,
+				ADC22BCF2354BB5A00758FD5 /* Model */,
+				ADC22BD02354BB5A00758FD5 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ADC22BCD2354BB5A00758FD5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADC22BCE2354BB5A00758FD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ADC22BCF2354BB5A00758FD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADC22BD02354BB5A00758FD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADC22BD12354BB5A00758FD5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22BD22354BB5A00758FD5 /* ViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ADC22BD32354BB5B00758FD5 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC22BAA23535E0100758FD5 /* LaunchScreen.storyboard in Resources */,
-				ADC22BA723535E0100758FD5 /* Assets.xcassets in Resources */,
-				ADC22BA523535E0000758FD5 /* Main.storyboard in Resources */,
+				ADC22BC82354BB5000758FD5 /* Main.storyboard in Resources */,
+				ADC22BC62354BB5000758FD5 /* Assets.xcassets in Resources */,
+				ADC22BC72354BB5000758FD5 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC22BA223535E0000758FD5 /* ViewController.swift in Sources */,
+				ADC22BD42354BB5B00758FD5 /* ViewController.swift in Sources */,
 				ADC22B9E23535E0000758FD5 /* AppDelegate.swift in Sources */,
 				ADC22BA023535E0000758FD5 /* SceneDelegate.swift in Sources */,
 			);
@@ -230,20 +309,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ADC22BA323535E0000758FD5 /* Main.storyboard */ = {
+		ADC22BC12354BB5000758FD5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ADC22BA423535E0000758FD5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ADC22BA823535E0100758FD5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADC22BA923535E0100758FD5 /* Base */,
+				ADC22BC22354BB5000758FD5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ADC22BC32354BB5000758FD5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADC22BC42354BB5000758FD5 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -299,6 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -353,6 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -372,7 +453,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftCommon/SwiftCommon.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftCommon/Info.plist;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,7 +474,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftCommon/SwiftCommon.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftCommon/Info.plist;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -474,7 +556,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftCommon/SwiftCommon.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftCommon/Info.plist;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,6 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -550,7 +633,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftCommon/SwiftCommon.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftCommon/Info.plist;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -613,6 +696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -631,7 +715,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftCommon/SwiftCommon.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftCommon/Info.plist;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,6 +779,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -713,7 +798,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftCommon/SwiftCommon.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftCommon/Info.plist;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -771,6 +856,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -790,7 +876,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftCommon/SwiftCommon.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftCommon/Info.plist;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -848,6 +934,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -867,7 +954,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftCommon/SwiftCommon.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftCommon/Info.plist;
+				INFOPLIST_FILE = SwiftCommon/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
