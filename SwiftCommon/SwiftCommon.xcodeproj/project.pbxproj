@@ -17,6 +17,17 @@
 		ADC22BD62354BEEB00758FD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BD52354BEEB00758FD5 /* BaseViewController.swift */; };
 		ADC22BD82354C0EF00758FD5 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BD72354C0EF00758FD5 /* RootTabBarController.swift */; };
 		ADC22BDA2354C40200758FD5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BD92354C40200758FD5 /* BaseNavigationController.swift */; };
+		ADC22C0A2356090500758FD5 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BF42356090500758FD5 /* ConfigManager.swift */; };
+		ADC22C0D2356090500758FD5 /* FCLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22BF92356090500758FD5 /* FCLogger.swift */; };
+		ADC22C112356090500758FD5 /* FCBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22C012356090500758FD5 /* FCBaseViewModel.swift */; };
+		ADC22C122356090500758FD5 /* FCNetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22C022356090500758FD5 /* FCNetworkPlugin.swift */; };
+		ADC22C132356090500758FD5 /* Observable+JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22C032356090500758FD5 /* Observable+JSONParser.swift */; };
+		ADC22C142356090500758FD5 /* Observable+ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22C042356090500758FD5 /* Observable+ParserError.swift */; };
+		ADC22C152356090500758FD5 /* FCBaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22C052356090500758FD5 /* FCBaseProvider.swift */; };
+		ADC22C162356090500758FD5 /* FCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22C072356090500758FD5 /* FCBaseModel.swift */; };
+		ADC22C172356090500758FD5 /* TargetType+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22C082356090500758FD5 /* TargetType+Base.swift */; };
+		ADC22C1B23560CD900758FD5 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22C1923560CCD00758FD5 /* ExampleBouncesContentView.swift */; };
+		ADC22C1C23560CDC00758FD5 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC22C1A23560CCD00758FD5 /* ExampleBasicContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +51,17 @@
 		ADC22BD52354BEEB00758FD5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ADC22BD72354C0EF00758FD5 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		ADC22BD92354C40200758FD5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		ADC22BF42356090500758FD5 /* ConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		ADC22BF92356090500758FD5 /* FCLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCLogger.swift; sourceTree = "<group>"; };
+		ADC22C012356090500758FD5 /* FCBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCBaseViewModel.swift; sourceTree = "<group>"; };
+		ADC22C022356090500758FD5 /* FCNetworkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCNetworkPlugin.swift; sourceTree = "<group>"; };
+		ADC22C032356090500758FD5 /* Observable+JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+JSONParser.swift"; sourceTree = "<group>"; };
+		ADC22C042356090500758FD5 /* Observable+ParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+ParserError.swift"; sourceTree = "<group>"; };
+		ADC22C052356090500758FD5 /* FCBaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCBaseProvider.swift; sourceTree = "<group>"; };
+		ADC22C072356090500758FD5 /* FCBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCBaseModel.swift; sourceTree = "<group>"; };
+		ADC22C082356090500758FD5 /* TargetType+Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TargetType+Base.swift"; sourceTree = "<group>"; };
+		ADC22C1923560CCD00758FD5 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
+		ADC22C1A23560CCD00758FD5 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
 		F410DFC6E3883F8215A9118E /* Pods-SwiftCommon.release-uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCommon.release-uat.xcconfig"; path = "Target Support Files/Pods-SwiftCommon/Pods-SwiftCommon.release-uat.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +146,12 @@
 		ADC22BCA2354BB5A00758FD5 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				ADC22BF32356090500758FD5 /* ConfigManager */,
+				ADC22BFB2356090500758FD5 /* DataBaseManager */,
+				ADC22BF82356090500758FD5 /* LogManager */,
+				ADC22BFF2356090500758FD5 /* NetworkManager */,
+				ADC22BF52356090500758FD5 /* RouteManager */,
+				ADC22C092356090500758FD5 /* UserManager */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -190,8 +218,85 @@
 		ADC22BD32354BB5B00758FD5 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				ADC22C1823560CCD00758FD5 /* TabbarItemContentView */,
 			);
 			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		ADC22BF32356090500758FD5 /* ConfigManager */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22BF42356090500758FD5 /* ConfigManager.swift */,
+			);
+			path = ConfigManager;
+			sourceTree = "<group>";
+		};
+		ADC22BF52356090500758FD5 /* RouteManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RouteManager;
+			sourceTree = "<group>";
+		};
+		ADC22BF82356090500758FD5 /* LogManager */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22BF92356090500758FD5 /* FCLogger.swift */,
+			);
+			path = LogManager;
+			sourceTree = "<group>";
+		};
+		ADC22BFB2356090500758FD5 /* DataBaseManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBaseManager;
+			sourceTree = "<group>";
+		};
+		ADC22BFF2356090500758FD5 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22C002356090500758FD5 /* ViewModel */,
+				ADC22C022356090500758FD5 /* FCNetworkPlugin.swift */,
+				ADC22C032356090500758FD5 /* Observable+JSONParser.swift */,
+				ADC22C042356090500758FD5 /* Observable+ParserError.swift */,
+				ADC22C052356090500758FD5 /* FCBaseProvider.swift */,
+				ADC22C062356090500758FD5 /* Model */,
+				ADC22C082356090500758FD5 /* TargetType+Base.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		ADC22C002356090500758FD5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22C012356090500758FD5 /* FCBaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADC22C062356090500758FD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22C072356090500758FD5 /* FCBaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADC22C092356090500758FD5 /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserManager;
+			sourceTree = "<group>";
+		};
+		ADC22C1823560CCD00758FD5 /* TabbarItemContentView */ = {
+			isa = PBXGroup;
+			children = (
+				ADC22C1923560CCD00758FD5 /* ExampleBouncesContentView.swift */,
+				ADC22C1A23560CCD00758FD5 /* ExampleBasicContentView.swift */,
+			);
+			path = TabbarItemContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +419,18 @@
 				ADC22BDA2354C40200758FD5 /* BaseNavigationController.swift in Sources */,
 				ADC22BD62354BEEB00758FD5 /* BaseViewController.swift in Sources */,
 				ADC22B9E23535E0000758FD5 /* AppDelegate.swift in Sources */,
+				ADC22C152356090500758FD5 /* FCBaseProvider.swift in Sources */,
+				ADC22C162356090500758FD5 /* FCBaseModel.swift in Sources */,
+				ADC22C0A2356090500758FD5 /* ConfigManager.swift in Sources */,
+				ADC22C172356090500758FD5 /* TargetType+Base.swift in Sources */,
 				ADC22BA023535E0000758FD5 /* SceneDelegate.swift in Sources */,
+				ADC22C0D2356090500758FD5 /* FCLogger.swift in Sources */,
+				ADC22C1B23560CD900758FD5 /* ExampleBouncesContentView.swift in Sources */,
+				ADC22C132356090500758FD5 /* Observable+JSONParser.swift in Sources */,
+				ADC22C1C23560CDC00758FD5 /* ExampleBasicContentView.swift in Sources */,
+				ADC22C112356090500758FD5 /* FCBaseViewModel.swift in Sources */,
+				ADC22C122356090500758FD5 /* FCNetworkPlugin.swift in Sources */,
+				ADC22C142356090500758FD5 /* Observable+ParserError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
