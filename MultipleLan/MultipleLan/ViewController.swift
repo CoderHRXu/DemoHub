@@ -31,6 +31,20 @@ class ViewController: UIViewController {
         btn.setTitleColor(UIColor.black, for: .normal)
     }
 
-
+    
+    @IBAction func btnclick(_ btn: UIButton) {
+        
+        var language = "en"
+        if let lan = UserDefaults.standard.value(forKey: "AppleLanguages") as? [String] {
+            
+            language = lan.first == "en" ? "es" : "en"
+        }
+        UserDefaults.standard.set([language], forKey: "AppleLanguages")
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+//        let delagate = UIApplication.shared.delegate as! AppDelegate
+//        delagate.perform(controller: vc)
+        UIApplication.shared.keyWindow?.rootViewController = vc
+    }
+    
 }
 
