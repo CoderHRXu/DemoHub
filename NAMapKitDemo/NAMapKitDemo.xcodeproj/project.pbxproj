@@ -31,6 +31,7 @@
 		AD849341239FA7B400BD1064 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84932F239FA53700BD1064 /* Path.swift */; };
 		AD849342239FA7B600BD1064 /* Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD849330239FA53700BD1064 /* Graphics.swift */; };
 		AD849343239FA7B900BD1064 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD849331239FA53700BD1064 /* Color.swift */; };
+		AD9BC18C23A0E02000D2EAB6 /* Floor1.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9BC18B23A0DFB900D2EAB6 /* Floor1.png */; };
 		ADA3E59E239F52C4004CA798 /* callout_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA3E57A239F52C4004CA798 /* callout_right@2x.png */; };
 		ADA3E59F239F52C4004CA798 /* NATiledImageMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA3E57B239F52C4004CA798 /* NATiledImageMapView.m */; };
 		ADA3E5A0239F52C4004CA798 /* pin_purple_floating.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA3E57D239F52C4004CA798 /* pin_purple_floating.png */; };
@@ -114,6 +115,7 @@
 		AD84932F239FA53700BD1064 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		AD849330239FA53700BD1064 /* Graphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphics.swift; sourceTree = "<group>"; };
 		AD849331239FA53700BD1064 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AD9BC18B23A0DFB900D2EAB6 /* Floor1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Floor1.png; sourceTree = "<group>"; };
 		ADA3E4DD239F4925004CA798 /* NAMapKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NAMapKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		ADA3E579239F52C4004CA798 /* NAPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAPinAnnotationView.h; sourceTree = "<group>"; };
 		ADA3E57A239F52C4004CA798 /* callout_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout_right@2x.png"; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 		ADA3E5F7239F67B3004CA798 /* MapResource */ = {
 			isa = PBXGroup;
 			children = (
+				AD9BC18B23A0DFB900D2EAB6 /* Floor1.png */,
 				ADA3E605239F7C1D004CA798 /* map.png */,
 			);
 			path = MapResource;
@@ -501,6 +504,7 @@
 				AD169C03239F448A0047A35B /* Assets.xcassets in Resources */,
 				ADA3E5A2239F52C4004CA798 /* callout_bg@2x.png in Resources */,
 				ADA3E5A8239F52C4004CA798 /* pin_red_floating.png in Resources */,
+				AD9BC18C23A0E02000D2EAB6 /* Floor1.png in Resources */,
 				ADA3E5A7239F52C4004CA798 /* callout_left.png in Resources */,
 				ADA3E606239F7C1D004CA798 /* map.png in Resources */,
 				ADA3E5AA239F52C4004CA798 /* callout_right.png in Resources */,

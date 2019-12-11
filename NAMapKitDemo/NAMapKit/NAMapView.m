@@ -115,6 +115,16 @@ const CGFloat NAMapViewDefaultZoomStep = 1.5f;
 {
 	CGFloat x = (point.x * self.zoomScale) - (self.frame.size.width / 2.0f);
 	CGFloat y = (point.y * self.zoomScale) - (self.frame.size.height / 2.0f);
+    if ((y + self.frame.size.height) > self.contentSize.height || y < 0) {
+        y = 0;
+    }
+    if (x < 0) {
+        x = 0;
+    }
+    if ((x + self.frame.size.width) > self.contentSize.width) {
+        x = self.contentSize.width - self.frame.size.width;
+    }
+    
 	[self setContentOffset:CGPointMake(round(x), round(y)) animated:animate];
     _centerPoint = point;
 }
@@ -172,6 +182,14 @@ const CGFloat NAMapViewDefaultZoomStep = 1.5f;
 - (CGFloat)zoomLevel
 {
     return self.zoomScale / self.maximumZoomScale;
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+   
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+     NSLog(@"offset %f  %f", scrollView.contentOffset.x, scrollView.contentOffset.y);
 }
 
 #pragma mark - Tap to Zoom
