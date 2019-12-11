@@ -19,10 +19,11 @@ class PinAnnotationView: UIButton {
     var isAnimate: Bool!
     private weak var mapView: NAMapView!
     let circleView: UIView = {
-        let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        let view = UIView.init(frame: CGRect(x: 5, y: 5, width: 10, height: 10))
         view.backgroundColor = UIColor.white
         view.layer.cornerRadius = 5
         view.layer.masksToBounds = true
+        view.isUserInteractionEnabled = false
         return view
     }()
     
@@ -31,12 +32,20 @@ class PinAnnotationView: UIButton {
         self.mapView = mapView
         self.annotation = annotation
         self.isAnimate = isAnimate
-        self.backgroundColor = UIColor.blue
-        self.addSubview(circleView)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
+        
+        if annotation.pinType == .Room {
+            setTitle("      " + annotation.title, for: .normal)
+            titleLabel?.font = UIFont.boldSystemFont(ofSize: 10)
+            sizeToFit()
+            addSubview(circleView)
+        }
+        if annotation.pinType == .Destination {
+            addSubview(circleView)
+        }
+        if annotation.pinType == .User {
+            setImage(UIImage(named: "icon_user_position")!, for: .normal)
+            sizeToFit()
+        }
         
     }
     
@@ -45,7 +54,28 @@ class PinAnnotationView: UIButton {
     }
  
     func updatePosition() {
-        let ponit = mapView.zoomRelativePoint(annotation.point)
-        frame = CGRect(x: ponit.x, y: ponit.y, width: NAMapViewAnnotationPinWidth, height: NAMapViewAnnotationPinHeight)
+        
+        var ponit = mapView.zoomRelativePoint(annotation.point)
+        switch annotation.pinType {
+        case .Destination:
+            
+            ponit.x -= NAMapViewAnnotationPinWidth * 0.5
+            ponit.y -= NAMapViewAnnotationPinHeight * 0.5
+            frame = CGRect(x: ponit.x, y: ponit.y, width: NAMapViewAnnotationPinWidth, height: NAMapViewAnnotationPinHeight)
+
+        case .Room:
+    
+            ponit.y -= bounds.size.height * 0.5
+            frame = CGRect(x: ponit.x, y: ponit.y, width: bounds.size.width, height: bounds.size.height)
+
+        case .User:
+            
+            ponit.x -= NAMapViewAnnotationPinWidth * 0.5
+            ponit.y -= NAMapViewAnnotationPinHeight * 0.5
+            frame = CGRect(x: ponit.x, y: ponit.y, width: NAMapViewAnnotationPinWidth, height: NAMapViewAnnotationPinHeight)
+            
+        default: break
+            
+        }
     }
 }

@@ -8,25 +8,25 @@
 
 import UIKit
 
-enum PinType {
+enum MoPopPinType {
     case Room
-    case Elevator
+    case Destination
+    case User
 }
-
 
 class PinAnnotation: NAAnnotation {
     
-    var type: PinType!
+    var pinType: MoPopPinType!
     /// title
     var title: String!
     
-    override init!(point: CGPoint) {
+    init(point: CGPoint, type: MoPopPinType) {
         super.init(point: point)
-        self.type = .Room
+        self.pinType = type
     }
     
     override func createView(on mapView: NAMapView!) -> UIView! {
-        PinAnnotationView.init(self, mapView)
+        PinAnnotationView(self, mapView)
     }
     
     override func add(to mapView: NAMapView!, animated animate: Bool) {

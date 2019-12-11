@@ -17,22 +17,31 @@ class MoPopMapView: NAMapView {
     
     override func setupMap() {
         super.setupMap()
+        autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        minimumZoomScale = 0.1
+        maximumZoomScale = 1.0
+        bouncesZoom = false
+        showsVerticalScrollIndicator = false
+        showsHorizontalScrollIndicator = false
         bubbleView = PinAnnotationBubbleView.init(frame: CGRect(x: 0, y: 0, width: 120, height: 40), onMapView: self)
+        bubbleView.isHidden = true
         addSubview(bubbleView)
     }
     
     override func add(_ annotation: NAAnnotation!, animated animate: Bool) {
         super.add(annotation, animated: true)
         annotationArray.append(annotation)
-        if let view = annotation.view as? PinAnnotationView {
+        if let view = annotation.view as? PinAnnotationView, view.annotation.pinType == .Destination {
             view.addTarget(self, action: #selector(showBubble(btn:)), for: .touchUpInside)
         }
     }
     
     @objc func showBubble(btn: UIButton) {
         
-        let annotationView = btn as! PinAnnotationView
-        showBubbleForAnnotation(annotation: annotationView.annotation)
+        if let annotationView = btn as? PinAnnotationView {
+            showBubbleForAnnotation(annotation: annotationView.annotation)
+        }
+        
     }
     
     func showBubbleForAnnotation(annotation: PinAnnotation, animate: Bool = true) {
@@ -41,7 +50,7 @@ class MoPopMapView: NAMapView {
         bubbleView.annotation = annotation
         bubbleView.position = annotation.point
         bubbleView.point = annotation.point
-        center(on: annotation.point, animated: true)
+        select(annotation, animated: true)
        
         let duration = animate ? BubbleAnimationDuration : 0
         bubbleView.transform = CGAffineTransform.identity.scaledBy(x: 0.4, y: 0.4)

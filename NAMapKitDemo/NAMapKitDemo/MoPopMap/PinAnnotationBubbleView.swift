@@ -30,7 +30,7 @@ class PinAnnotationBubbleView: NibView {
     }
    
     init(frame: CGRect, onMapView mapView: NAMapView) {
-        super.init(frame: CGRect.zero)
+        super.init(frame: frame)
         self.mapView = mapView
     }
     
@@ -43,15 +43,9 @@ class PinAnnotationBubbleView: NibView {
         if position != nil {
             let point = mapView.zoomRelativePoint(position)
             let xPostion = point.x - (frame.size.width / 2.0)
-            let yPostion = point.y - (frame.size.height) - 26
+            let yPostion = point.y - (frame.size.height) - 5
             frame = CGRect(x: floor(xPostion), y: yPostion, width: frame.size.width, height: frame.size.height)
-//            if let superV = superview {
-//                superV.frame = CGRect(x: floor(xPostion), y: floor(yPostion), width: frame.size.width, height: frame.size.height)
-//            } else {
-//                frame = CGRect(x: floor(xPostion), y: yPostion, width: frame.size.width, height: frame.size.height)
-//            }
         }
-        
     }
     
 }
