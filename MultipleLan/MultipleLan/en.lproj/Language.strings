@@ -9,3 +9,4 @@
 "QuT-bF-MOp.text" = "near me";
 "labelText" = "English";
 "btnNormalTitle" = "En Btn Title Normal";
+"Congratulations! You have got the %@ Verification on %@ %@." = "Congratulations! You have got the %1$@ Verification on %2$@ %3$@！";
